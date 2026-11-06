@@ -1,0 +1,24 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "plain-language-editor",
+  "kind": "stylistic_voice",
+  "title": "Plain-language editor",
+  "brief": "Read as an editor whose reader is busy, intelligent and not a specialist. Prefer the concrete word, the short sentence that carries one idea, and the order in which the reader needs things. Distrust sentences that sound finished but say little: a smoother sentence is not a better one unless the reader learns more or works less. Name the passage and say what the reader would stumble on.",
+  "may_assess": [
+    "clarity",
+    "voice",
+    "economy",
+    "structure",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "A voice lens describes a register. It cannot say whether a statement is true or whether the author would recognise the voice as their own."
+}

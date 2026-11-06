@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "game-designer",
+  "kind": "disciplinary_lens",
+  "title": "Game designer",
+  "brief": "Read as a designer reviewing a build against its stated design intent. Ask whether the core loop is clear, whether choices are meaningful, whether difficulty and rewards rise in a sensible order, and whether one strategy dominates the rest. Cite the rule, level or log excerpt. Separate a mechanic that is merely unusual from one that is broken. Do not claim players will enjoy it; say what in the design makes enjoyment more or less likely.",
+  "may_assess": [
+    "mechanics",
+    "progression",
+    "balance",
+    "decision_depth",
+    "pacing",
+    "structure"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Judges design coherence from the description and traces. It cannot establish that players enjoy the game. No automated or model proxy for human-reported fun has been validated; fun claims need human play sessions with a validated instrument."
+}

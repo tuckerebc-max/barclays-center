@@ -1,0 +1,225 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "game-build",
+  "title": "Game build: playable and not broken, with fun left to players",
+  "genre": "game-build",
+  "status": "officials_runnable",
+  "objective": "Narrow a set of game builds to those that boot cleanly, respond to input within the stated time, can be finished by a scripted bot on the first level and show no softlock in the stated number of bot runs, then report balance and difficulty proxies as advisory evidence. The event never rules that a game is fun.",
+  "audience": "Set per bout. The bout names the players the game is for (age, experience) and the design intent.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "a browser game build as one HTML file, or one archive that the official unpacks and hashes as one file. It exposes the test API in the test contract.",
+    "required_sources": [
+      "design_brief",
+      "test_contract",
+      "bot_script"
+    ],
+    "optional_sources": [
+      "level_specs",
+      "balance_scenarios"
+    ],
+    "test_contract": "A small API the candidate must expose for deterministic checks: seed the random generator, read game state, send an input, report level completion. Without it only pixel and DOM heuristics are possible.",
+    "bot_script": "The organizer's scripted bot for level one, and the strategy set (random, greedy, scripted expert) for the balance proxies."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "boots",
+      "official": "game.boot",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "max_console_errors": 0,
+        "max_uncaught_exceptions": 0,
+        "canvas_nonblank": true
+      },
+      "why": "A build that does not load, throws, or draws a blank canvas is not a game to compare."
+    },
+    {
+      "id": "input-latency",
+      "official": "game.input_latency",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "max_ms": 100,
+        "statistic": "median",
+        "trials": 15
+      },
+      "why": "Time from an input to a changed state, measured headless on a shared host. That is noisy and is not perceived latency, so it advises and never disqualifies; a person with the build decides."
+    },
+    {
+      "id": "bot-completes-level-1",
+      "official": "game.bot_completes_level",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "level": 1,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "max_steps": 2000,
+        "timeout_seconds": 60
+      },
+      "why": "A bot that reaches the goal is a proof that the level can be completed. A failure means the build departs from the test contract the bot was written against, and is reported with the trace."
+    },
+    {
+      "id": "softlock-search",
+      "official": "game.softlock_search",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "runs": 200,
+        "input_policy": "seeded random",
+        "stuck_after_steps": 500
+      },
+      "why": "A softlock found by the bot is a reproducible trace and a defect. Finding none in N runs shows only that none appeared in those runs."
+    },
+    {
+      "id": "frame-time",
+      "official": "game.frame_time",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Frame-time spread during a scripted session; a responsiveness lead, noisy across machines."
+    },
+    {
+      "id": "bot-win-rates",
+      "official": "game.bot_win_rates",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "strategies": [
+          "random",
+          "greedy",
+          "scripted_expert"
+        ],
+        "games_per_pair": 100
+      },
+      "why": "Win and completion rates by strategy, and dominant-strategy detection. These describe the game under the modelled agents, not under players."
+    },
+    {
+      "id": "difficulty-curve",
+      "official": "game.difficulty_curve",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "metrics": [
+          "completion_rate",
+          "mean_steps"
+        ],
+        "skill_gradient_check": true
+      },
+      "why": "Completion and step counts by level and bot skill. A monotonic skill gradient is a sanity check; the curve is an ordinal proxy for human difficulty."
+    },
+    {
+      "id": "first-player-advantage",
+      "official": "game.first_player_advantage",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "For games with turns or sides: win rate of the first mover under equal-skill bots. A balance proxy only."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "mechanics_coherence",
+      "weight": 0.25,
+      "definition": "The rules fit together, choices matter, and no single strategy makes the rest pointless."
+    },
+    {
+      "id": "progression",
+      "weight": 0.25,
+      "definition": "Difficulty and rewards rise in an order that suits the stated players."
+    },
+    {
+      "id": "onboarding_clarity",
+      "weight": 0.2,
+      "definition": "A new player can tell what to do, what just happened and why they lost within the first minute."
+    },
+    {
+      "id": "balance",
+      "weight": 0.15,
+      "definition": "Options, sides and levels are close enough in strength that the stated players have real choices."
+    },
+    {
+      "id": "feedback_responsiveness",
+      "weight": 0.15,
+      "definition": "Actions get an immediate, legible response."
+    }
+  ],
+  "model_gates": [],
+  "lenses": [
+    "game-designer",
+    "novice-player",
+    "adversarial-tester"
+  ],
+  "evidence_required": [
+    "The design brief, test contract and bot script, hashed.",
+    "Each candidate's exact bytes, hashed.",
+    "For every official run: tool name and version, browser and version, seeds, the trace of inputs and states, and the raw numbers (latencies, step counts, win rates with the number of games).",
+    "For every softlock: the seed and input trace that reproduces it.",
+    "For the human_review stage: the play-session protocol, number and description of players, instrument and version, and responses."
+  ],
+  "hard_disqualifiers": [
+    "The build does not boot, throws, logs a console error, or draws a blank canvas.",
+    "Median input response exceeds the stated time.",
+    "The scripted bot cannot complete level one on the stated seeds.",
+    "The bot finds a softlock within the stated number of runs."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Panel reviewers read the design brief, level descriptions, screenshots and bot traces. They propose objections and test ideas. They do not rank games and they do not say a game is fun.",
+    "calibration": "No reviewer route has been scored against human play data for this genre."
+  },
+  "format": {
+    "tournament": "gauntlet then human play sessions",
+    "why": "Boot, input time, level-one completion and softlock are checkable on the build, so they run first and can eliminate every candidate. Nothing validated can rank the survivors on fun, so a model bracket would only convert unvalidated judgment into a verdict. An advisory panel supplies objections and test ideas for the human play sessions that decide.",
+    "panel": {
+      "reference_sources": [
+        "design_brief"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "no_clear_winner_when": [
+      "more than one candidate passes the gauntlet (TIED_SHORTLIST: no validated automated measure ranks them on fun)",
+      "no candidate passes the gauntlet (NO_ELIGIBLE_CANDIDATE)",
+      "the build lacks the test contract, so a decisive official could not run (INCONCLUSIVE, never a loss)",
+      "the bot fails because the bot script is wrong or the harness failed (INCONCLUSIVE; a bot failure is not proof of a game defect until the trace is read)"
+    ]
+  },
+  "human_decides_when": [
+    "always",
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "No automated proxy has been validated as predicting human-reported fun. The research found none. The nearest study tested agent-balanced levels against perceived balance, not enjoyment, with 71 respondents, mixed significance and no multiple-comparison correction. Bot win rates, difficulty curves and first-player advantage describe the game under the modelled agents.",
+    "Fun, fairness-feel and pacing need human play sessions with a validated instrument: the miniPXI or PXI (enjoyment, challenge, ease of control, progress feedback), paired with observed behaviour such as completion, quit points and session length. In the test-retest study in the notes, miniPXI reliabilities ran from .365 (Immersion) to .704 (Enjoyment) with none in the 'good' band, so it supports comparing groups of players on the same game, not single-person repeated measures. PXI construct validity and the criticisms of GEQ were not verified.",
+    "A bot that completes a level proves it can be completed. A bot that fails proves only that the bot failed. A softlock search that finds nothing proves nothing about runs it did not make.",
+    "Difficulty for the stated players, who are not the bots."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal"
+    ],
+    "notes": "Candidate game code runs in a browser on this machine. Restricted material is refused until the browser runs in a real sandbox with default-deny network."
+  },
+  "notes": "OFFICIALS RUNNABLE, NO BRACKET, on purpose. The checks run through the plug-in barclays-officials-game when the venue has it installed (docs/PLUGINS.md), on games that expose its test hook: game.boot, game.bot_completes_level, game.softlock_search and, as advice, game.difficulty_curve. The others are named here and report unverified until built. Everything a game's hook says is the candidate's own claim. The organiser's bot script should define a referee (the rules, checked on every transition) and a situation function (what counts as the same place); without them every passing result carries a major lead. The harness, the bots and the referee run in the candidate's own page, so these checks find honest mistakes and are not a defence against a build written to deceive. Every one of them is a bot proxy. Nothing validated can rank survivors on fun, so there is no model bracket: fun, felt difficulty and pacing are established only by playtests with people, reported separately."
+}

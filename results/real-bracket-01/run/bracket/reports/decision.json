@@ -1,0 +1,277 @@
+{
+  "campaign_id": "real-bracket-01",
+  "composites": {
+    "baseline": 80.0,
+    "faithful-plain": 95.0,
+    "faithful-warm": 82.5
+  },
+  "cycle": 1,
+  "decision": {
+    "acceptance_state": "pending_owner",
+    "baseline_comparison": {
+      "faithful-plain": {
+        "delta": 15.0,
+        "explanation": "weighted composite delta 15.0 against required 5.0",
+        "materially_better": true,
+        "pair": "inconclusive",
+        "promotable": false
+      },
+      "faithful-warm": {
+        "delta": 2.5,
+        "explanation": "weighted composite delta 2.5 against required 5.0",
+        "materially_better": false,
+        "pair": "inconclusive",
+        "promotable": false
+      }
+    },
+    "baseline_id": "baseline",
+    "campaign_id": "real-bracket-01",
+    "contract_hash": "54dc0e71619e21d1cef1ecfa23a4e57e6d95df5c00bb8eac2b244937a0cafde4",
+    "coverage": {
+      "complete_pairs": 1,
+      "finalists": 3,
+      "incomplete_pairs": [
+        [
+          "faithful-plain",
+          "baseline"
+        ],
+        [
+          "faithful-warm",
+          "baseline"
+        ]
+      ]
+    },
+    "cycle": 1,
+    "dissent": [],
+    "eligible": [
+      "baseline",
+      "faithful-warm"
+    ],
+    "flags": [
+      "COVERAGE_INCOMPLETE",
+      "MODEL_DIVERSITY_LIMITED",
+      "PRICE_UNKNOWN",
+      "ROLE_OVERLAP",
+      "SINGLE_TOURNAMENT",
+      "UNCALIBRATED_PANEL"
+    ],
+    "ineligible": {
+      "faithful-plain": [
+        "gate no-new-claims failed: The summary line asserts that the program 'reached a lot of students', an evaluative claim about scale. The reference gives only the count (4,218 students, 37 schools) and no denominator or benchmark,"
+      ]
+    },
+    "operational_status": "COMPLETE",
+    "ranking": [
+      {
+        "candidate_id": "faithful-plain",
+        "composite": 95.0,
+        "played": 1,
+        "points": 1.0
+      },
+      {
+        "candidate_id": "faithful-warm",
+        "composite": 82.5,
+        "played": 1,
+        "points": 0.0
+      },
+      {
+        "candidate_id": "baseline",
+        "composite": 80.0,
+        "played": 0,
+        "points": 0.0
+      }
+    ],
+    "reasons": [
+      "faithful-warm vs baseline: pair result inconclusive; composite delta +2.50 against a threshold of 5.00; not promotable",
+      "the comparisons needed for a decision are incomplete or open; the strongest observed eligible candidates are listed without a recommendation",
+      "2 finalist pair(s) lack a conclusive result"
+    ],
+    "recommended": [],
+    "scope": "3 candidates in task unit real-bracket-01; rubric editorial-revision-r1 v1; cycle 1; winner is relative to this tested set",
+    "selected_hashes": {
+      "baseline": "f8e0cb28a22e98434287c46cd67308b8e4ba03ed089b084fafb9259f3b6eb986",
+      "faithful-warm": "eb7860e452bef08778bdd7edde004c7060104511986af4634342f98163955364"
+    },
+    "shortlist": [
+      "baseline",
+      "faithful-warm"
+    ],
+    "status": "INCONCLUSIVE"
+  },
+  "diagnostics": {
+    "candidates": {
+      "baseline": {
+        "inconclusive": 2,
+        "missing_ballots": 0
+      },
+      "faithful-plain": {
+        "inconclusive": 1,
+        "missing_ballots": 0
+      },
+      "faithful-warm": {
+        "inconclusive": 1,
+        "missing_ballots": 0
+      }
+    },
+    "flags": [],
+    "judges": {
+      "claude-haiku": {
+        "abstain_rate": 0.0,
+        "ballots": 6,
+        "both_order_matches": 3,
+        "display_a_rate": 0.5,
+        "flip_rate": 0.0,
+        "matches": 3,
+        "valid": 6
+      },
+      "claude-sonnet": {
+        "abstain_rate": 0.6666666666666666,
+        "ballots": 6,
+        "both_order_matches": 3,
+        "display_a_rate": 0.5,
+        "flip_rate": 0.6666666666666666,
+        "matches": 3,
+        "valid": 6
+      }
+    }
+  },
+  "eligibility": {
+    "baseline": {
+      "candidate_id": "baseline",
+      "contract_hash": "54dc0e71619e21d1cef1ecfa23a4e57e6d95df5c00bb8eac2b244937a0cafde4",
+      "floor_failures": [],
+      "gates": {
+        "no-new-claims": "pass"
+      },
+      "missing_criteria": [],
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-plain": {
+      "candidate_id": "faithful-plain",
+      "contract_hash": "54dc0e71619e21d1cef1ecfa23a4e57e6d95df5c00bb8eac2b244937a0cafde4",
+      "floor_failures": [],
+      "gates": {
+        "no-new-claims": "fail"
+      },
+      "missing_criteria": [],
+      "reasons": [
+        "gate no-new-claims failed: The summary line asserts that the program 'reached a lot of students', an evaluative claim about scale. The reference gives only the count (4,218 students, 37 schools) and no denominator or benchmark,"
+      ],
+      "status": "ineligible"
+    },
+    "faithful-warm": {
+      "candidate_id": "faithful-warm",
+      "contract_hash": "54dc0e71619e21d1cef1ecfa23a4e57e6d95df5c00bb8eac2b244937a0cafde4",
+      "floor_failures": [],
+      "gates": {
+        "no-new-claims": "pass"
+      },
+      "missing_criteria": [],
+      "reasons": [],
+      "status": "eligible"
+    }
+  },
+  "scores": {
+    "baseline": {
+      "argument": 75.0,
+      "clarity": 75.0,
+      "economy": 75.0,
+      "voice": 100.0
+    },
+    "faithful-plain": {
+      "argument": 100.0,
+      "clarity": 100.0,
+      "economy": 75.0,
+      "voice": 100.0
+    },
+    "faithful-warm": {
+      "argument": 87.5,
+      "clarity": 87.5,
+      "economy": 75.0,
+      "voice": 75.0
+    }
+  },
+  "usage": {
+    "by_model": {
+      "claude-haiku": {
+        "calls": 23,
+        "tokens": 0
+      },
+      "claude-sonnet": {
+        "calls": 13,
+        "tokens": 0
+      }
+    },
+    "by_role": {
+      "challenger": {
+        "calls": 2,
+        "tokens": 0
+      },
+      "gate_check": {
+        "calls": 5,
+        "tokens": 0
+      },
+      "judge_grade": {
+        "calls": 8,
+        "tokens": 0
+      },
+      "judge_pair": {
+        "calls": 15,
+        "tokens": 0
+      },
+      "verifier": {
+        "calls": 6,
+        "tokens": 0
+      }
+    },
+    "calls_reserved": 0,
+    "calls_used": 36,
+    "tokens_reserved": 0,
+    "tokens_used": 0
+  },
+  "win_matrix": {
+    "cells": {
+      "baseline": {
+        "faithful-plain": "inconclusive",
+        "faithful-warm": "inconclusive"
+      },
+      "faithful-plain": {
+        "baseline": "inconclusive",
+        "faithful-warm": "win"
+      },
+      "faithful-warm": {
+        "baseline": "inconclusive",
+        "faithful-plain": "loss"
+      }
+    },
+    "ids": [
+      "baseline",
+      "faithful-plain",
+      "faithful-warm"
+    ],
+    "incomplete_pairs": [
+      [
+        "baseline",
+        "faithful-plain"
+      ],
+      [
+        "baseline",
+        "faithful-warm"
+      ]
+    ],
+    "played": {
+      "baseline": 0,
+      "faithful-plain": 1,
+      "faithful-warm": 1
+    },
+    "points": {
+      "baseline": 0.0,
+      "faithful-plain": 1.0,
+      "faithful-warm": 0.0
+    }
+  },
+  "work_states": {
+    "accepted": 29
+  }
+}

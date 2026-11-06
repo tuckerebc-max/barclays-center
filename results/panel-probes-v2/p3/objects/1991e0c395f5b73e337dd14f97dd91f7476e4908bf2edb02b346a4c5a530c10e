@@ -1,0 +1,66 @@
+{
+  "applies_to": "all",
+  "authority": "advise",
+  "candidate_content_hash": "8c1fae75a680fe69b54e16e48f196394cde45e999e61173d12ca7574d582e6db",
+  "candidate_id": "baseline",
+  "duration_ms": 181,
+  "findings": [
+    {
+      "claim": "test_visible.Visible.test_unsorted_disjoint did not pass",
+      "evidence": {
+        "trace_tail_untrusted": " [[1, 2], [5, 7]])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: [[5, 7]] != [[1, 2], [5, 7]]\n\nFirst differing element 0:\n[5, 7]\n[1, 2]\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n[5, 7]\n\n- [[5, 7]]\n+ [[1, 2], [5, 7]]\n"
+      },
+      "id": "T-test_unsorted_disjoint",
+      "locator": "suite:visible_tests",
+      "severity": "critical"
+    }
+  ],
+  "is_baseline": true,
+  "kind": "executable",
+  "leads": [],
+  "metrics": {
+    "candidate_calls": 3,
+    "candidate_seconds": 0.004,
+    "failed": 1,
+    "opaque_returns": 0,
+    "passed": 2,
+    "seconds": 0.074,
+    "skipped": 0,
+    "tests_run": 3
+  },
+  "official": "py.exec_tests",
+  "official_id": "visible",
+  "official_version": "0.2.0",
+  "receipt": {
+    "attempts": 1,
+    "budget_seconds": 20.0,
+    "call_timeout_seconds": 10.0,
+    "candidate_content_hash": "8c1fae75a680fe69b54e16e48f196394cde45e999e61173d12ca7574d582e6db",
+    "candidate_stderr_bytes": 0,
+    "candidate_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": "oracle: python -I -S -B <oracle>; worker: unshare -r -n -m -p -f [--kill-child] sh <jail> ... chroot <root> python -I -S -B <worker>",
+    "exit_code": 0,
+    "filesystem": "isolated (chroot in a private mount namespace: interpreter and candidate files only, read-only)",
+    "harness_sha256": "26efefd39a2e962b9ca9ead8f2ee32e5111d3e13a2004b1694c6f036f38dd355",
+    "kill_on_exit": true,
+    "network": "denied (network namespace)",
+    "oracle_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "oracle_stdout_sha256": "4a9fa651a5e5913fb7cfb9b3271fc9ca7f8ed8380556cb8cf508d8880d83bfca",
+    "oracle_timed_out": false,
+    "process": "the candidate runs in its own process; the test oracle never imports it",
+    "result_authenticated": true,
+    "rlimits": "applied to the worker",
+    "suite": "visible_tests",
+    "suite_sha256": "a891e0db59d4653eaf9782f5c29512ae446e3e018dd7ae69af400ff48f2b7b4d",
+    "timed_out": false,
+    "timeout_seconds": 20.0,
+    "wall_seconds": 0.119
+  },
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "1 of 3 test(s) in 'visible_tests' did not pass"
+}

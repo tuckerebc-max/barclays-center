@@ -1,0 +1,34 @@
+{
+  "description": "Round robin: 3 pairing rounds over 3 unchanged candidates (3 matches), 2 judges per match, both orders, 1 tournament per cycle, 1 challenge exchange for the top 1 plus baseline, 0 revision cycles.",
+  "plan": {
+    "call_limit": 120,
+    "challenge_calls_max": 22,
+    "challenged": 2,
+    "complete_pass_rounds": 3,
+    "cycles": 1,
+    "description": "Round robin: 3 pairing rounds over 3 unchanged candidates (3 matches), 2 judges per match, both orders, 1 tournament per cycle, 1 challenge exchange for the top 1 plus baseline, 0 revision cycles.",
+    "finals_judge_calls_max": 0,
+    "finals_new_matches_max": 0,
+    "finals_size": 3,
+    "fits_call_limit": true,
+    "format": "round_robin",
+    "gate_check_calls": 3,
+    "generation_calls": 0,
+    "grading_calls": 6,
+    "judges_per_match": 2,
+    "matches_per_tournament": 3,
+    "n_candidates": 3,
+    "orders": 2,
+    "partial_pass": false,
+    "qualification_judge_calls": 12,
+    "retry_allowance": 5,
+    "rounds": 3,
+    "total_calls_upper": 48,
+    "tournaments": 1,
+    "warnings": [
+      "Panel has 1 families; single-family panel (MODEL_DIVERSITY_LIMITED).",
+      "Only 1 tournament per cycle; no cross-tournament stability claim.",
+      "Some judges have no dated calibration for this task: results are provisional (UNCALIBRATED_PANEL)."
+    ]
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "audience": "School-board members reading before a budget vote",
+  "baseline": "baseline",
+  "bout_id": "attacks-editorial",
+  "candidates": [
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/a-footnote.md"
+        }
+      ],
+      "id": "a-footnote"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/a-negate.md"
+        }
+      ],
+      "id": "a-negate"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/a-quotes.md"
+        }
+      ],
+      "id": "a-quotes"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/a-reverse.md"
+        }
+      ],
+      "id": "a-reverse"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/faithful-plain.md"
+        },
+        {
+          "path": "z-appendix.md",
+          "source": "candidates/a-second-file.md"
+        }
+      ],
+      "id": "a-second-file"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/a-swap.md"
+        }
+      ],
+      "id": "a-swap"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/baseline.md"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/faithful-plain.md"
+        }
+      ],
+      "id": "faithful-plain"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-british.md"
+        }
+      ],
+      "id": "fp-british"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-dollars.md"
+        }
+      ],
+      "id": "fp-dollars"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-ellipsis.md"
+        }
+      ],
+      "id": "fp-ellipsis"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-evaluation.md"
+        }
+      ],
+      "id": "fp-evaluation"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-newdate.md"
+        }
+      ],
+      "id": "fp-newdate"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-paraphrase6.md"
+        }
+      ],
+      "id": "fp-paraphrase6"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-space-thousands.md"
+        }
+      ],
+      "id": "fp-space-thousands"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/fp-spelled37.md"
+        }
+      ],
+      "id": "fp-spelled37"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/x-ordinal.md"
+        }
+      ],
+      "id": "x-ordinal"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/y-words.md"
+        }
+      ],
+      "id": "y-words"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/y-reuse-pct.md"
+        }
+      ],
+      "id": "y-reuse-pct"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/y-percent-word.md"
+        }
+      ],
+      "id": "y-percent-word"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/y-unquoted-attrib.md"
+        }
+      ],
+      "id": "y-unquoted-attrib"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/f-roundword.md"
+        }
+      ],
+      "id": "f-roundword"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/f-about-4000.md"
+        }
+      ],
+      "id": "f-about-4000"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/f-units.md"
+        }
+      ],
+      "id": "f-units"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/r-bare-700.md"
+        }
+      ],
+      "id": "r-bare-700"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/r-about-700.md"
+        }
+      ],
+      "id": "r-about-700"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/r-swap-700.md"
+        }
+      ],
+      "id": "r-swap-700"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/q-third.md"
+        }
+      ],
+      "id": "q-third"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/q-double.md"
+        }
+      ],
+      "id": "q-double"
+    }
+  ],
+  "event": "editorial-revision",
+  "notes": "Attack and false-positive candidates for the text officials, from the independent review. Weigh-in only. Expected outcomes are in ATTACKS.json. Synthetic: the organisation, people and figures do not exist.",
+  "purpose": "Revise the first-year summary so a school-board member can act on it after one read, without changing what it says",
+  "schema": "barclays.bout/0.1",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fact_ledger": "sources/ledger.json",
+    "source_draft": "sources/source.md"
+  }
+}

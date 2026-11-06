@@ -1,0 +1,94 @@
+{
+  "properties": {
+    "allegations": {
+      "items": {
+        "properties": {
+          "candidate": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "candidate",
+          "quote",
+          "claim"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "margin": {
+      "description": "How clearly: 0 none, 1 barely, 5 decisively.",
+      "maximum": 5,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "objections": {
+      "items": {
+        "properties": {
+          "candidate": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "minor",
+              "major",
+              "critical"
+            ]
+          }
+        },
+        "required": [
+          "candidate",
+          "category",
+          "quote",
+          "claim",
+          "severity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "out_of_lane_notes": {
+      "type": "string"
+    },
+    "preference": {
+      "enum": [
+        "A",
+        "B",
+        "tie",
+        "abstain"
+      ]
+    },
+    "reasons": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "preference",
+    "margin",
+    "reasons",
+    "objections",
+    "allegations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,3 @@
+# Byte-exact on every platform. Fixtures, event cards and run objects are hashed; a converted line ending is a
+# different file. Never let git rewrite them.
+* -text

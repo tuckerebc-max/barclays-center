@@ -1,0 +1,21 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "clean-fix": "incomplete"
+  },
+  "flags_include": [
+    "COVERAGE_INCOMPLETE",
+    "UNVERIFIED:clean-fix"
+  ],
+  "frozen_before_first_run": "2026-11-04",
+  "human_required": true,
+  "kind": "missing evidence: the target suite has no tests, so a correct change cannot be verified",
+  "officials": {
+    "clean-fix": {
+      "fail-to-pass": "unverified",
+      "pass-to-pass": "pass"
+    }
+  },
+  "recommended": [],
+  "status": "INCONCLUSIVE"
+}

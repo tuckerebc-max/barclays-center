@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "faithful-plain",
+    "B": "subtle-omission"
+  },
+  "leads_mode": "none",
+  "lens_id": "fact-desk",
+  "lens_sha256": "b1c5507fb756c39ac33490e9bfaffff7ebd4d8f0e4d9b38d19799f41c4021796",
+  "order": "ab",
+  "packet_id": "p-fe995c67b34d",
+  "packet_sha256": "a8051abd23a823db2322f0c490423100201a6761ca84ac86ecc71c4cc79d5cfe",
+  "pair": [
+    "faithful-plain",
+    "subtle-omission"
+  ],
+  "reference_shown": false,
+  "reviewer_slot": "r1"
+}

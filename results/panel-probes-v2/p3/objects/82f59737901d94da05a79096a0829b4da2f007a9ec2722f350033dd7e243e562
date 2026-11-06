@@ -1,0 +1,69 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "a36855504bb640af1337e7f92a53dffb1ff3d3c5d58f5dfa0571ca35a2814de3",
+  "candidate_id": "polished-shallow",
+  "duration_ms": 110,
+  "findings": [
+    {
+      "claim": "1 of 7 test(s) in the held-back suite 'pass_to_pass' did not pass",
+      "evidence": {
+        "note": "test names, inputs and expected values are withheld; whoever holds the suite can match the digests (sha256 of the test id)",
+        "test_digests": [
+          "d56bb69f82b2"
+        ]
+      },
+      "id": "TESTS-FAILED",
+      "locator": "suite:pass_to_pass",
+      "severity": "critical"
+    }
+  ],
+  "is_baseline": false,
+  "kind": "executable",
+  "leads": [],
+  "metrics": {
+    "candidate_calls": 7,
+    "candidate_seconds": 0.004,
+    "failed": 1,
+    "opaque_returns": 0,
+    "passed": 6,
+    "seconds": 0.067,
+    "skipped": 0,
+    "tests_run": 7
+  },
+  "official": "py.exec_tests",
+  "official_id": "pass-to-pass",
+  "official_version": "0.2.0",
+  "receipt": {
+    "attempts": 1,
+    "budget_seconds": 20.0,
+    "call_timeout_seconds": 10.0,
+    "candidate_content_hash": "a36855504bb640af1337e7f92a53dffb1ff3d3c5d58f5dfa0571ca35a2814de3",
+    "candidate_stderr_bytes": 0,
+    "candidate_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command": "oracle: python -I -S -B <oracle>; worker: unshare -r -n -m -p -f [--kill-child] sh <jail> ... chroot <root> python -I -S -B <worker>",
+    "exit_code": 0,
+    "filesystem": "isolated (chroot in a private mount namespace: interpreter and candidate files only, read-only)",
+    "harness_sha256": "26efefd39a2e962b9ca9ead8f2ee32e5111d3e13a2004b1694c6f036f38dd355",
+    "kill_on_exit": true,
+    "network": "denied (network namespace)",
+    "oracle_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "oracle_stdout_sha256": "d7d91fda3b1cff578754af4c1426393432f581d4d8fd53d468145f1c7cebb960",
+    "oracle_timed_out": false,
+    "process": "the candidate runs in its own process; the test oracle never imports it",
+    "result_authenticated": true,
+    "rlimits": "applied to the worker",
+    "suite": "pass_to_pass",
+    "suite_sha256": "ea21d529f4417318bc572ccbff09e4f18974f1686289d62e1e9ba01fc73922c6",
+    "timed_out": false,
+    "timeout_seconds": 20.0,
+    "wall_seconds": 0.109
+  },
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "1 of 7 test(s) in 'pass_to_pass' did not pass"
+}

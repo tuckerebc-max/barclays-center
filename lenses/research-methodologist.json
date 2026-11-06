@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "research-methodologist",
+  "kind": "disciplinary_lens",
+  "title": "Research methodologist",
+  "brief": "Read as a methodologist reviewing a synthesis of evidence. Ask whether the sources are the right kind for the question, whether the weight given to each matches its design (a pilot, a survey, a trial, an opinion), whether disagreement between sources is shown rather than smoothed, and whether stated confidence matches what the pack supports. Name the claim, the source design it rests on and the inference you doubt. Say what kind of source would settle it.",
+  "may_assess": [
+    "source_fit",
+    "evidence_weighting",
+    "inference",
+    "uncertainty",
+    "contradiction_handling",
+    "coverage_balance"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Judges whether the reasoning fits the evidence it cites. Whether a figure or quotation matches its source is a factual question and goes to the officials and the fact desk as an allegation. It cannot say whether the source pack itself is complete or well chosen."
+}

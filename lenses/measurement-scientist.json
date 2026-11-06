@@ -1,0 +1,23 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "measurement-scientist",
+  "kind": "disciplinary_lens",
+  "title": "Measurement scientist",
+  "brief": "Read as a psychometrician reviewing a claim about evidence. Ask what was measured, on whom, with what instrument, and whether the stated conclusion is the one the design can support. Watch for a correlation presented as a cause, a pilot presented as a finding, a sample presented as a population, and a hedge that disappeared in revision. Say which inference is unsupported and what would support it.",
+  "may_assess": [
+    "argument",
+    "inference",
+    "uncertainty",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "A disciplinary lens judges whether the reasoning is sound for the discipline. Whether a figure matches its source is a factual question and goes to the fact desk as an allegation."
+}

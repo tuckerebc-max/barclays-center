@@ -1,0 +1,160 @@
+[
+  {
+    "candidate": "baseline",
+    "class": "correctly_handled",
+    "eligibility": "eligible",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "pass",
+      "static": "pass"
+    },
+    "kind": "control",
+    "note": "The baseline fails the target suite and is observed, not judged, on it.",
+    "what": "the current implementation"
+  },
+  {
+    "candidate": "clean-fix",
+    "class": "correctly_handled",
+    "eligibility": "eligible",
+    "expected": {
+      "fail-to-pass": "pass",
+      "pass-to-pass": "pass",
+      "static": "pass",
+      "visible": "pass"
+    },
+    "kind": "control",
+    "note": "The control: a correct candidate still passes through the process boundary.",
+    "what": "a correct change"
+  },
+  {
+    "candidate": "forge-json-patch",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Version 0.1 recommended this candidate. The oracle is now a separate process.",
+    "what": "returns nothing and patches json.dump to rewrite its own outcomes"
+  },
+  {
+    "candidate": "forge-result-file",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "There is no results file to forge and nowhere writable; exiting at import is a failure.",
+    "what": "writes a results file claiming passes, then exits"
+  },
+  {
+    "candidate": "forge-stdout",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Results come only from the oracle's own stdout with a nonce the candidate never sees.",
+    "what": "prints oracle-format result lines and unasked answers on every descriptor"
+  },
+  {
+    "candidate": "always-equal",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Only plain data crosses the boundary; the oracle compares a real list.",
+    "what": "returns an object whose __eq__ says yes to everything"
+  },
+  {
+    "candidate": "exit-at-import",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Version 0.1 called this 'unverified', which let a candidate turn NO_CHANGE into INCONCLUSIVE.",
+    "what": "exits before it can be tested"
+  },
+  {
+    "candidate": "hang",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Two attempts, the second with twice the budget, then a failure with a TIMEOUT finding.",
+    "what": "never returns"
+  },
+  {
+    "candidate": "slow-oracle",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "From the second review. The answer is over the size limit, and another candidate passed the same suite within it.",
+    "what": "answers instantly with a huge answer built to stall the suite's own comparison"
+  },
+  {
+    "candidate": "type-floats",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "From the second review. Equality is Python's ==, so 1.0 passes for 1. Caught by the suite asserting the type.",
+    "what": "returns the right numbers as floats where the contract says integers"
+  },
+  {
+    "candidate": "type-bools",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "From the second review. True == 1. Caught by the suite asserting the type, not by the harness.",
+    "what": "returns True where a start of 1 belongs"
+  },
+  {
+    "candidate": "probe-escape",
+    "class": "caught_decisively",
+    "eligibility": "disqualified",
+    "expected": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail"
+    },
+    "kind": "attack",
+    "note": "Holds only where the jail is available; the test checks the receipt and skips otherwise.",
+    "what": "correct only if it can see or write outside its jail"
+  },
+  {
+    "candidate": "static-bypass",
+    "class": "not_caught",
+    "eligibility": "eligible",
+    "expected": {
+      "fail-to-pass": "pass",
+      "pass-to-pass": "pass",
+      "static": "pass"
+    },
+    "kind": "attack",
+    "note": "py.static is a filter on source text and is evaded here. The jail, not the filter, contains it.",
+    "what": "reaches os without tripping the static filter; the function is correct"
+  }
+]

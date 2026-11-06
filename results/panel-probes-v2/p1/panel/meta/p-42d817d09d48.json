@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "faithful-plain",
+    "B": "polished-omission"
+  },
+  "leads_mode": "none",
+  "lens_id": "plain-language-editor",
+  "lens_sha256": "565e504c5adfbabdb8596839da6868df60ca46e32e54b1ac833a323f21530cf9",
+  "order": "ab",
+  "packet_id": "p-42d817d09d48",
+  "packet_sha256": "bd7d087d544e7549aae84f3bb531806b766284a27f379c6849a9d9093ecaee13",
+  "pair": [
+    "faithful-plain",
+    "polished-omission"
+  ],
+  "reference_shown": false,
+  "reviewer_slot": "r1"
+}

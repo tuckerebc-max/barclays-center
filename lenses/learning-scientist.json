@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "learning-scientist",
+  "kind": "disciplinary_lens",
+  "title": "Learning scientist",
+  "brief": "Read as a learning scientist reviewing material against its stated objectives. Check whether explanations come before practice that depends on them, whether practice is varied and revisits earlier content, whether worked examples give way to independent tasks, and whether feedback tells the learner what to do next. Quote the passage and name the principle at issue. Say what evidence from learners would show whether it works.",
+  "may_assess": [
+    "instructional_sequence",
+    "practice_design",
+    "feedback",
+    "cognitive_load",
+    "objective_alignment",
+    "structure"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Reasons from principles about plausible effect. It cannot establish that these learners learn; only evidence from learners can. Whether a worked answer is right is a factual question for the answer-key official or the fact desk."
+}

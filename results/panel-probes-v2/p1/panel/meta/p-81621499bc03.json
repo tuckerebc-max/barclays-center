@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "polished-omission",
+    "B": "faithful-plain"
+  },
+  "leads_mode": "none",
+  "lens_id": "measurement-scientist",
+  "lens_sha256": "7e2cd0a3ef0a2bbdfcb136d952d4e93dc33733aec60f4aebd943c0a04d2fc6f3",
+  "order": "ba",
+  "packet_id": "p-81621499bc03",
+  "packet_sha256": "4a4595a00f71a655f579a0742ae5bdd27adc49260ef68271b5863215a6f81586",
+  "pair": [
+    "faithful-plain",
+    "polished-omission"
+  ],
+  "reference_shown": false,
+  "reviewer_slot": "r2"
+}

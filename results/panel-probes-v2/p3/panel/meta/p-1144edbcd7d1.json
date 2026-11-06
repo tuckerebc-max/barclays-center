@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "clean-fix",
+    "B": "polished-shallow"
+  },
+  "leads_mode": "none",
+  "lens_id": "maintainer",
+  "lens_sha256": "f741080345e55c652c672836eb157beb60f17b2a0bc29d8254a2358c6eb595ad",
+  "order": "ab",
+  "packet_id": "p-1144edbcd7d1",
+  "packet_sha256": "e90440a06f81483b54fc544ac94e95dc76b30a5515197926188f4bb6b03822c7",
+  "pair": [
+    "clean-fix",
+    "polished-shallow"
+  ],
+  "reference_shown": true,
+  "reviewer_slot": "r2"
+}

@@ -1,0 +1,42 @@
+{
+  "baseline_fails_target": false,
+  "eligibility": {
+    "baseline": {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "is_baseline": true,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-plain": {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "subtle-omission": {
+      "content_hash": "4d3f7b31fa8030f921488c804d5ea923aeb1071eb95ddbd07f839d78a778af36",
+      "is_baseline": false,
+      "reasons": [
+        "fact-ledger: 1 of 7 must-keep facts missing"
+      ],
+      "status": "disqualified"
+    }
+  },
+  "result_objects": [
+    "86c196fd358d901451748b79f3d005efb95dffad85c2d637701cc20b810a1363",
+    "59ff5fb725880ae5f78114991cb5b152e6b53d9aa555ecd108a61d9bb205725f",
+    "94d89ad942e1a1c3d2d25697bf03d2060cb53c183a2039436a6811e1d929a9f5",
+    "577eee99791f3606bba5ef4336f6d0db45f56da98ae568479bd2328e4951bf80",
+    "63df2223e6ed8d5a927815d82742db5882f1954c539a94b7dbeeea7d1e904ee6",
+    "07196cfe779c3f30cf7235e9f1a0722b5f88d638d171a4b27ed0dd1004e66e54",
+    "47bb91594f918d6394d96a51ec5c749a524a80e8be61ca5225b5a31ef530f2f9",
+    "4a870234b65dd00bcfe5efd7aa35dd5567b12c21a27267335b926b2153895003",
+    "7d731e317c78dc8ce1dba1cb9b97a62545e60c736ede464b6cb69b0b832c19fd",
+    "941908559f3afbf2afb8b05b366169b6ca3347c152289f6f4e3f4739a4a5af31",
+    "54d5fc8430418b226ab06c0881f50ee96ab3543c4b370f1b41ff615afac9a509",
+    "275e3f66717bb09ddd608df65c50e0f4f087d922fc617b4936487bece0098426",
+    "e700b9e487d64cef54baeacda3396221ffd21e35ce9b02437873abdb0954037e",
+    "fd5b52a89a96258e89a15bcf3d97153c66bbfefa994fae88b4eeef8e665dc6bb",
+    "ad22025a5e39d3a158ba0ee37bae263439836f55f6ed2b4e259a350a07a2a92b"
+  ]
+}

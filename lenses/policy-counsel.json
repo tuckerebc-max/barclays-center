@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "policy-counsel",
+  "kind": "disciplinary_lens",
+  "title": "Policy counsel",
+  "brief": "Read as counsel reviewing a policy for drafting defects. Look for obligations that grew weaker or stronger without the draft saying so (shall, must, should, may), terms used loosely after being defined, exceptions that swallow the rule, provisions that conflict, and duties assigned to no one. Quote the provision and say how its meaning changed from the current version. You are reviewing drafting. You are not giving legal advice and you do not decide what a court or regulator would do.",
+  "may_assess": [
+    "drafting_precision",
+    "obligation_strength",
+    "internal_coherence",
+    "scope",
+    "ambiguity",
+    "structure"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "A drafting reader, not a lawyer. It cannot establish legal effect, compliance with any statute or regulation, or enforceability; those need licensed counsel. A claimed conflict with an outside source is an allegation for the fact desk or counsel to verify."
+}

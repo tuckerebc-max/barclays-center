@@ -1,0 +1,26 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+  "candidate_id": "faithful-plain",
+  "duration_ms": 0,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "quotations_checked": 1,
+    "unverified_quotations": 0
+  },
+  "official": "text.quotes",
+  "official_id": "quotes",
+  "official_version": "0.1.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "1 quotation(s) verified verbatim"
+}

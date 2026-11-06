@@ -1,0 +1,21 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "overfit": "disqualified",
+    "polished-shallow": "disqualified"
+  },
+  "flags_include": [
+    "TARGET_UNMET"
+  ],
+  "frozen_before_first_run": "2026-11-04",
+  "kind": "no candidate deserves promotion (every challenger fails hidden tests)",
+  "officials": {
+    "overfit": {
+      "fail-to-pass": "fail",
+      "pass-to-pass": "fail",
+      "visible": "pass"
+    }
+  },
+  "recommended": [],
+  "status": "NO_CHANGE"
+}

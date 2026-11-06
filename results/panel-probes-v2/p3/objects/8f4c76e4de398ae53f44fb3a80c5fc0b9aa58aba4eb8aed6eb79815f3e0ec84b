@@ -1,0 +1,217 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "software-change",
+  "title": "Software change: works in use, not just on the visible tests",
+  "genre": "software-change",
+  "status": "runnable",
+  "objective": "Promote a code change only if it passes the tests the author could not see, breaks nothing that worked, and is the better change to maintain. A change is never accepted because a model says it looks good.",
+  "audience": "Set per bout: the maintainers who will own the code.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one or more Python source files; file names are fixed by the bout",
+    "required_sources": [
+      "task",
+      "visible_tests",
+      "pass_to_pass",
+      "fail_to_pass"
+    ],
+    "suites": "visible_tests are shown to authors. pass_to_pass (behaviour that works today and must keep working) and fail_to_pass (the target behaviour) are held back from authors. The vocabulary is SWE-bench's."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "bracket",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "static",
+      "official": "py.static",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "forbid_imports": [
+          "os",
+          "sys",
+          "subprocess",
+          "socket",
+          "unittest",
+          "inspect",
+          "importlib",
+          "builtins",
+          "ctypes",
+          "pathlib",
+          "shutil",
+          "threading",
+          "multiprocessing",
+          "atexit",
+          "signal",
+          "gc",
+          "pickle",
+          "urllib",
+          "http"
+        ],
+        "forbid_calls": [
+          "eval",
+          "exec",
+          "compile",
+          "__import__",
+          "open",
+          "globals"
+        ],
+        "special_case_threshold": 2,
+        "visible_suite": "visible_tests"
+      },
+      "why": "The candidate must parse, and a pure-function task needs none of these imports. This is a filter on the source text: it can be evaded (the independent review did) and it is not what protects the harness. The harness is protected by running the candidate in a separate, jailed process (py.exec_tests)."
+    },
+    {
+      "id": "visible",
+      "official": "py.exec_tests",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "suite": "visible_tests",
+        "timeout_seconds": 20,
+        "reveal": "traces"
+      },
+      "why": "Recorded so the report can show 'passes the visible tests' next to what happened on the hidden ones. Never decisive.",
+      "bout_may_set": [
+        "timeout_seconds",
+        "call_timeout_seconds"
+      ]
+    },
+    {
+      "id": "pass-to-pass",
+      "official": "py.exec_tests",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "suite": "pass_to_pass",
+        "timeout_seconds": 20,
+        "reveal": "counts"
+      },
+      "why": "What worked must still work. Applies to the baseline too: a baseline that fails its own regression suite is not a valid comparator.",
+      "bout_may_set": [
+        "timeout_seconds",
+        "call_timeout_seconds"
+      ]
+    },
+    {
+      "id": "fail-to-pass",
+      "official": "py.exec_tests",
+      "authority": "disqualify",
+      "applies_to": "challengers",
+      "params": {
+        "suite": "fail_to_pass",
+        "timeout_seconds": 20,
+        "reveal": "counts"
+      },
+      "why": "The target behaviour, tested on inputs the author never saw. The baseline is observed, not judged: it is expected to fail.",
+      "bout_may_set": [
+        "timeout_seconds",
+        "call_timeout_seconds"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "maintainability",
+      "weight": 0.4,
+      "definition": "A maintainer who did not write it can read it, see why it is correct and change it safely."
+    },
+    {
+      "id": "generality",
+      "weight": 0.35,
+      "definition": "The approach handles the stated contract as a whole rather than by enumerating cases."
+    },
+    {
+      "id": "economy",
+      "weight": 0.25,
+      "definition": "No code, comment or abstraction beyond what the task needs."
+    }
+  ],
+  "model_gates": [],
+  "lenses": [
+    "maintainer",
+    "adversarial-tester"
+  ],
+  "evidence_required": [
+    "The task statement and all three suites, hashed.",
+    "Each candidate's exact files, hashed.",
+    "For every suite run: the receipt (process and jail state, time budgets, attempts, hashes of output) and per-test outcomes. For the two held-back suites the result shows counts and digests of test ids, never test names, inputs or expected values.",
+    "For the bracket: the controller's decision record."
+  ],
+  "hard_disqualifiers": [
+    "Does not parse, or uses a forbidden import or builtin (a filter on the source text; it can be evaded and is not what protects the test harness).",
+    "Any pass_to_pass test fails or errors, the candidate will not import, exits, or twice fails to answer in time.",
+    "Any fail_to_pass test fails or errors, the candidate will not import, exits, or twice fails to answer in time (challengers)."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Judges compare only candidates that already passed execution. They rank maintainability; they do not rule on correctness.",
+    "calibration": "No judge route has been scored against maintainer decisions for this genre."
+  },
+  "format": {
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "finalists": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": [
+        "task",
+        "visible_tests"
+      ],
+      "bout_may_set": [
+        "judges_per_match",
+        "grade_judges",
+        "final_judges_per_match",
+        "finalists",
+        "max_model_calls",
+        "allow_single_family",
+        "minimum_family_quorum",
+        "routing",
+        "registry_source"
+      ]
+    },
+    "panel": {
+      "reference_sources": [
+        "task"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "two or more candidates pass every suite and the judges tie or cycle on maintainability (TIED_SHORTLIST)",
+      "every challenger fails a decisive suite (NO_CHANGE, flagged TARGET_UNMET when the baseline still fails the target)",
+      "a suite could not be run for a challenger: the worker would not start, the oracle died, the suite has no tests, or the suite needs something the official cannot carry across a process boundary (INCONCLUSIVE; a harness failure is not a candidate failure)"
+    ]
+  },
+  "human_decides_when": [
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "The hidden suites are the organizer's statement of what 'in use' means. Behaviour they do not exercise is unverified, however many tests pass.",
+    "Whether maintainers would merge the change. Test-passing changes are merged far less often than they pass; only maintainers can say.",
+    "User-facing behaviour beyond the function contract. That needs an end-to-end test or a real user."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal"
+    ],
+    "notes": "Candidate code executes on this machine, in a separate process and, on Linux, a namespace jail with no network and a read-only private root. That is isolation suitable for the Navy Yard's own lanes, not a hardened sandbox: restricted material is refused until the execution official runs under bubblewrap, nsjail or a disposable VM."
+  },
+  "notes": "Runnable for Python candidates whose contract is module-level functions over plain data, with unittest suites. Suites that need candidate classes, callbacks or object identity are reported 'unverified'. Other languages need their own execution official."
+}

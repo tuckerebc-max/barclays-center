@@ -1,0 +1,33 @@
+{
+  "applies_to": "all",
+  "authority": "advise",
+  "candidate_content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+  "candidate_id": "faithful-warm",
+  "duration_ms": 1,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [
+    {
+      "basis": "heuristic",
+      "id": "H-F7",
+      "locator": "fact:F7",
+      "note": "Near fact F7 the source hedges with ['not yet'] and the candidate does not. Check whether the claim was strengthened. Candidate: \"the question of cause goes to a randomized study planned for 2026-27.\"",
+      "severity": "major"
+    }
+  ],
+  "metrics": {
+    "leads": 1
+  },
+  "official": "text.hedge_shift",
+  "official_id": "hedge-shift",
+  "official_version": "0.1.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "1 lead(s) for reviewers; this official never fails a candidate"
+}

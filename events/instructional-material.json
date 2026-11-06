@@ -1,0 +1,229 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "instructional-material",
+  "title": "Instructional material: right on paper, effective only with learners",
+  "genre": "instructional-material",
+  "status": "specified",
+  "objective": "Promote lessons, tasks or explanations only if every stated learning objective is addressed, machine-checkable answer keys are correct, the reading level sits in the stated band and the accessibility basics hold; then choose the better material on pedagogical quality for the stated learners. A tournament cannot show that learners learn.",
+  "audience": "Set per bout. The bout names the learners (age or grade, prior knowledge), the teachers who will use the material and the setting.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one Markdown or HTML file, or a flat set of files, holding the lesson, tasks, explanations and answer key",
+    "required_sources": [
+      "objectives",
+      "reading_band",
+      "curriculum_reference"
+    ],
+    "optional_sources": [
+      "answer_key_spec",
+      "glossary"
+    ],
+    "objectives": "The stated learning objectives, each with an id. Candidate tasks and explanations tag the objective ids they address.",
+    "reading_band": "The target range on a stated readability measure and the text to which it applies (student-facing text, not teacher notes).",
+    "curriculum_reference": "The standards, text or accepted source the explanations must agree with."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "bracket",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "objectives-covered",
+      "official": "edu.objectives_covered",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "objectives": "objectives"
+      },
+      "why": "Each stated objective must be tagged by at least one explanation or task, and each tag must resolve to a stated objective. A tag shows coverage was claimed; the panel judges whether the task really addresses the objective."
+    },
+    {
+      "id": "answer-key",
+      "official": "edu.answer_key",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "checkable": [
+          "arithmetic",
+          "unit_conversion",
+          "single_key_multiple_choice",
+          "key_matches_worked_solution"
+        ],
+        "not_checkable": "not_applicable, never pass"
+      },
+      "why": "A wrong key teaches the wrong answer. Where the answer can be recomputed it is. Items that cannot be machine-checked are marked not applicable and go to reviewers."
+    },
+    {
+      "id": "reading-level",
+      "official": "edu.reading_level",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "metric": "flesch_kincaid_grade",
+        "band": "set per bout",
+        "tolerance": 1.0,
+        "text": "student_facing"
+      },
+      "why": "A gross out-of-band check on student-facing text. Readability formulas are crude, so the tolerance is stated and a pass is not a claim of readability."
+    },
+    {
+      "id": "accessibility-basics",
+      "official": "edu.accessibility_basics",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "checks": [
+          "alt_text_present",
+          "heading_order",
+          "table_headers",
+          "link_text",
+          "no_colour_only_meaning"
+        ]
+      },
+      "why": "Missing alt text, skipped headings and colour-only cues are checkable and keep material from some learners."
+    },
+    {
+      "id": "language-leads",
+      "official": "edu.language_leads",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Terms used before they are introduced, sentences far above the band, and non-inclusive wording, as leads for reviewers."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "explanation_quality",
+      "weight": 0.3,
+      "definition": "Explanations lead the stated learners from what they know to the new idea, with examples that fit, and without introducing a misconception.",
+      "anchors": [
+        {
+          "level": 0,
+          "description": "confusing or misleading"
+        },
+        {
+          "level": 2,
+          "description": "adequate with gaps"
+        },
+        {
+          "level": 4,
+          "description": "learners could follow unaided"
+        }
+      ]
+    },
+    {
+      "id": "task_objective_alignment",
+      "weight": 0.25,
+      "definition": "Each task requires the learner to do what the objective it is tagged to says."
+    },
+    {
+      "id": "scaffolding_and_progression",
+      "weight": 0.25,
+      "definition": "Support fades as competence grows, and practice moves from guided to independent in an order learners can manage."
+    },
+    {
+      "id": "feedback_to_learner",
+      "weight": 0.1,
+      "definition": "Feedback and answer explanations tell the learner what to do next, not only whether they were right."
+    },
+    {
+      "id": "engagement_and_relevance",
+      "weight": 0.1,
+      "definition": "Contexts and tasks are meaningful to the stated learners."
+    }
+  ],
+  "model_gates": [
+    {
+      "id": "no-misconceptions",
+      "definition": "Teaches nothing that the curriculum reference contradicts"
+    }
+  ],
+  "lenses": [
+    "classroom-teacher",
+    "learning-scientist",
+    "measurement-scientist",
+    "plain-language-editor",
+    "fact-desk"
+  ],
+  "evidence_required": [
+    "The objectives, reading band and curriculum reference, hashed.",
+    "Each candidate's exact bytes, hashed.",
+    "For every disqualification: the official, its version, and the objective, item, passage or measure concerned.",
+    "For the answer-key official: each item checked, how it was recomputed, and each item marked not applicable.",
+    "For the bracket: the controller's decision record with its contract hash, ballots and judge diagnostics.",
+    "For the human_review stage: what teacher and learner evidence was gathered, how, and from whom."
+  ],
+  "hard_disqualifiers": [
+    "A stated objective has no task or explanation tagged to it.",
+    "A machine-checkable answer key is wrong.",
+    "Student-facing text falls outside the stated reading band by more than the tolerance.",
+    "An accessibility basic fails, such as an image with no alternative text."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Judges compare only materials that passed the decisive officials. They rank pedagogical quality. They do not rule on whether learners learn or on the correctness of keys the official could not check.",
+    "calibration": "No judge route has been scored against teacher decisions or learner outcomes for this genre."
+  },
+  "format": {
+    "tournament": "gauntlet then finals",
+    "why": "Objective coverage, answer keys, reading band and accessibility basics are checkable, so they run first and can eliminate every candidate. Pedagogical quality needs readers, so survivors meet in pairwise finals in both orders, with a lens panel for objections. The panel and bracket are a proxy for teacher review and carry no evidence about learners.",
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": [
+        "objectives",
+        "curriculum_reference"
+      ]
+    },
+    "panel": {
+      "reference_sources": [
+        "objectives",
+        "curriculum_reference"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "no candidate passes the decisive officials (NO_ELIGIBLE_CANDIDATE)",
+      "the leading eligible materials tie or beat each other in a cycle (TIED_SHORTLIST)",
+      "no challenger beats the baseline by the material-improvement threshold, when a baseline is named (NO_CHANGE)",
+      "a judge's two display orders disagree and quorum is lost (INCONCLUSIVE)",
+      "most items could not be machine-checked, so the answer-key official verified little (INCONCLUSIVE; it is flagged, not passed)"
+    ]
+  },
+  "human_decides_when": [
+    "always",
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Whether learners learn. Learning effect needs evidence from learners: performance on items tied to the objectives before and after use, ideally against a comparison group, and retention after a delay. A model judge, a teacher-proxy lens and a readability score are not that evidence.",
+    "Whether teachers can use it. That needs real teachers using it with a real class and reporting time, changes made and where students were lost.",
+    "Whether learners who use assistive technology or have other access needs can use it. The accessibility official checks basics on bytes only.",
+    "Whether the assessment items measure what they claim. That needs response data from learners and item analysis.",
+    "Whether the reading-level band is right for these learners. Readability formulas are crude and only observation of learners reading settles it."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal",
+      "restricted"
+    ],
+    "notes": "The officials run locally on the candidate text, which is never executed. The material must contain no learner records. Reviewer and judge routes are cleared separately and fail closed."
+  },
+  "notes": "SPECIFIED, NOT RUNNABLE. To make it runnable build: edu.objectives_covered, custom tag-and-resolve check, no upstream; edu.answer_key, custom recomputation using a restricted expression evaluator that never executes candidate code (no upstream was researched); edu.reading_level, wrapping textstat (MIT; descriptive statistic, not a quality verdict); edu.accessibility_basics, wrapping html-validate (MIT) and axe-core (MPL-2.0) for HTML, and markdownlint (MIT) for Markdown; edu.language_leads, wrapping alex (MIT) and textstat. Also needed: a tagging convention that candidate authors follow, and a convention for marking which items are machine-checkable. 'always' stays in human_decides_when on purpose: no outcome of this event is evidence about learners."
+}

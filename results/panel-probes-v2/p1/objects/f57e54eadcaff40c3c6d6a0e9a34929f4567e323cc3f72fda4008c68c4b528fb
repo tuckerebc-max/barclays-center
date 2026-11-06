@@ -1,0 +1,36 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "aeeb5c8311e2d665289d25eac23dcb26b0e5d863b5d80f394bd1dbfd1b6cd616",
+  "candidate_id": "polished-omission",
+  "duration_ms": 0,
+  "findings": [
+    {
+      "claim": "Quotation does not appear verbatim in the source or the evidence",
+      "evidence": {
+        "quotation": "the results are encouraging and show that tutoring works."
+      },
+      "id": "Q-1",
+      "locator": "L7",
+      "severity": "critical"
+    }
+  ],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "quotations_checked": 1,
+    "unverified_quotations": 1
+  },
+  "official": "text.quotes",
+  "official_id": "quotes",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "1 of 1 quotation(s) not found verbatim"
+}

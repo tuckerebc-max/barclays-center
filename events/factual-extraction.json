@@ -1,0 +1,167 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "factual-extraction",
+  "title": "Factual extraction: scored against gold, not argued about",
+  "genre": "factual-extraction",
+  "status": "specified",
+  "objective": "Choose among extraction candidates (for example CV and publication metadata, or table values) on whether each value is valid under the schema, traceable to a locator in its source, free of fabricated identifiers, and exactly right on a held-out gold subset above the stated threshold. No model judges which extraction reads better.",
+  "audience": "Set per bout. The bout names the downstream use of the extracted records and the cost of a wrong value.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one JSON or JSON Lines file of records that follow the extraction schema, each value carrying a source locator",
+    "required_sources": [
+      "source_documents",
+      "extraction_schema",
+      "gold_subset"
+    ],
+    "optional_sources": [
+      "normalisation_rules"
+    ],
+    "gold_subset": "Human-verified values for a held-out subset of records and fields, withheld from candidates and hashed with the bout. The bout records how the subset was drawn, its size, and the annotators' agreement with each other.",
+    "extraction_schema": "A JSON Schema for the records, with required fields, types, patterns for identifiers and the form a locator takes (document, page or cell, character span)."
+  },
+  "stages": [
+    "weigh_in",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "schema-valid",
+      "official": "extract.schema_valid",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "schema_source": "extraction_schema"
+      },
+      "why": "Records that do not validate cannot be scored or loaded. Checked on bytes."
+    },
+    {
+      "id": "locator-traceable",
+      "official": "extract.locator_traceable",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "match": "exact_after_normalisation",
+        "near_match": "unverified_not_pass"
+      },
+      "why": "Every value must appear at the locator it cites, after Unicode and whitespace normalisation. A near match is reported unverified, never a pass."
+    },
+    {
+      "id": "no-fabricated-ids",
+      "official": "extract.no_fabricated_ids",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "kinds": [
+          "doi",
+          "orcid",
+          "isbn",
+          "issn",
+          "url",
+          "report_number"
+        ],
+        "checksum": true
+      },
+      "why": "An identifier that is not in the source text, or whose check digit fails, is invented. Offline and exact; existence on the web is advisory."
+    },
+    {
+      "id": "gold-agreement",
+      "official": "extract.gold_agreement",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "metric": "exact_match_per_field",
+        "min_exact_agreement": 0.95,
+        "min_gold_items": 50,
+        "interval": "wilson_95",
+        "pass_when": "point_estimate >= min_exact_agreement",
+        "unverified_when": "gold items < min_gold_items"
+      },
+      "why": "The decisive accuracy measure: exact agreement with human-verified values on records the candidate never saw. The threshold and gold size are placeholders the bout states before any candidate is scored."
+    },
+    {
+      "id": "identifier-lookup",
+      "official": "extract.identifier_lookup",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "sources": [
+          "crossref",
+          "openalex",
+          "arxiv"
+        ],
+        "flag_on": "absence_in_all_sources"
+      },
+      "why": "Whether identifiers exist in public registries. Single-source absence is not a finding; a flag is a prompt for a person."
+    },
+    {
+      "id": "candidate-disagreement",
+      "official": "extract.disagreement",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Fields on which candidates differ, outside the gold subset, listed for a reviewer to check against the source."
+    }
+  ],
+  "criteria": [],
+  "model_gates": [],
+  "lenses": [],
+  "evidence_required": [
+    "The source documents (tree hash), the extraction schema and the gold subset, hashed, with the record of how the gold subset was drawn.",
+    "The annotators' agreement on the gold subset, with a chance-corrected statistic.",
+    "Each candidate's exact bytes, hashed.",
+    "For every disqualification: the official, its version, and the record, field, value and locator concerned.",
+    "For the gold comparison: counts per field, the point estimate, the interval, and the threshold stated before scoring."
+  ],
+  "hard_disqualifiers": [
+    "A record fails schema validation.",
+    "A value does not appear at its cited locator.",
+    "An identifier is absent from the source text or fails its check digit.",
+    "Exact agreement with the gold subset falls below the stated threshold."
+  ],
+  "judge_qualifications": {
+    "model_judges": "none. No model reads the candidates to say which is better.",
+    "gold_annotators": "At least two independent annotators label the gold subset, their chance-corrected agreement is reported, and disagreements are resolved by a named person.",
+    "calibration": "The gold subset is the calibration. Its own reliability is estimated and reported, because human labels are noisy too."
+  },
+  "format": {
+    "tournament": "scored against gold",
+    "why": "An extracted value has a determinable right answer in the source. Exact comparison with verified values is cheaper than pairwise judging, auditable value by value, and not open to the failure of model judges, which prefer fluent output over checked output.",
+    "scoring": {
+      "official": "gold-agreement",
+      "rank_by": "exact agreement on the gold subset among candidates that pass every decisive official",
+      "tie_when": "the intervals of the leading candidates overlap"
+    }
+  },
+  "abstention": {
+    "no_clear_winner_when": [
+      "the intervals on gold agreement for the leading candidates overlap (TIED_SHORTLIST)",
+      "no candidate meets the threshold or passes every decisive official (NO_ELIGIBLE_CANDIDATE)",
+      "the gold subset is smaller than the stated minimum, or its annotators disagree beyond the stated limit (INCONCLUSIVE)",
+      "a decisive official could not run for a candidate (INCONCLUSIVE, never a loss)"
+    ]
+  },
+  "human_decides_when": [
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "on_status:NO_ELIGIBLE_CANDIDATE",
+    "open_critical_leads",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Values outside the gold subset are checked for traceability, not for correctness. A value can sit at its cited locator and still be the wrong value, such as the wrong person's year or the wrong table row.",
+    "Whether the gold subset represents the whole collection. A subset drawn from easy documents overstates accuracy on hard ones.",
+    "Whether the gold labels are right. Annotators disagree; the reported agreement bounds how much a score can mean.",
+    "Whether the schema captures what the downstream use needs, and whether an ambiguous source (two people with one name, a revised figure) was resolved as the owner would resolve it.",
+    "Whether personal data in the sources may be processed at all."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal",
+      "restricted"
+    ],
+    "notes": "The officials run locally. CVs and publication lists contain personal data, so internal and restricted bouts are expected, and identifier lookups that contact public registries are off unless the owner clears them."
+  },
+  "notes": "SPECIFIED, NOT RUNNABLE. No panel and no bracket, on purpose. Pairwise model judging is the wrong tool for a genre with a checkable answer: judges without source access prefer fluency, and non-reasoning judges are near chance on objectively checkable correctness (JudgeBench: GPT-4o 56.57% against 50% for chance), so scoring against gold replaces it. Every threshold is reported with its interval and is fixed before candidates are scored, which also guards against criteria drift. To make it runnable build: extract.schema_valid on jsonschema (MIT) or pydantic (MIT); extract.locator_traceable on exact normalised substring matching with rapidfuzz (MIT) for near-match reporting; extract.no_fabricated_ids as custom syntax and checksum checks (no upstream); extract.gold_agreement, custom exact-match scoring (no upstream); extract.identifier_lookup wrapping bibtex-updater (MIT; contacts Crossref, OpenAlex and arXiv; its published detection rate of 0.820 at 0.051 false-positive rate came from a co-designed benchmark and is an upper bound); extract.disagreement, custom. Schema gap: ranking candidates by an official's metric has no stage or field of its own; format.scoring records the rule but the controller has no ranker for it."
+}

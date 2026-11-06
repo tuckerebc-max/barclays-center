@@ -1,0 +1,165 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "manuscript-production",
+  "title": "Manuscript production: a readiness checklist with no winner",
+  "genre": "manuscript-production",
+  "status": "specified",
+  "objective": "Report whether a chapter or volume is ready for production: references resolve and match their citations, cross-references and numbering hold, the style sheet is followed, every figure and table is called out, and the permissions list is complete. This is a checklist gauntlet. It names no winner and ranks nothing.",
+  "audience": "Set per bout: the managing editor who releases the manuscript to production, and the author who fixes what is found.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one manuscript version: a Markdown or plain-text file for the chapter or volume, plus its bibliography file or files (flat file names)",
+    "required_sources": [
+      "style_sheet",
+      "figure_table_inventory",
+      "permissions_ledger"
+    ],
+    "optional_sources": [
+      "reference_database",
+      "house_terms"
+    ],
+    "style_sheet": "The house rules, written as machine-readable style rules where possible (spelling, capitalisation, hyphenation, number style, heading levels, reference form).",
+    "figure_table_inventory": "Every figure and table, with its file, caption and source.",
+    "permissions_ledger": "Every third-party figure, table, long quotation and epigraph, with the rights holder, the status (cleared, pending, not needed) and the date."
+  },
+  "stages": [
+    "weigh_in",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "citations-match-refs",
+      "official": "ms.citations_match_refs",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "check": [
+          "every_citation_has_one_entry",
+          "every_entry_is_cited",
+          "author_year_agree"
+        ]
+      },
+      "why": "A citation with no entry, or an entry nobody cites, is a production defect. Checked on bytes, offline."
+    },
+    {
+      "id": "references-resolve",
+      "official": "ms.references_resolve",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "sources": [
+          "crossref",
+          "openalex",
+          "arxiv"
+        ],
+        "flag_on": "absence_in_all_sources"
+      },
+      "why": "Whether each reference exists in public registries. Published detectors have real false-positive rates, so single-source absence is a prompt for a person, never a blocker."
+    },
+    {
+      "id": "xref-numbering",
+      "official": "ms.xref_numbering",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "why": "Cross-references such as 'see Chapter 4' or 'Figure 2.3' must resolve, and chapter, section, figure, table and note numbering must run in sequence."
+    },
+    {
+      "id": "style-sheet",
+      "official": "ms.style_sheet",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "blocking_level": "error"
+      },
+      "why": "Violations of rules the house wrote down and marked as errors. Warnings are advisory. The rules are the editor's; the check enforces them and says nothing of quality."
+    },
+    {
+      "id": "callouts",
+      "official": "ms.figure_table_callouts",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "why": "Every figure and table must be called out in the text and every callout must point to one that exists, with a caption and a file."
+    },
+    {
+      "id": "permissions",
+      "official": "ms.permissions_complete",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "blocking_status": [
+          "pending",
+          "missing"
+        ]
+      },
+      "why": "Every third-party item in the inventory needs a ledger row with a status of cleared or not needed. A missing or pending row blocks release."
+    },
+    {
+      "id": "links",
+      "official": "ms.links",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Link rot in references and notes. Reported for the editor; an unreachable site may be down today."
+    },
+    {
+      "id": "language-leads",
+      "official": "ms.language_leads",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Spelling and grammar rule hits beyond the style sheet, as leads for the copyeditor."
+    }
+  ],
+  "criteria": [],
+  "model_gates": [],
+  "lenses": [],
+  "evidence_required": [
+    "The style sheet, figure and table inventory and permissions ledger, hashed.",
+    "The manuscript version's exact bytes, hashed. A re-edited manuscript is a new version.",
+    "For every blocking item: the official, its version, the location in the manuscript and the rule or ledger row concerned.",
+    "For every item the check could not complete: the reason, reported as unverified."
+  ],
+  "hard_disqualifiers": [
+    "A citation has no reference entry, or a reference entry that matches it badly.",
+    "A cross-reference or a numbering sequence is broken.",
+    "A style-sheet rule marked as an error is violated.",
+    "A figure or table has no callout, or a callout has no figure or table.",
+    "A third-party item has no cleared permissions row."
+  ],
+  "judge_qualifications": {
+    "model_judges": "none. No model judges the manuscript; the event has no panel and no bracket.",
+    "reviewers": "A copyeditor or production editor works through the blocking items and the leads. The style sheet is only as good as the rules the house has written down."
+  },
+  "format": {
+    "tournament": "checklist with no winner",
+    "why": "Production readiness is a set of pass or fail facts about one manuscript, not a preference between manuscripts. Several versions may be checked, but each receives its own report and none is ranked. The unit of output is a list of blockers and leads.",
+    "report": "One outcome per official per manuscript version: pass, fail, unverified or not applicable, with locations."
+  },
+  "abstention": {
+    "no_clear_winner_when": [
+      "this event never names a winner; every run ends in a readiness report",
+      "a check could not run (INCONCLUSIVE for that item, listed as unverified and never as a pass)",
+      "an input needed by a decisive official is missing, such as the permissions ledger (INCONCLUSIVE; the manuscript is not reported ready)"
+    ]
+  },
+  "human_decides_when": [
+    "always",
+    "open_critical_leads",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Whether the manuscript is correct, well argued or fit to publish. Readiness is not editorial acceptance.",
+    "Whether a reference supports the claim it is cited for. A reference can exist and match its citation and still not say what the text says it does.",
+    "Whether permissions are legally sufficient. The ledger shows a row and a status; rights holders and counsel decide whether the grant covers the use.",
+    "Whether the style sheet is complete. Unwritten house habits are not checked.",
+    "Whether the figures and tables are accurate and legible in print or on screen."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal",
+      "restricted"
+    ],
+    "notes": "The officials run locally. Unpublished manuscripts are usually internal or restricted. The reference-resolution and link officials contact public registries and sites, so they stay off until the owner clears the outgoing queries."
+  },
+  "notes": "SPECIFIED, NOT RUNNABLE. To make it runnable build: ms.citations_match_refs on pybtex (MIT) or bibtexparser (MIT), with citeproc-py (BSD-2-Clause-Views per PyPI) or pandoc for citation parsing, and AnyStyle (licence text BSD-2-style, SPDX not confirmed) or GROBID (Apache-2.0) if references arrive as free text; avoid citeproc-js (CPAL-1.0 OR AGPL-3.0). ms.references_resolve on bibtex-updater (MIT; contacts Crossref, OpenAlex and arXiv). ms.xref_numbering on markdownlint (MIT) plus custom resolvers. ms.style_sheet on Vale (MIT, offline), with the house rules written as Vale styles; no study was found showing that Vale scores track quality, so it enforces rules and no more. ms.figure_table_callouts and ms.permissions_complete are custom with no upstream. ms.links on lychee (Apache-2.0 OR MIT). ms.language_leads on LanguageTool run as a local server (LGPL-2.1; avoid its GPL-3.0 Python wrapper). Schema gaps: the controller vocabulary has no status for a checklist that finishes without a winner, and 'disqualify' here means 'blocks release'."
+}

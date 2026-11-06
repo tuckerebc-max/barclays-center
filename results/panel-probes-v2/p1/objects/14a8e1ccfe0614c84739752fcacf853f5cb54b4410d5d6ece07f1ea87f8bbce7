@@ -1,0 +1,59 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "aeeb5c8311e2d665289d25eac23dcb26b0e5d863b5d80f394bd1dbfd1b6cd616",
+  "candidate_id": "polished-omission",
+  "duration_ms": 1,
+  "findings": [
+    {
+      "claim": "Fact F1 is not present: The Corps tutored 4,218 students.",
+      "evidence": {
+        "reason": "no occurrence of: 4,218 | 4218",
+        "source_sentence": "# riverbend reading corps: first-year summary in the 2025-26 school year, the riverbend reading corps provided tutoring to 4218 students in grades 1 through 3 across 37 schools."
+      },
+      "id": "F1",
+      "locator": "(absent from the candidate)",
+      "severity": "critical"
+    },
+    {
+      "claim": "Fact F3 is not present: The comparison was not randomized.",
+      "evidence": {
+        "reason": "no occurrence of: not randomized | non-randomized | nonrandomized | without random assignment | no random assignment | not a randomized",
+        "source_sentence": "an internal pilot comparison suggests that tutored students may have gained more than untutored students on the district's spring reading screener, but the comparison was not randomized and the difference could reflect which students were selected for tutoring."
+      },
+      "id": "F3",
+      "locator": "(absent from the candidate)",
+      "severity": "critical"
+    },
+    {
+      "claim": "Fact F6 is not present: The evaluator said the results do not yet show that tutoring caused the gains.",
+      "evidence": {
+        "reason": "no occurrence of: do not yet show that tutoring caused | does not yet show that tutoring caused | not yet show that tutoring caused | cannot yet say the tutoring caused | has not shown that tutoring caused | not show yet that tutoring caused",
+        "source_sentence": "the evaluator, dr. lena okafor, wrote that \"the results are encouraging but do not yet show that tutoring caused the gains."
+      },
+      "id": "F6",
+      "locator": "(absent from the candidate)",
+      "severity": "critical"
+    }
+  ],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "facts_total": 8,
+    "kept": 4,
+    "missing": 3,
+    "must_keep": 7
+  },
+  "official": "text.fact_ledger",
+  "official_id": "fact-ledger",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "3 of 7 must-keep facts missing"
+}

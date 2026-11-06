@@ -1,0 +1,21 @@
+{
+  "note": "Synthetic. The organizer's statement of what a revision of source.md must keep. Each fact lists term groups; every group must be satisfied (by any one alternative) inside one window of characters.",
+  "facts": [
+    {"id": "F1", "statement": "The Corps tutored 4,218 students.", "must_keep": true, "critical": true,
+     "match": {"all": [["4,218", "4218"], ["students"]], "window": 160}},
+    {"id": "F2", "statement": "It worked in 37 schools.", "must_keep": true, "critical": true,
+     "match": {"all": [["37"], ["schools"]], "window": 80}},
+    {"id": "F3", "statement": "The comparison was not randomized.", "must_keep": true, "critical": true,
+     "match": {"all": [["not randomized", "non-randomized", "nonrandomized", "without random assignment", "no random assignment", "not a randomized"]], "window": 240}},
+    {"id": "F4", "statement": "Tutored students gained 11 scale-score points; untutored students gained 8.", "must_keep": true, "critical": true,
+     "match": {"all": [["11"], ["8"], ["points", "point"]], "window": 220}},
+    {"id": "F5", "statement": "The first year cost $2.9 million.", "must_keep": true, "critical": true,
+     "match": {"all": [["2.9 million", "2.9m"]], "window": 80}},
+    {"id": "F6", "statement": "The evaluator said the results do not yet show that tutoring caused the gains.", "must_keep": true, "critical": true,
+     "match": {"all": [["do not yet show that tutoring caused", "does not yet show that tutoring caused", "not yet show that tutoring caused", "cannot yet say the tutoring caused", "has not shown that tutoring caused"]], "window": 240}},
+    {"id": "F7", "statement": "A randomized study is planned for 2026-27.", "must_keep": true, "critical": true,
+     "match": {"all": [["2026-27", "2026-2027"], ["randomized study", "randomized trial", "randomised study", "randomized controlled"]], "window": 200}},
+    {"id": "F8", "statement": "Sessions lasted 30 minutes.", "must_keep": false, "critical": false,
+     "match": {"all": [["30"], ["minutes", "minute"]], "window": 60}}
+  ]
+}

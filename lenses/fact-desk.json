@@ -1,0 +1,22 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "fact-desk",
+  "kind": "fact_desk",
+  "title": "Fact desk",
+  "brief": "Read as a checker with the reference material open beside each candidate. For every figure, name, date, quotation and attributed claim in a candidate, find it in the reference material. Report anything you cannot find, anything that differs, and anything the candidate states more strongly or more weakly than the reference. Quote the candidate's words exactly. Do not comment on style.",
+  "may_assess": [
+    "accuracy",
+    "source_support",
+    "completeness"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "The only lens that may raise factual objections in lane. They are still allegations: each one is verified by an official or a second checker before it counts."
+}

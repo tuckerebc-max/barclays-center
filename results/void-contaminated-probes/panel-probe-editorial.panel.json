@@ -1,0 +1,2790 @@
+{
+  "allegations": [
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference states 4,218 students. Describing that as nearly 5,000 overstates the reach by about 800 students.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference quotes the evaluator as saying the results are encouraging 'but do not yet show that tutoring caused the gains.' B drops the caveat and attributes to her the opposite conclusion, that tutoring works.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference gives 11 and 8 points but no percentage. The 38 percent figure is a derived number, and the reference says the comparison was not randomized and the difference could reflect selection. Calling it proof contradicts the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference describes the difference as something that may reflect which students were selected, and says the results are preliminary. Stating the effect as unmistakable is stronger than the source supports.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference says the district should describe first-year results as preliminary until the randomized study reports. B presents the answer as settled, which is stronger than the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference says the randomized study is planned and that results should be called preliminary until it reports. It does not say the study will confirm the first-year findings, and the wording presupposes the answer.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "No comparison with other or larger programs appears in the reference material. This claim is unsupported by the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Misquotes Okafor. Source: 'the results are encouraging but do not yet show that tutoring caused the gains.' This reverses the meaning of a direct quotation.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Source says the comparison was not randomized and the difference could reflect student selection; this states the effect much more strongly.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The 38 percent figure is not in the source (it is a derived value from 11 vs 8 gains, 3 points), and 'proves the model works' contradicts the source's caution that causation is not shown.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Source says 4,218 students; 'nearly 5,000' overstates the number.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "No support in the source for comparison with larger programs.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Characterization of the cost as modest is not in the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The program's stated aim and the claim that the answer is in are not in the source, which says results are preliminary.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "it set out to answer a simple question: can steady, human attention change how a child reads? One year on, the answer is in.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source gives only 11 vs 8 points; the percentage is not stated in the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Attributed quote differs from the evaluator's actual words in the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference states 4,218 students. 'Nearly 5,000' overstates the reach by about 800 students.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students in grades 1 through 3",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference quotes Dr. Okafor as saying the results 'do not yet show that tutoring caused the gains.' Candidate A reverses the evaluator's meaning and misattributes a stronger conclusion to her.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference reports 11 and 8 scale-score points and says the comparison was not randomized, so it cannot prove the model works. The 38 percent figure is a derived ratio that the reference does not state.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference describes the difference as possibly reflecting which students were selected for tutoring and calls the results preliminary. 'Unmistakable' states the finding more strongly than the reference supports.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference says the district should describe the first-year results as preliminary. Saying the answer is in overstates the certainty of the findings.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The reference says the randomized study is planned and that the first-year results do not yet establish causation. It does not say the study will confirm the first-year findings.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "claim": "The reference says sessions were delivered three times per week and each lasted 30 minutes. It does not say every student received three sessions a week, so B states the schedule more specifically than the reference.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "Each student had three 30-minute sessions a week.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "This comparison to larger programs does not appear in the reference material and is unsupported by it.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Misquotes Dr. Okafor. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.' The quote is altered to reverse its meaning.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source says the comparison was not randomized and cannot show causation; 'proves' is far stronger than the source. The 38 percent figure is not in the source (it is derived from 3/8 = 37.5 percent).",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Source says 4,218 students. 'Nearly 5,000' overstates the figure.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source says the results are preliminary and the study will test them. 'Will confirm' presupposes the outcome, and the instruction to describe results as preliminary is dropped.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Not in the source; there is no comparison to other programs.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source gives no characterization of the cost as modest.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Contradicts the source, which says the results are preliminary pending the randomized study.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "claim": "The source states the average gain; this is consistent. 'On average' is not misleading. No problem found.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Fabricated alteration of Dr. Okafor's quote, which in the source says the results 'do not yet show that tutoring caused the gains'.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Source figure is 4,218 students.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Figure not in the source; it is a derived percentage.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source document reports 4,218 students tutored, so 'nearly 5,000' misstates the figure in the source.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source evaluator quote says the results 'do not yet show that tutoring caused the gains', which is the opposite conclusion.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Misquotes Dr. Okafor. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.'",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "'Modest' is a value judgment, and the claim that larger programs struggled to match these results is unsupported by the source.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "The investment was modest. At $2.9 million",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "No comparison to larger programs appears in the source draft or any other material provided. This is an unsupported factual claim about other programs.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source's evaluator quote is that the results do not yet show that tutoring caused the gains. A's quotation is altered and attributed to Dr. Okafor, which misrepresents her.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The 38 percent figure is not in the source. It is derived as (11-8)/8 = 37.5 percent, and it compares raw gains rather than an adjusted effect.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source states 4,218 students.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source contains no comparison with other programs.",
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "larger programs have struggled to match",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source evaluator quote reads 'the results are encouraging but do not yet show that tutoring caused the gains.' Candidate B changes the quotation to say the opposite about causation.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source gives 4,218 students; 'nearly 5,000' misstates the reach figure.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "No comparison with other programs appears in the source material.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Unsupported comparison to larger programs; the source contains nothing on other programs.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source gives only 11 versus 8 points. A 38 percent figure is derived and framed as a causal advantage; it is also not tied to the source's hedges.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Misquotes the evaluator. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.'",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source gives 4,218 students. 'Nearly 5,000' overstates the count by about 800 students.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students in grades 1 through 3 sat down with a tutor",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "No comparison with larger programs appears in the source material.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source quotes the evaluator as saying the results do not yet show that tutoring caused the gains. The wording and meaning differ.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source describes the comparison as not randomized and says the difference could reflect selection. It does not describe the effect as unmistakable.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "Misquotes Dr. Okafor; the source says the results 'do not yet show that tutoring caused the gains'.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source does not give a 38 percent figure, and it says the comparison was not randomized and cannot show causation.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "claim": "The source says 4,218 students.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "raised_in_lane": false,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    }
+  ],
+  "authority": "advisory: objections and allegations for the report and a human; never decisive",
+  "missing_results": 0,
+  "objections_in_lane": [
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "The reference does not characterize the cost as modest. B also omits the non-randomized caveat and the instruction to describe results as preliminary, which the reference includes and which the board needs before a budget vote.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "Source says the study is pending and the district should describe results as preliminary; B omits the non-randomized caveat and preliminary guidance, and presupposes the outcome.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "The passage omits that the comparison was an internal pilot that was not randomized and that the difference may reflect selection. The reference treats this caveat as essential.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "The reference gives the cost but makes no judgment that the investment is modest. The sentence adds an evaluative claim without a source.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "Omits the source's caveat that the comparison was internal and not randomized and that the difference could reflect student selection. States the finding far more strongly than the source.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "completeness",
+      "claim": "Omits the 30-minute session length given in the source.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "sat down with a tutor three times a week",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "The caveat is stated plainly, but a board member acting on the summary may need the uncertainty stated once more in terms of what the budget decision depends on. This is a minor clarity point and not a measurement error.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "we cannot yet say the tutoring caused the gains",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "inference",
+      "claim": "A non-randomized comparison cannot prove the model works. Selection into tutoring is an uncontrolled confound. The 38 percent figure is also a derived relative figure that makes a 3-point difference look larger.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "The evaluator's quote is altered. The source says the results 'do not yet show that tutoring caused the gains'. The revision reverses the evaluator's conclusion.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "uncertainty",
+      "claim": "This presupposes the outcome of the randomized study and drops the source's direction to describe the results as preliminary.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "uncertainty",
+      "claim": "The non-randomization and selection caveats are removed, so a pilot comparison reads as an established effect.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "4,218 is rounded up to 'nearly 5,000', which overstates reach by about 18 percent.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "This comparative claim about other programs has no support in the source.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "larger programs have struggled to match",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "The units are not explained and no effect-size or uncertainty information is given, so a board member cannot judge whether 3 points is practically meaningful. This repeats a gap already in the source.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "scale-score points",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "A non-randomized pilot comparison cannot establish that the model works. The source says the comparison was not randomized and the difference could reflect which students were selected. Calling the gap proof is a causal inference the design cannot carry.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "The effect is an unadjusted difference in mean gains from a non-randomized comparison. Describing it as unmistakable overstates the certainty the measurement supports.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "This misstates the evaluator. The source quotes Dr. Okafor as saying the results do not yet show that tutoring caused the gains. A reverses that conclusion and attributes it to her.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "uncertainty",
+      "claim": "This presupposes the answer that the planned randomized study is meant to test. The hedge the source draft states, that results should be described as preliminary until the study reports, is removed entirely.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "uncertainty",
+      "claim": "A single non-randomized year cannot settle the question the program set out to answer. The source explicitly calls the results preliminary.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "inference",
+      "claim": "The source reports 4,218 students. Rounding up to nearly 5,000 inflates reach by about 18 percent.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "Vague quantifier in the lead. The exact figure of 4,218 appears in the Reach paragraph, so the summary loses precision that a board member could have used at a glance.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "argument",
+      "claim": "Paraphrases the evaluator's wording in the short version. It is faithful to the source, but a reader may take encouraging as a finding rather than an evaluator's impression.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "early results are encouraging",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "inference",
+      "claim": "A non-randomized pilot comparison cannot prove efficacy. Selection into tutoring is an uncontrolled confound. The 38 percent figure is a ratio of raw gains (11 vs 8), not an adjusted effect, and no uncertainty is given.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "uncertainty",
+      "claim": "The source says the difference may reflect which students were selected. Calling it an 'effect' that is 'unmistakable' removes the hedge entirely.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "argument",
+      "claim": "This misquotes the evaluator. The original reads 'encouraging but do not yet show that tutoring caused the gains'. The altered quote reverses the evaluator's conclusion.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "inference",
+      "claim": "This presupposes the outcome of the randomized study and treats a hypothesis as settled. It also drops the instruction to describe results as preliminary.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "The source figure is 4,218 students. 'Nearly 5,000' overstates the reach by about 18 percent, which matters to a budget vote. The audience also never learns that the comparison group was not randomized.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "inference",
+      "claim": "There is no support in the source for any comparison with other programs.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the Corps delivered results that larger programs have struggled to match",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "This is minor. The sizes of the two groups, and whether the pilot comparison covered all 4,218 students, are not stated, nor is any measure of variability. The source does not give these either, so B is faithful to it, but a board member cannot judge how large 3 points is.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "Vague emphatic phrasing that adds no information; the reader is told the effect is certain without being shown the basis for it.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "voice",
+      "claim": "Short, confident sentence that pushes the reader to a conclusion the figures do not carry, and the sentence is harder to act on than a plain statement of the two averages.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "economy",
+      "claim": "Filler framing that sounds finished but says nothing about what the results were.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "Vague count ('nearly 5,000') in place of the exact figure given in the source; a board member reading for a budget vote needs the exact number.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "Across 37 schools, nearly 5,000 students in grades 1 through 3 sat down with a tutor three times a week.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "structure",
+      "claim": "The ending presents the coming study as a confirmation, and omits the source's instruction to describe first-year results as preliminary, so the reader is left with the wrong next step.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "Evaluative word with no basis in the source, which gives only the cost and cost per student.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "Replaces the exact count of 4,218 with a rounded figure that overstates it; a busy reader gets a vaguer and larger number.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "A new derived figure and a causal claim. The source says the comparison was not randomized and cannot show causation. A board member would take 'proves' at face value.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "The evaluator's quote is altered to say the opposite of the source ('do not yet show that tutoring caused the gains'). A board member would be misled about what the evaluator said.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "\"the results are encouraging and show that tutoring works.\"",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "structure",
+      "claim": "Omits the instruction to describe results as preliminary and the non-randomization caveat. The reader is left with no limits on the evidence and nothing to act on.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "economy",
+      "claim": "A sentence that sounds finished and adds no information. The reader learns the author's mood, not the finding.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "economy",
+      "claim": "The opening paragraph is narrative setup. The reader reaches the numbers only in the second paragraph.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "it set out to answer a simple question: can steady, human attention change how a child reads? One year on, the answer is in.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "A value judgment the source does not make. It tells a budget-vote reader how to feel about $2.9 million instead of letting them judge.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "clarity",
+      "claim": "A technical term left undefined for a non-specialist. The source has the same term, so this is a minor point.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "scale-score points",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "audience_fit",
+      "claim": "The sentence tells a budget-reading board member the effect is proven and the model works. The source says the comparison was not randomized and may reflect which students were selected. A reader acting before a budget vote would stumble on a claim they cannot check and that the source does not support.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable. On the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points, a 38 percent advantage that proves the model works.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "The quoted words are not the evaluator's. The source reads 'do not yet show that tutoring caused the gains'. The reader is told the evaluator said something she did not say, and the reader cannot tell that the quote was changed.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "As the evaluator, Dr. Lena Okafor, put it, \"the results are encouraging and show that tutoring works.\"",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "The sentence sounds conclusive but tells the reader nothing about what the answer is. It is the kind of finished-sounding line the lens asks an editor to cut.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "economy",
+      "claim": "'Modest' is a judgment with no comparison in the text. 'Larger programs have struggled to match' is a comparison the reader cannot check and must take on trust. Both lines add persuasion without adding information.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The investment was modest. At $2.9 million, or approximately $688 per student, the Corps delivered results that larger programs have struggled to match.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "The reader is told the coming study will confirm a result. The source says the study is planned and that the district should describe first-year results as preliminary. The sentence removes the open question the board needs to weigh.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "clarity",
+      "claim": "'A lot of' is vague. The next paragraph gives the exact figure, so the opening could name it and save the reader a step.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "structure",
+      "claim": "The heading and the first sentence are clear. The paragraph does not say what the study will decide, which a budget-voting reader may want. This is a small gap, not a stumbling point.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "**What happens next.** A randomized study is planned for 2026-27.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "Vague and inaccurate rounding of 4,218; a board member cannot rely on it for budget math.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "Introduces an unstated percentage and a claim of proof the source disclaims; misleads the reader.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "clarity",
+      "claim": "Alters the evaluator's quote to say the opposite of the source ('but do not yet show that tutoring caused the gains').",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "reviewer_slot": "sonnet",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "structure",
+      "claim": "Drops the instruction to call results preliminary, so the reader has no action to take and the sentence says little.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "voice",
+      "claim": "Promotional tone aimed at persuading rather than informing a board member before a vote.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "The investment was modest.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "economy",
+      "claim": "'A lot' is vaguer than the exact number given just below; minor.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    }
+  ],
+  "objections_out_of_lane": [
+    {
+      "candidate_id": "polished-omission",
+      "category": "causal inference",
+      "claim": "A non-randomized pilot difference of 11 vs 8 points is presented as an unmistakable effect. The source states the comparison may reflect which students were selected for tutoring.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "The effect was unmistakable.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "causal inference",
+      "claim": "A non-randomized comparison cannot prove the model works. The percentage is also a relative difference on a small scale-score gap, which overstates its meaning without uncertainty information.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "a 38 percent advantage that proves the model works",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "hedge removal",
+      "claim": "The source says the results are preliminary and the district should describe them as such. Declaring the answer settled removes that hedge.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "One year on, the answer is in.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "evaluator attribution",
+      "claim": "The source quotes the evaluator as writing that the results do not yet show that tutoring caused the gains. B reverses the evaluator's conclusion in a quotation.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the results are encouraging and show that tutoring works.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "sample description",
+      "claim": "The source reports 4,218 students. Describing this as nearly 5,000 overstates the reach.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "nearly 5,000 students",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "forecast of study result",
+      "claim": "The planned randomized study has not reported. Asserting its outcome presents an untested expectation as established.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "will confirm what the first year has already made clear.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "polished-omission",
+      "category": "omitted limitation",
+      "claim": "The source instructs that results be described as preliminary until the randomized study reports. B omits the preliminary status entirely.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    }
+  ],
+  "order_sensitive": 0,
+  "packets": 12,
+  "provider": {
+    "haiku": {
+      "family": "anthropic",
+      "model": "claude-haiku (Claude Code subagent, fresh context per packet)",
+      "real": true
+    },
+    "sonnet": {
+      "family": "anthropic",
+      "model": "claude-sonnet (Claude Code subagent, fresh context per packet)",
+      "real": true
+    }
+  },
+  "reconciled": [
+    {
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "lens_kind": "fact_desk",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "lens_kind": "fact_desk",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "lens_kind": "disciplinary_lens",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "lens_kind": "disciplinary_lens",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "lens_kind": "stylistic_voice",
+      "margin": 4.5,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "lens_kind": "stylistic_voice",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    }
+  ],
+  "records": [
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference states 4,218 students. Describing that as nearly 5,000 overstates the reach by about 800 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference quotes the evaluator as saying the results are encouraging 'but do not yet show that tutoring caused the gains.' B drops the caveat and attributes to her the opposite conclusion, that tutoring works.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference gives 11 and 8 points but no percentage. The 38 percent figure is a derived number, and the reference says the comparison was not randomized and the difference could reflect selection. Calling it proof contradicts the source.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference describes the difference as something that may reflect which students were selected, and says the results are preliminary. Stating the effect as unmistakable is stronger than the source supports.",
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference says the district should describe first-year results as preliminary until the randomized study reports. B presents the answer as settled, which is stronger than the source.",
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference says the randomized study is planned and that results should be called preliminary until it reports. It does not say the study will confirm the first-year findings, and the wording presupposes the answer.",
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "No comparison with other or larger programs appears in the reference material. This claim is unsupported by the source.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "The reference does not characterize the cost as modest. B also omits the non-randomized caveat and the instruction to describe results as preliminary, which the reference includes and which the board needs before a budget vote.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "severity": "major"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "B's headline and framing ('changed the trajectory', 'proves the model works') set a persuasive tone that the reference does not support. A is plain and stays close to the source. Neither candidate was assessed on style beyond the fact-desk lens.",
+      "packet_id": "fact-desk--faithful-plain--polished-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate A matches the reference on every figure (4,218 students, 37 schools, three 30-minute sessions a week, 11 vs 8 scale-score points, non-randomized pilot, $2.9 million, approximately $688 per student, 2026-27 randomized study) and quotes the evaluator exactly. Candidate B inflates the reach figure, misquotes the evaluator in a way that reverses her caveat, adds a derived percentage that the reference does not state and uses it to claim proof, and drops the non-randomized caveat and the preliminary framing the reference requires.",
+      "result_sha256": "11f7a442d5ccc46654c8b7ffb75d24d54febc131a116b67ebb2eae0597290390",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Misquotes Okafor. Source: 'the results are encouraging but do not yet show that tutoring caused the gains.' This reverses the meaning of a direct quotation.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Source says the comparison was not randomized and the difference could reflect student selection; this states the effect much more strongly.",
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The 38 percent figure is not in the source (it is a derived value from 11 vs 8 gains, 3 points), and 'proves the model works' contradicts the source's caution that causation is not shown.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Source says 4,218 students; 'nearly 5,000' overstates the number.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "No support in the source for comparison with larger programs.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Characterization of the cost as modest is not in the source.",
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The program's stated aim and the claim that the answer is in are not in the source, which says results are preliminary.",
+          "locator_resolved": true,
+          "quote": "it set out to answer a simple question: can steady, human attention change how a child reads? One year on, the answer is in.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source gives only 11 vs 8 points; the percentage is not stated in the source.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Attributed quote differs from the evaluator's actual words in the source.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "Source says the study is pending and the district should describe results as preliminary; B omits the non-randomized caveat and preliminary guidance, and presupposes the outcome.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "severity": "critical"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "Candidate A's reorganisation with a short-version lead and labeled sections suits a board reader, and the 'short version' preserves the source's hedging. Candidate B reads as promotional copy rather than a faithful revision.",
+      "packet_id": "fact-desk--faithful-plain--polished-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate A reproduces every figure, name, date and quotation in the source: 4,218 students, grades 1-3, 37 schools, three 30-minute sessions weekly, 11 vs 8 points, $2.9 million, approximately $688 per student, the Okafor quote verbatim, the 2026-27 randomized study and the 'preliminary' guidance. It keeps the non-randomized caveat. Candidate B alters the evaluator quotation, drops the non-randomization caveat, asserts causation, rounds 4,218 to 'nearly 5,000', adds an unsupported 38 percent figure and comparative cost claim, and states the planned study will 'confirm' results.",
+      "result_sha256": "a29fe7f3e29bc6d39d06d9b0008e880f017860080c8dc6884db2b729b3a2c7f0",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference states 4,218 students. 'Nearly 5,000' overstates the reach by about 800 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students in grades 1 through 3",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference quotes Dr. Okafor as saying the results 'do not yet show that tutoring caused the gains.' Candidate A reverses the evaluator's meaning and misattributes a stronger conclusion to her.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference reports 11 and 8 scale-score points and says the comparison was not randomized, so it cannot prove the model works. The 38 percent figure is a derived ratio that the reference does not state.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference describes the difference as possibly reflecting which students were selected for tutoring and calls the results preliminary. 'Unmistakable' states the finding more strongly than the reference supports.",
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference says the district should describe the first-year results as preliminary. Saying the answer is in overstates the certainty of the findings.",
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The reference says the randomized study is planned and that the first-year results do not yet establish causation. It does not say the study will confirm the first-year findings.",
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "claim": "The reference says sessions were delivered three times per week and each lasted 30 minutes. It does not say every student received three sessions a week, so B states the schedule more specifically than the reference.",
+          "locator_resolved": true,
+          "quote": "Each student had three 30-minute sessions a week.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "This comparison to larger programs does not appear in the reference material and is unsupported by it.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "The passage omits that the comparison was an internal pilot that was not randomized and that the difference may reflect selection. The reference treats this caveat as essential.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "The reference gives the cost but makes no judgment that the investment is modest. The sentence adds an evaluative claim without a source.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Candidate B's opening line 'the program reached a lot of students' is vague but not inaccurate given 4,218 students across 37 schools. Candidate A's ending and heading tone are style matters outside this lens.",
+      "packet_id": "fact-desk--faithful-plain--polished-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate B matches every figure in the reference (4,218 students, 37 schools, 11 vs 8 points, $2.9 million, approximately $688 per student), quotes the evaluator exactly, and keeps the reference's caveats that the comparison was not randomized and that results are preliminary. Candidate A inflates the reach figure to nearly 5,000, drops the non-randomized caveat, converts the evaluator's statement that the results do not yet show causation into a claim that tutoring works, and adds causal and comparative claims the reference does not support.",
+      "result_sha256": "4b71131f11ee8a91826ac40e4d587a41d16ac3ae3bd192bb351dd81f0f1227b3",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Misquotes Dr. Okafor. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.' The quote is altered to reverse its meaning.",
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source says the comparison was not randomized and cannot show causation; 'proves' is far stronger than the source. The 38 percent figure is not in the source (it is derived from 3/8 = 37.5 percent).",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Source says 4,218 students. 'Nearly 5,000' overstates the figure.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source says the results are preliminary and the study will test them. 'Will confirm' presupposes the outcome, and the instruction to describe results as preliminary is dropped.",
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Not in the source; there is no comparison to other programs.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source gives no characterization of the cost as modest.",
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Contradicts the source, which says the results are preliminary pending the randomized study.",
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "claim": "The source states the average gain; this is consistent. 'On average' is not misleading. No problem found.",
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Fabricated alteration of Dr. Okafor's quote, which in the source says the results 'do not yet show that tutoring caused the gains'.",
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Source figure is 4,218 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Figure not in the source; it is a derived percentage.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "Omits the source's caveat that the comparison was internal and not randomized and that the difference could reflect student selection. States the finding far more strongly than the source.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "completeness",
+          "claim": "Omits the 30-minute session length given in the source.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "sat down with a tutor three times a week",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Candidate B's bolded 'short version' up top makes it more actionable for a board reader. Candidate A's framing is promotional rather than neutral. B's last objection is not a real defect and is listed only for completeness.",
+      "packet_id": "fact-desk--faithful-plain--polished-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate B reproduces every figure, name, date and quotation from the source accurately: 4,218 students, 37 schools, three 30-minute sessions, 11 vs 8 points, $2.9 million, approximately $688 per student, the exact Okafor quote, the non-randomized caveat, and the 'preliminary' instruction. Candidate A alters the evaluator's quote to say the opposite of the source, drops the non-randomization caveat, asserts causation, changes 4,218 to 'nearly 5,000', and adds unsupported claims.",
+      "result_sha256": "89b2a8c744affb4d59d3dd118d4c311b93a9d31cd08e4b527293a4658a40ff80",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source document reports 4,218 students tutored, so 'nearly 5,000' misstates the figure in the source.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source evaluator quote says the results 'do not yet show that tutoring caused the gains', which is the opposite conclusion.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "causal inference",
+          "claim": "A non-randomized pilot difference of 11 vs 8 points is presented as an unmistakable effect. The source states the comparison may reflect which students were selected for tutoring.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "causal inference",
+          "claim": "A non-randomized comparison cannot prove the model works. The percentage is also a relative difference on a small scale-score gap, which overstates its meaning without uncertainty information.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "hedge removal",
+          "claim": "The source says the results are preliminary and the district should describe them as such. Declaring the answer settled removes that hedge.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "evaluator attribution",
+          "claim": "The source quotes the evaluator as writing that the results do not yet show that tutoring caused the gains. B reverses the evaluator's conclusion in a quotation.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "sample description",
+          "claim": "The source reports 4,218 students. Describing this as nearly 5,000 overstates the reach.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "forecast of study result",
+          "claim": "The planned randomized study has not reported. Asserting its outcome presents an untested expectation as established.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "omitted limitation",
+          "claim": "The source instructs that results be described as preliminary until the randomized study reports. B omits the preliminary status entirely.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "The caveat is stated plainly, but a board member acting on the summary may need the uncertainty stated once more in terms of what the budget decision depends on. This is a minor clarity point and not a measurement error.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "we cannot yet say the tutoring caused the gains",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "The task asks for a revision that a school-board member can act on after one read. Candidate A is clear and short. Candidate B is more persuasive in tone but departs from the source content, which the task says must not change.",
+      "packet_id": "measurement-scientist--faithful-plain--polished-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate A keeps the inferential limits the design requires: it states the comparison was an internal non-randomized pilot, names selection as a possible explanation for the 11 vs 8 point difference, and reports the evaluator's statement that tutoring causation is not yet shown. Candidate B removes every one of these limits. It presents an uncontrolled difference as proof that the model works, calls the effect unmistakable, and says the randomized study will confirm what the first year has already made clear. A pilot without a control group cannot support a causal or population-level conclusion, so B asserts a finding the design cannot support. B also misquotes the evaluator and inflates the student count.",
+      "result_sha256": "9a2ecd7506db1ce45d846f003577b8a09cf1744b1b910678aaa81b459c777012",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Misquotes Dr. Okafor. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.'",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "'Modest' is a value judgment, and the claim that larger programs struggled to match these results is unsupported by the source.",
+          "locator_resolved": true,
+          "quote": "The investment was modest. At $2.9 million",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "inference",
+          "claim": "A non-randomized comparison cannot prove the model works. Selection into tutoring is an uncontrolled confound. The 38 percent figure is also a derived relative figure that makes a 3-point difference look larger.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "The evaluator's quote is altered. The source says the results 'do not yet show that tutoring caused the gains'. The revision reverses the evaluator's conclusion.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "uncertainty",
+          "claim": "This presupposes the outcome of the randomized study and drops the source's direction to describe the results as preliminary.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "uncertainty",
+          "claim": "The non-randomization and selection caveats are removed, so a pilot comparison reads as an established effect.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "4,218 is rounded up to 'nearly 5,000', which overstates reach by about 18 percent.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "This comparative claim about other programs has no support in the source.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "larger programs have struggled to match",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "The units are not explained and no effect-size or uncertainty information is given, so a board member cannot judge whether 3 points is practically meaningful. This repeats a gap already in the source.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "scale-score points",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "A's summary line at the top works well for a one-read audience. A could say whether $688 per student refers to all students served.",
+      "packet_id": "measurement-scientist--faithful-plain--polished-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "A preserves every hedge from the source: the comparison was not randomized, the difference may reflect selection, the evaluator says the results do not show causation, and the results are preliminary. It reports the 11 vs 8 point gains without turning them into a causal claim. B turns a non-randomized pilot into proof. It states 'The effect was unmistakable' and 'proves the model works', alters the evaluator's quote to say 'show that tutoring works', and presents the planned randomized study as a formality that 'will confirm' the result. It also drops the selection caveat and the instruction to call results preliminary. A board member voting on a budget would be misled by B.",
+      "result_sha256": "cc2d59abd347e9c0f80f0702f67e3de4295bb8648745a6831a92ca2ef813a91f",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "No comparison to larger programs appears in the source draft or any other material provided. This is an unsupported factual claim about other programs.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source's evaluator quote is that the results do not yet show that tutoring caused the gains. A's quotation is altered and attributed to Dr. Okafor, which misrepresents her.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "A non-randomized pilot comparison cannot establish that the model works. The source says the comparison was not randomized and the difference could reflect which students were selected. Calling the gap proof is a causal inference the design cannot carry.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "The effect is an unadjusted difference in mean gains from a non-randomized comparison. Describing it as unmistakable overstates the certainty the measurement supports.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "This misstates the evaluator. The source quotes Dr. Okafor as saying the results do not yet show that tutoring caused the gains. A reverses that conclusion and attributes it to her.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "uncertainty",
+          "claim": "This presupposes the answer that the planned randomized study is meant to test. The hedge the source draft states, that results should be described as preliminary until the study reports, is removed entirely.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "uncertainty",
+          "claim": "A single non-randomized year cannot settle the question the program set out to answer. The source explicitly calls the results preliminary.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "inference",
+          "claim": "The source reports 4,218 students. Rounding up to nearly 5,000 inflates reach by about 18 percent.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "Vague quantifier in the lead. The exact figure of 4,218 appears in the Reach paragraph, so the summary loses precision that a board member could have used at a glance.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "argument",
+          "claim": "Paraphrases the evaluator's wording in the short version. It is faithful to the source, but a reader may take encouraging as a finding rather than an evaluator's impression.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "early results are encouraging",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Candidate A's shift from preliminary to proven also changes the framing for a budget vote, which is a presentation concern outside this lens. The cost figure of $688 per student is identical in both candidates and matches the source arithmetic of $2.9 million over 4,218 students, so no objection is raised on it.",
+      "packet_id": "measurement-scientist--faithful-plain--polished-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate B keeps the design's limits in view: the comparison is an internal, non-randomized pilot, the difference may reflect selection, and the evaluator's causal caveat is quoted accurately. Candidate A treats a non-randomized 11-versus-8 point difference as proof that the model works, drops every caveat, and alters the evaluator's quote so it asserts the opposite of what she wrote. For a board member deciding a budget, A would convey a causal conclusion the design cannot support.",
+      "result_sha256": "fdf2c3388e75202d762671a6339c7143a12449529e618f8b867194f1cb71356a",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The 38 percent figure is not in the source. It is derived as (11-8)/8 = 37.5 percent, and it compares raw gains rather than an adjusted effect.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source states 4,218 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source contains no comparison with other programs.",
+          "locator_resolved": true,
+          "quote": "larger programs have struggled to match",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "inference",
+          "claim": "A non-randomized pilot comparison cannot prove efficacy. Selection into tutoring is an uncontrolled confound. The 38 percent figure is a ratio of raw gains (11 vs 8), not an adjusted effect, and no uncertainty is given.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "uncertainty",
+          "claim": "The source says the difference may reflect which students were selected. Calling it an 'effect' that is 'unmistakable' removes the hedge entirely.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "argument",
+          "claim": "This misquotes the evaluator. The original reads 'encouraging but do not yet show that tutoring caused the gains'. The altered quote reverses the evaluator's conclusion.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "inference",
+          "claim": "This presupposes the outcome of the randomized study and treats a hypothesis as settled. It also drops the instruction to describe results as preliminary.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "The source figure is 4,218 students. 'Nearly 5,000' overstates the reach by about 18 percent, which matters to a budget vote. The audience also never learns that the comparison group was not randomized.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "inference",
+          "claim": "There is no support in the source for any comparison with other programs.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "This is minor. The sizes of the two groups, and whether the pilot comparison covered all 4,218 students, are not stated, nor is any measure of variability. The source does not give these either, so B is faithful to it, but a board member cannot judge how large 3 points is.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "B's structure, with a short version up front and labeled sections, suits a single read before a vote. B's 'Each student had three 30-minute sessions a week' states the dosage as a fixed fact where the source says sessions were 'delivered' this way, which is a small difference. B moves the 'preliminary' guidance to the end, but it is still present. A's headline and its 'opened its doors' framing are promotional rather than informational.",
+      "packet_id": "measurement-scientist--faithful-plain--polished-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "B preserves the source's design caveats: the comparison was a non-randomized internal pilot, selection may explain the 8 vs 11 point difference, the evaluator said results do not yet show causation, and the results should be called preliminary. It also adds a one-line bottom line that a board member can act on. A converts a non-randomized pilot comparison into proof of efficacy. It drops the selection caveat and the 'preliminary' instruction. It alters the evaluator's quotation so that it asserts the opposite of the original. It also says the randomized study will merely 'confirm' a conclusion already reached, which treats the hypothesis as settled.",
+      "result_sha256": "54dd4f51139184f1d56f81b0e6fe89f0cf353ccc0b6719f9a6f94fa7d32e11d1",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source evaluator quote reads 'the results are encouraging but do not yet show that tutoring caused the gains.' Candidate B changes the quotation to say the opposite about causation.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source gives 4,218 students; 'nearly 5,000' misstates the reach figure.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "No comparison with other programs appears in the source material.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "Vague emphatic phrasing that adds no information; the reader is told the effect is certain without being shown the basis for it.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "voice",
+          "claim": "Short, confident sentence that pushes the reader to a conclusion the figures do not carry, and the sentence is harder to act on than a plain statement of the two averages.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "economy",
+          "claim": "Filler framing that sounds finished but says nothing about what the results were.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "Vague count ('nearly 5,000') in place of the exact figure given in the source; a board member reading for a budget vote needs the exact number.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "Across 37 schools, nearly 5,000 students in grades 1 through 3 sat down with a tutor three times a week.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "structure",
+          "claim": "The ending presents the coming study as a confirmation, and omits the source's instruction to describe first-year results as preliminary, so the reader is left with the wrong next step.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "Evaluative word with no basis in the source, which gives only the cost and cost per student.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "Candidate B's factual changes (misquoted evaluator, inflated student count, unsupported comparison with larger programs) fall outside the plain-language lens and are reported only as allegations for separate checking.",
+      "packet_id": "plain-language-editor--faithful-plain--polished-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate A is short, uses concrete words, and gives each point its own labelled paragraph in the order a board member needs it: reach, results, cost, evaluator, next step. It keeps the caveat that the comparison was not randomized in the same sentence as the result, so a busy reader cannot skip it. Candidate B uses inflated, vague phrasing ('changed the trajectory', 'the answer is in', 'unmistakable', 'proves the model works') that sounds finished but tells the board member less, and it never says the study was not randomized. Both candidates state the same numbers except that B rounds 4,218 up to 'nearly 5,000'.",
+      "result_sha256": "5a1785ce229a8d12bc2d5a2abcd77bb91242a5e9a9afe33462060387c2186188",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Unsupported comparison to larger programs; the source contains nothing on other programs.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source gives only 11 versus 8 points. A 38 percent figure is derived and framed as a causal advantage; it is also not tied to the source's hedges.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Misquotes the evaluator. The source reads 'the results are encouraging but do not yet show that tutoring caused the gains.'",
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "Replaces the exact count of 4,218 with a rounded figure that overstates it; a busy reader gets a vaguer and larger number.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "A new derived figure and a causal claim. The source says the comparison was not randomized and cannot show causation. A board member would take 'proves' at face value.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "The evaluator's quote is altered to say the opposite of the source ('do not yet show that tutoring caused the gains'). A board member would be misled about what the evaluator said.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "\"the results are encouraging and show that tutoring works.\"",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "structure",
+          "claim": "Omits the instruction to describe results as preliminary and the non-randomization caveat. The reader is left with no limits on the evidence and nothing to act on.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "economy",
+          "claim": "A sentence that sounds finished and adds no information. The reader learns the author's mood, not the finding.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "economy",
+          "claim": "The opening paragraph is narrative setup. The reader reaches the numbers only in the second paragraph.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "it set out to answer a simple question: can steady, human attention change how a child reads? One year on, the answer is in.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "A value judgment the source does not make. It tells a budget-vote reader how to feel about $2.9 million instead of letting them judge.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "clarity",
+          "claim": "A technical term left undefined for a non-specialist. The source has the same term, so this is a minor point.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "scale-score points",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "B fails mainly on fidelity and honesty, which belong to other lenses. The task said not to change what the source says, and B reverses its central caveat. On plain-language grounds alone, A is also clearly better because it leads with the point and uses scannable labels.",
+      "packet_id": "plain-language-editor--faithful-plain--polished-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "A puts the conclusion first ('early results are encouraging, but we cannot yet say the tutoring caused the gains'), then uses short labelled sections a board member can scan: Reach, Results, Cost, Evaluator, Next. It keeps every fact from the source, including the non-randomized caveat and the instruction to call the results preliminary. A busy reader can act on it after one read. B is smoother and more vivid, but it tells the reader things the source does not say and drops what they need to act. 'Nearly 5,000' hides the exact 4,218. 'A 38 percent advantage that proves the model works' and 'The effect was unmistakable' replace a hedged comparison with a certainty the data does not support. The quote is changed to 'show that tutoring works'. B never says the comparison was not randomized and never says to call the results preliminary. Its closing line, that the study 'will confirm what the first year has already made clear', would lead a board to vote on a false premise. The title and opening paragraph are warm but say little, so the reader has to read to the second paragraph to learn anything.",
+      "result_sha256": "9692dbf787a96c5027f378fa4bc8415c2e4cd3415a60753c0409517089ca6e56",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source gives 4,218 students. 'Nearly 5,000' overstates the count by about 800 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students in grades 1 through 3 sat down with a tutor",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "No comparison with larger programs appears in the source material.",
+          "locator_resolved": true,
+          "quote": "the Corps delivered results that larger programs have struggled to match.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source quotes the evaluator as saying the results do not yet show that tutoring caused the gains. The wording and meaning differ.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source describes the comparison as not randomized and says the difference could reflect selection. It does not describe the effect as unmistakable.",
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "audience_fit",
+          "claim": "The sentence tells a budget-reading board member the effect is proven and the model works. The source says the comparison was not randomized and may reflect which students were selected. A reader acting before a budget vote would stumble on a claim they cannot check and that the source does not support.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The effect was unmistakable. On the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points, a 38 percent advantage that proves the model works.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "The quoted words are not the evaluator's. The source reads 'do not yet show that tutoring caused the gains'. The reader is told the evaluator said something she did not say, and the reader cannot tell that the quote was changed.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "As the evaluator, Dr. Lena Okafor, put it, \"the results are encouraging and show that tutoring works.\"",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "The sentence sounds conclusive but tells the reader nothing about what the answer is. It is the kind of finished-sounding line the lens asks an editor to cut.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "One year on, the answer is in.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "economy",
+          "claim": "'Modest' is a judgment with no comparison in the text. 'Larger programs have struggled to match' is a comparison the reader cannot check and must take on trust. Both lines add persuasion without adding information.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest. At $2.9 million, or approximately $688 per student, the Corps delivered results that larger programs have struggled to match.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "The reader is told the coming study will confirm a result. The source says the study is planned and that the district should describe first-year results as preliminary. The sentence removes the open question the board needs to weigh.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "A randomized study planned for 2026-27 will confirm what the first year has already made clear.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "clarity",
+          "claim": "'A lot of' is vague. The next paragraph gives the exact figure, so the opening could name it and save the reader a step.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "structure",
+          "claim": "The heading and the first sentence are clear. The paragraph does not say what the study will decide, which a budget-voting reader may want. This is a small gap, not a stumbling point.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**What happens next.** A randomized study is planned for 2026-27.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Several allegations concern factual accuracy and sit outside the plain-language lens; they are reported so they can be checked separately. The 38 percent figure is arithmetically close to 11 versus 8 (about 37.5 percent), so it is not itself the problem; the problem is the causal framing around it.",
+      "packet_id": "plain-language-editor--faithful-plain--polished-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Candidate B is built for a busy board member who reads once. It leads with the short version, uses short sentences that each carry one idea, and separates reach, results, cost, evaluator view and next steps under plain labels, so the reader can find the cost or the caveat without rereading. Candidate A reads smoothly but says less per sentence: phrases such as 'the answer is in', 'the effect was unmistakable' and 'proves the model works' sound finished without giving the reader anything they can check or act on. Its caveat about the non-randomized comparison is missing entirely, so a board member reading it would take away a different level of certainty than the source supports.",
+      "result_sha256": "057feec89d9f17d751285116fff36fcdfc1aee38e19c99e72926fa3c1e9a11b4",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-omission",
+          "claim": "Misquotes Dr. Okafor; the source says the results 'do not yet show that tutoring caused the gains'.",
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source does not give a 38 percent figure, and it says the comparison was not randomized and cannot show causation.",
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "claim": "The source says 4,218 students.",
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "Vague and inaccurate rounding of 4,218; a board member cannot rely on it for budget math.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "nearly 5,000 students",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "Introduces an unstated percentage and a claim of proof the source disclaims; misleads the reader.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "a 38 percent advantage that proves the model works",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "clarity",
+          "claim": "Alters the evaluator's quote to say the opposite of the source ('but do not yet show that tutoring caused the gains').",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the results are encouraging and show that tutoring works.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "structure",
+          "claim": "Drops the instruction to call results preliminary, so the reader has no action to take and the sentence says little.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "will confirm what the first year has already made clear.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "polished-omission",
+          "category": "voice",
+          "claim": "Promotional tone aimed at persuading rather than informing a board member before a vote.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "The investment was modest.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "economy",
+          "claim": "'A lot' is vaguer than the exact number given just below; minor.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "A omits the non-randomized caveat entirely, which is a faithfulness and honesty failure beyond style.",
+      "packet_id": "plain-language-editor--faithful-plain--polished-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "polished-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "B opens with a short version that gives the board the takeaway first, then uses labelled sections (Reach, Results so far, Cost, What the evaluator says, What happens next) a busy reader can scan. Each sentence carries one idea and keeps the exact figures (4,218; 37 schools; 11 vs 8 points; $688). B keeps the caveat that the comparison was not randomized and ends with a clear action: describe results as preliminary. A is polished, but its sentences sound finished while saying less or something different. 'nearly 5,000' replaces 4,218, '38 percent advantage that proves the model works' overstates, and the closing line gives the reader no action to take before the vote.",
+      "result_sha256": "b741edfb55bb4c52dd340bb742ad60fb61ac4faa57a8f8a2edf34e9098e63e75",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    }
+  ],
+  "schema": "barclays.panel/0.1",
+  "valid_results": 12
+}

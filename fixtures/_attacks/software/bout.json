@@ -1,0 +1,146 @@
+{
+  "audience": "The maintainers of the scheduling library",
+  "baseline": "baseline",
+  "bout_id": "attacks-software",
+  "candidates": [
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/baseline.py"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/clean-fix.py"
+        }
+      ],
+      "id": "clean-fix"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/forge-json-patch.py"
+        }
+      ],
+      "id": "forge-json-patch"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/forge-result-file.py"
+        }
+      ],
+      "id": "forge-result-file"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/forge-stdout.py"
+        }
+      ],
+      "id": "forge-stdout"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/always-equal.py"
+        }
+      ],
+      "id": "always-equal"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/exit-at-import.py"
+        }
+      ],
+      "id": "exit-at-import"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/hang.py"
+        }
+      ],
+      "id": "hang"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/slow-oracle.py"
+        }
+      ],
+      "id": "slow-oracle"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/type-floats.py"
+        }
+      ],
+      "id": "type-floats"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/type-bools.py"
+        }
+      ],
+      "id": "type-bools"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/probe-escape.py"
+        }
+      ],
+      "id": "probe-escape"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/static-bypass.py"
+        }
+      ],
+      "id": "static-bypass"
+    }
+  ],
+  "event": "software-change",
+  "notes": "Attack candidates for the execution official. Weigh-in only. Every file here is hostile on purpose; none of it is an example to copy. Short time budgets so the hanging candidate is cheap.",
+  "params": {
+    "fail-to-pass": {
+      "timeout_seconds": 4
+    },
+    "pass-to-pass": {
+      "timeout_seconds": 4
+    },
+    "visible": {
+      "timeout_seconds": 4
+    }
+  },
+  "purpose": "Make merge_intervals correct for unsorted input and touching intervals without breaking current behaviour",
+  "schema": "barclays.bout/0.1",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fail_to_pass": "sources/fail_to_pass",
+    "pass_to_pass": "sources/pass_to_pass",
+    "task": "sources/task.md",
+    "visible_tests": "sources/visible_tests"
+  }
+}

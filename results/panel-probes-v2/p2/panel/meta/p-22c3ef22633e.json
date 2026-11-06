@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "subtle-omission",
+    "B": "faithful-plain"
+  },
+  "leads_mode": "none",
+  "lens_id": "measurement-scientist",
+  "lens_sha256": "7e2cd0a3ef0a2bbdfcb136d952d4e93dc33733aec60f4aebd943c0a04d2fc6f3",
+  "order": "ba",
+  "packet_id": "p-22c3ef22633e",
+  "packet_sha256": "0f285542819eb03bae2404c1621822bdeab4f339a738bc71f86c8352fdc3d9bb",
+  "pair": [
+    "faithful-plain",
+    "subtle-omission"
+  ],
+  "reference_shown": false,
+  "reviewer_slot": "r2"
+}

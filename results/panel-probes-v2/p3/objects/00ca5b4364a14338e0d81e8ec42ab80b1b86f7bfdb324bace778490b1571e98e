@@ -1,0 +1,45 @@
+{
+  "audience": "The maintainers of the scheduling library",
+  "baseline": "baseline",
+  "bout_id": "software-clear-win",
+  "candidates": [
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/baseline.py"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/clean-fix.py"
+        }
+      ],
+      "id": "clean-fix"
+    },
+    {
+      "files": [
+        {
+          "path": "solution.py",
+          "source": "candidates/polished-shallow.py"
+        }
+      ],
+      "id": "polished-shallow"
+    }
+  ],
+  "event": "software-change",
+  "notes": "Synthetic calibration fixture.",
+  "purpose": "Make merge_intervals correct for unsorted input and touching intervals without breaking current behaviour",
+  "schema": "barclays.bout/0.1",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fail_to_pass": "sources/fail_to_pass",
+    "pass_to_pass": "sources/pass_to_pass",
+    "task": "sources/task.md",
+    "visible_tests": "sources/visible_tests"
+  }
+}

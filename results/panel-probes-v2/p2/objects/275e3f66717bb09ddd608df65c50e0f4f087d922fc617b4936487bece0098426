@@ -1,0 +1,25 @@
+{
+  "applies_to": "all",
+  "authority": "advise",
+  "candidate_content_hash": "4d3f7b31fa8030f921488c804d5ea923aeb1071eb95ddbd07f839d78a778af36",
+  "candidate_id": "subtle-omission",
+  "duration_ms": 2,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "leads": 0
+  },
+  "official": "text.hedge_shift",
+  "official_id": "hedge-shift",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "0 lead(s) for reviewers; this official never fails a candidate"
+}

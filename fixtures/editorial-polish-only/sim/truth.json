@@ -1,0 +1,38 @@
+{
+  "note": "SIMULATED perceptions for the controller's simulator. These are not model outputs. They encode a panel that is impressed by polish: the polished candidate is perceived as best although it drops and alters facts.",
+  "seed": 7,
+  "behaviors": {
+    "sim-alpha": {
+      "noise": 0.01
+    },
+    "sim-beta": {
+      "noise": 0.01
+    },
+    "sim-gamma": {
+      "noise": 0.01
+    },
+    "sim-delta": {
+      "noise": 0.01
+    }
+  },
+  "truth": {
+    "baseline": {
+      "quality": 0.45
+    },
+    "faithful-plain": {
+      "quality": 0.8
+    },
+    "faithful-warm": {
+      "quality": 0.8
+    },
+    "polished-omission": {
+      "quality": 0.93
+    },
+    "smoother-only": {
+      "quality": 0.48
+    },
+    "subtle-omission": {
+      "quality": 0.86
+    }
+  }
+}

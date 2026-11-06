@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "accessibility-auditor",
+  "kind": "disciplinary_lens",
+  "title": "Accessibility auditor",
+  "brief": "Read as an accessibility specialist working from WCAG 2.x. For each page state in the packet, ask whether a person using only a keyboard, a screen reader, magnification or voice control could perceive, operate and understand it. Name the element, the barrier and the success criterion it would fail, such as name-role-value, focus order, contrast or target size. Treat tool output as a starting list: a clean automated report is not evidence that the page works. Say what you could not judge from text and screenshots.",
+  "may_assess": [
+    "keyboard_operability",
+    "focus_and_order",
+    "labels_and_names",
+    "contrast_and_legibility",
+    "structure",
+    "cognitive_load"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Reads a rendering, not a running page with assistive technology. A claimed WCAG failure is a lead until a tool or a manual audit confirms it. It cannot establish that people who use assistive technology can complete real tasks; that needs testing with them."
+}

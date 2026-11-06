@@ -1,0 +1,22 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "adversarial-tester",
+  "kind": "adversarial_role",
+  "title": "Adversarial tester",
+  "brief": "Your job is to break it. Read each candidate looking for the input its author did not think of: empty, single-element, unsorted, duplicated, adjacent, negative, very large. For each weakness, name the exact input and the output you expect to be wrong. A suspicion without a concrete input is not an objection.",
+  "may_assess": [
+    "generality",
+    "robustness",
+    "structure"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "An adversarial role proposes tests. A proposed failing input is an allegation until it is run."
+}

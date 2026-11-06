@@ -1,0 +1,50 @@
+{
+  "barclays_version": "0.2.0",
+  "bout_id": "editorial-subtle-omission",
+  "bout_sha256": "db0eb15c2c44291b84c0d59324b25ead67a392083f3adad423154f308d38b1c4",
+  "candidates": [
+    {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "1e51878e54db91fe8ee9b82b32f093d4bb123c0eaec3f9fb07fdf7f4fa5a3991"
+        }
+      ],
+      "id": "faithful-plain"
+    },
+    {
+      "content_hash": "4d3f7b31fa8030f921488c804d5ea923aeb1071eb95ddbd07f839d78a778af36",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "925c15d5e60dc623cf2df0bae0312860cafed795c1ae238e65ff442c7b51c916"
+        }
+      ],
+      "id": "subtle-omission"
+    }
+  ],
+  "event_id": "editorial-revision",
+  "event_sha256": "291e6d4588d96b385a5032cda231ec4ad69036639dfda3b4f965560b908b4a50",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fact_ledger": {
+      "path": "sources/ledger.json",
+      "sha256": "bcb68541be772f2cf40a639af6fe739ec680be98dafe8aaa963083462a8e058d"
+    },
+    "source_draft": {
+      "path": "sources/source.md",
+      "sha256": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+    }
+  }
+}

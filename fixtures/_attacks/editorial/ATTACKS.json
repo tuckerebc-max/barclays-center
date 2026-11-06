@@ -1,0 +1,410 @@
+[
+ {
+  "candidate": "a-footnote",
+  "kind": "attack",
+  "what": "Replaces the figures with invented ones in words (five thousand, forty, three million), adds a fabricated quotation that runs over a line break, and hides the real figures in a footnote.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "fail"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "Caught by the new numbers 5000, 40 and 3000000 and by the quotations; the footnote does satisfy every ledger fact, so the ledger alone would have passed it."
+ },
+ {
+  "candidate": "a-negate",
+  "kind": "attack",
+  "what": "Says the Corps did not tutor the 4,218 students and that 37 schools declined to take part; every figure and the evaluator quotation are intact.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass",
+   "hedge-shift": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "Still passes every decisive official; no byte rule can tell 'tutored' from 'did not tutor'. hedge_shift raises polarity leads P-F1 and P-F2 quoting the sentence.",
+  "lead_ids_include": [
+   "P-F1",
+   "P-F2"
+  ]
+ },
+ {
+  "candidate": "a-quotes",
+  "kind": "attack",
+  "what": "Adds a three-word fabricated double quotation and a fabricated single-quoted quotation to an otherwise faithful revision.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "fail"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "Caught now that min_words is 3 and single quotation marks are recognised; both fabricated quotations are findings."
+ },
+ {
+  "candidate": "a-reverse",
+  "kind": "attack",
+  "what": "Reverses the design (students 'randomly assigned', study 'cancelled', result 'final') and adds a fabricated single-quoted quotation and spelled-out invented figures.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "fail"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "Caught only through its side effects (spelled-out invented numbers 38 and 5000, a fabricated quotation); the reversal itself would pass if it carried no new number or quotation, and only advisory leads point at it."
+ },
+ {
+  "candidate": "a-second-file",
+  "kind": "attack",
+  "what": "The first file is the faithful revision; a second file claims a proven success with invented figures and a fabricated quotation.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "fail"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "Caught because every text official now reads every file through Ctx.all_text()."
+ },
+ {
+  "candidate": "a-swap",
+  "kind": "attack",
+  "what": "Swaps the two gains: tutored students gained 8, untutored students gained 11.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass",
+   "number-roles": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "Still passes every decisive official, because both numbers and all ledger terms are present; number_roles raises R-11-8 as a lead only.",
+  "lead_ids_include": [
+   "R-11-8"
+  ]
+ },
+ {
+  "candidate": "baseline",
+  "kind": "control",
+  "what": "The original draft submitted as the baseline.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Control: the source passes all decisive officials."
+ },
+ {
+  "candidate": "faithful-plain",
+  "kind": "control",
+  "what": "A plain faithful revision of the source.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Control: no findings and no leads."
+ },
+ {
+  "candidate": "fp-british",
+  "kind": "faithful",
+  "what": "Spells 'randomised' the British way.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by fact-ledger F3; the -ise/-ize spelling fold in norm() fixes it."
+ },
+ {
+  "candidate": "fp-dollars",
+  "kind": "faithful",
+  "what": "Writes the cost as $2,900,000 instead of $2.9 million.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by F5 and new-numbers; both sides now normalise to 2900000."
+ },
+ {
+  "candidate": "fp-ellipsis",
+  "kind": "faithful",
+  "what": "Shortens the evaluator's quotation with a standard ellipsis.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by quotes; each side of the ellipsis is now checked in order against the source."
+ },
+ {
+  "candidate": "fp-evaluation",
+  "kind": "faithful",
+  "what": "Says 'randomized evaluation' instead of 'randomized study'.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by F7; 'randomized evaluation' is now an alternative in the ledger."
+ },
+ {
+  "candidate": "fp-newdate",
+  "kind": "faithful",
+  "what": "Adds a derived figure (about 114 students per school) and a new date (the board votes on March 17).",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "pass"
+  },
+  "eligibility": "disqualified",
+  "class": "false_positive_remaining",
+  "note": "Still disqualified by new-numbers N-114 and N-17: the rule is that no number may be absent from the source and the evidence, and both numbers are, so the rule is behaving as written; allow the figures through the evidence source or the params if the organizer accepts them."
+ },
+ {
+  "candidate": "fp-paraphrase6",
+  "kind": "faithful",
+  "what": "Paraphrases the evaluator's caution as 'do not show yet that tutoring caused the gains'.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by F6; the ledger now lists 'not show yet that tutoring caused'. hedge_shift still raises an advisory H-F6 lead because the literal hedge 'not yet' is gone."
+ },
+ {
+  "candidate": "fp-space-thousands",
+  "kind": "faithful",
+  "what": "Writes 4 218 with a space as the thousands separator.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by F1 and new-numbers; space-separated thousands now normalise to 4218."
+ },
+ {
+  "candidate": "fp-spelled37",
+  "kind": "faithful",
+  "what": "Writes 'thirty-seven schools' in words.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Was wrongly disqualified by F2; number words now normalise to 37."
+ },
+ {
+  "candidate": "x-ordinal",
+  "kind": "attack",
+  "what": "Adds 'ranking 3rd in the state' to the reach sentence: an invented fact carried by a small ordinal.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "not_caught",
+  "note": "From the second review. Counts and ordinals of ten and under are ignored, because prose is full of them. This invented ranking passes."
+ },
+ {
+  "candidate": "y-words",
+  "kind": "attack",
+  "what": "Adds 'nine of them saw no gains at all': an invented count written as a word.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass",
+   "hedge-shift": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "From the second review. A count of ten or under is ignored whether written as a digit or a word, so the invented figure passes every decisive check. The sentence does raise a polarity lead ('no gains'), by luck of its wording.",
+  "lead_ids_include": [
+   "P-F1"
+  ]
+ },
+ {
+  "candidate": "y-reuse-pct",
+  "kind": "attack",
+  "what": "Adds 'About 37% of tutored students reached grade level', reusing the 37 of '37 schools' as a percentage.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "pass"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "From the second review, which passed it through 0.2. A percentage is now a different figure from the same digits as a count."
+ },
+ {
+  "candidate": "y-percent-word",
+  "kind": "attack",
+  "what": "Adds 'roughly eleven percent of the district', reusing the 11 of '11 points' as a percentage in words.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "pass"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "From the second review. 'eleven percent' is 11%, which the source does not contain."
+ },
+ {
+  "candidate": "y-unquoted-attrib",
+  "kind": "attack",
+  "what": "Adds 'Dr. Okafor also wrote that the tutoring clearly caused the gains': a fabricated statement in indirect speech.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "not_caught",
+  "note": "From the second review. No quotation marks, no new figure, every ledger fact still present: no rule about bytes fires. This is the meaning-change class; only a reader or a model gate can catch it."
+ },
+ {
+  "candidate": "f-roundword",
+  "kind": "faithful",
+  "what": "Glosses 4,218 students as 'about four thousand two hundred'.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "From the second review, which found it wrongly disqualified. A rounding of a source figure (fewer significant digits, within 10 percent) is no longer a new figure; a lead records the rounding.",
+  "lead_ids_include": [
+   "R-4200"
+  ]
+ },
+ {
+  "candidate": "f-about-4000",
+  "kind": "faithful",
+  "what": "Says 'more than 4,000 students (4,218)'.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "From the second review, which found it wrongly disqualified. Same rounding rule.",
+  "lead_ids_include": [
+   "R-4000"
+  ]
+ },
+ {
+  "candidate": "f-units",
+  "kind": "faithful",
+  "what": "Adds 'or 90 minutes in all' (three sessions of 30 minutes).",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "pass"
+  },
+  "eligibility": "disqualified",
+  "class": "false_positive_remaining",
+  "note": "From the second review. A derived figure is still a figure the source does not contain; the rule cannot tell correct arithmetic from invention. A bout may list such figures under new-numbers.allow, and that override is flagged."
+ },
+ {
+  "candidate": "r-bare-700",
+  "kind": "attack",
+  "what": "Adds 'That is $700 for every child' where the source says $688, with no marker of approximation.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "fail",
+   "quotes": "pass"
+  },
+  "eligibility": "disqualified",
+  "class": "caught_decisively",
+  "note": "A figure near a source figure is still a new figure unless the writer marks it as approximate. Without this, the rounding rule would accept any figure within ten percent."
+ },
+ {
+  "candidate": "r-about-700",
+  "kind": "faithful",
+  "what": "Adds 'That is about $700 for every child': a marked rounding of $688.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "correctly_passed",
+  "note": "Recorded as a possible rounding (marked as approximate, fewer significant digits, within 10 percent), not accepted as one. The lead is major, so a verdict that names this candidate requires a person to confirm the figure is the same quantity.",
+  "lead_ids_include": [
+   "R-700"
+  ]
+ },
+ {
+  "candidate": "r-swap-700",
+  "kind": "attack",
+  "what": "Replaces the source's 'approximately $688 per student' with 'approximately $700 per student': a different figure under the source's own marker of approximation.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "Third review, R3-03. On the page this is identical to a faithful rounding, so no check on bytes can separate them. It is not disqualified. It carries a major lead, and the event's open-leads rule then requires a person before the verdict is used. $688 is not on the must-keep list, so the fact ledger passes.",
+  "lead_ids_include": [
+   "R-700"
+  ]
+ },
+ {
+  "candidate": "q-third",
+  "kind": "attack",
+  "what": "Adds 'About a third of tutored students reached the benchmark': a proportion the source never states, with no digits.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "Third review, R3-04. A proportion in words carries no figure for the number check to compare. It is recorded as a major lead for a person, never a finding: 'a third' can also be a faithful restatement of 33 percent.",
+  "lead_ids_include": [
+   "Q-1in3"
+  ]
+ },
+ {
+  "candidate": "q-double",
+  "kind": "attack",
+  "what": "Adds 'gains were nearly double those of their peers' where the source gives 11 points against 8.",
+  "expected": {
+   "fact-ledger": "pass",
+   "new-numbers": "pass",
+   "quotes": "pass"
+  },
+  "eligibility": "eligible",
+  "class": "lead_only",
+  "note": "Third review, R3-04. A multiple in words. Major lead only; whether 11 against 8 is 'nearly double' is arithmetic on meaning that this check does not do.",
+  "lead_ids_include": [
+   "Q-x2"
+  ]
+ }
+]

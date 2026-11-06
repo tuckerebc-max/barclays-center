@@ -1,0 +1,60 @@
+{
+  "applies_to": "challengers",
+  "authority": "disqualify",
+  "candidate_content_hash": "aeeb5c8311e2d665289d25eac23dcb26b0e5d863b5d80f394bd1dbfd1b6cd616",
+  "candidate_id": "polished-omission",
+  "duration_ms": 0,
+  "findings": [
+    {
+      "claim": "Number 5000 does not appear in the source or the evidence",
+      "evidence": {
+        "line": "Across 37 schools, nearly 5,000 students in grades 1 through 3 sat down with a tutor three times a week. The effect was unmistakable. On the district's spring reading screener, tutored students gained"
+      },
+      "id": "N-5000",
+      "locator": "L5",
+      "severity": "major"
+    },
+    {
+      "claim": "Number 38 does not appear in the source or the evidence",
+      "evidence": {
+        "line": "Across 37 schools, nearly 5,000 students in grades 1 through 3 sat down with a tutor three times a week. The effect was unmistakable. On the district's spring reading screener, tutored students gained"
+      },
+      "id": "N-38",
+      "locator": "L5",
+      "severity": "major"
+    }
+  ],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [
+    {
+      "basis": "heuristic",
+      "id": "D-4218",
+      "locator": "",
+      "note": "Source number 4218 is absent from the candidate (source line 3: In the 2025-26 school year, the Riverbend Reading Corps provided tutoring to 4,218 students in grades 1 through 3 across 37 schools. Tutoring sessions were delivered three times per week and each sess)",
+      "severity": "minor"
+    },
+    {
+      "basis": "heuristic",
+      "id": "D-30",
+      "locator": "",
+      "note": "Source number 30 is absent from the candidate (source line 3: In the 2025-26 school year, the Riverbend Reading Corps provided tutoring to 4,218 students in grades 1 through 3 across 37 schools. Tutoring sessions were delivered three times per week and each sess)",
+      "severity": "minor"
+    }
+  ],
+  "metrics": {
+    "dropped_source_numbers": 2,
+    "new_numbers": 2
+  },
+  "official": "text.new_numbers",
+  "official_id": "new-numbers",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "2 number(s) with no support in the source or evidence"
+}

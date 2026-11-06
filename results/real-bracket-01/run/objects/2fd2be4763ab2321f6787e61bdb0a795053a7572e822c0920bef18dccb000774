@@ -1,0 +1,28 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+  "candidate_id": "faithful-warm",
+  "duration_ms": 0,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "facts_total": 8,
+    "kept": 8,
+    "missing": 0,
+    "must_keep": 7
+  },
+  "official": "text.fact_ledger",
+  "official_id": "fact-ledger",
+  "official_version": "0.1.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "all 7 must-keep facts present"
+}

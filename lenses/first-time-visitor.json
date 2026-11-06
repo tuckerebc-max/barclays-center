@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "first-time-visitor",
+  "kind": "audience_proxy",
+  "title": "First-time visitor",
+  "brief": "Read as someone arriving at this site for the first time, with the goal the brief states and no knowledge of the organization. Try to do the task the brief names: find the thing, understand what is offered, know what to do next. Report where you hesitated, where a label meant something other than you expected, and where you could not tell what a control would do. Quote the label or heading you stumbled on.",
+  "may_assess": [
+    "findability",
+    "navigation_clarity",
+    "label_clarity",
+    "first_impression",
+    "task_flow",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Cannot establish that real first-time visitors find, understand or trust the site. A model playing an audience is not evidence from that audience: its reading is a source of objections to check, never a measure of how real members of the audience would respond. Task success and satisfaction need real users (task success, SUS)."
+}

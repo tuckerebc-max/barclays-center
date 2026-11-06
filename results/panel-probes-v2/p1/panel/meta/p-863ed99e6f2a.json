@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "polished-omission",
+    "B": "faithful-plain"
+  },
+  "leads_mode": "none",
+  "lens_id": "fact-desk",
+  "lens_sha256": "b1c5507fb756c39ac33490e9bfaffff7ebd4d8f0e4d9b38d19799f41c4021796",
+  "order": "ba",
+  "packet_id": "p-863ed99e6f2a",
+  "packet_sha256": "e97afa71a84252eac5654f3be2906023809c7df753158b09d6d08d059a88e131",
+  "pair": [
+    "faithful-plain",
+    "polished-omission"
+  ],
+  "reference_shown": false,
+  "reviewer_slot": "r1"
+}

@@ -1,0 +1,234 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "research-synthesis",
+  "title": "Research synthesis: every claim traceable, every conflict shown",
+  "genre": "research-synthesis",
+  "status": "specified",
+  "objective": "Promote a synthesis only if every citation resolves to a source in the pack, every quotation is verbatim in the cited source, every cited figure appears in the cited source, and it is the better account of what the pack supports: the right sources weighed by their design, conflicts shown, uncertainty stated at the strength the evidence allows. A synthesis that sounds authoritative but cites loosely does not win.",
+  "audience": "Set per bout. The bout names the decision-maker or reader the synthesis serves and the question it must answer.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one Markdown or plain-text file whose citations use the bout's declared form: a source id and a locator (page, section or paragraph) for each",
+    "required_sources": [
+      "source_pack",
+      "requirements_ledger"
+    ],
+    "optional_sources": [
+      "known_conflicts"
+    ],
+    "source_pack": "A directory of source documents, hashed as a tree with the bout. Nothing outside the pack can be cited; a citation to anything else is unresolved.",
+    "requirements_ledger": "The organizer's list of sources the synthesis must engage and questions it must answer. Like the fact ledger in editorial-revision it is evidence: a source left out of it is not protected.",
+    "known_conflicts": "Pairs of sources the organizer knows disagree, each with the point of disagreement. Conflicts the organizer does not know about are not checked."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "bracket",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "cite-resolves",
+      "official": "cite.resolves",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "locator_required": true
+      },
+      "why": "A citation that names no source in the pack, or a locator that does not exist in it, cannot be checked by anyone. Checked on bytes before any judge reads the prose."
+    },
+    {
+      "id": "cite-quote-verbatim",
+      "official": "cite.quote_verbatim",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "min_words": 4,
+        "normalise": [
+          "unicode",
+          "whitespace",
+          "quote_style"
+        ],
+        "scope": "cited_source"
+      },
+      "why": "A quotation must appear verbatim in the source it is cited to, not merely somewhere in the pack."
+    },
+    {
+      "id": "cite-number-grounded",
+      "official": "cite.number_grounded",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "ignore_integers_upto": 10,
+        "scope": "cited_source"
+      },
+      "why": "A figure attached to a citation must appear in that cited source. A figure that is true elsewhere in the pack but not in the cited source is a mis-citation."
+    },
+    {
+      "id": "cite-coverage",
+      "official": "cite.coverage",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "ledger": "requirements_ledger"
+      },
+      "why": "Required sources the synthesis never cites are a lead for reviewers. Omission can be a judgment about relevance, so it is never a failure."
+    },
+    {
+      "id": "cite-conflict-acknowledged",
+      "official": "cite.conflict_acknowledged",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "conflicts": "known_conflicts"
+      },
+      "why": "A known disagreement that the synthesis cites on one side only, or smooths into agreement, is where weighting goes wrong. A heuristic lead, never a failure."
+    },
+    {
+      "id": "cite-grounding",
+      "official": "cite.grounding_score",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "models": [
+          "MiniCheck-Flan-T5-Large",
+          "HHEM-2.1-Open"
+        ],
+        "report": [
+          "true_positive_rate",
+          "true_negative_rate"
+        ],
+        "role": "leads_only_until_calibrated"
+      },
+      "why": "A local grounding model scores whether each cited passage supports its claim. These models have asymmetric errors, so scores are leads until a threshold is calibrated on labelled examples from this genre."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "evidence_weighting",
+      "weight": 0.25,
+      "definition": "Each source counts for what its design can bear: a pilot is not treated as a finding, an opinion is not treated as a trial, and the reader can tell which is which."
+    },
+    {
+      "id": "calibration_of_confidence",
+      "weight": 0.25,
+      "definition": "Stated confidence matches what the pack supports; hedges survive where the evidence is thin and are absent where it is strong.",
+      "anchors": [
+        {
+          "level": 0,
+          "description": "claims far stronger or weaker than the pack supports"
+        },
+        {
+          "level": 2,
+          "description": "mostly matched, some overreach"
+        },
+        {
+          "level": 4,
+          "description": "confidence tracks evidence throughout"
+        }
+      ]
+    },
+    {
+      "id": "conflict_handling",
+      "weight": 0.2,
+      "definition": "Where sources disagree the synthesis shows both sides, says why they may differ and does not pick silently."
+    },
+    {
+      "id": "coverage_balance",
+      "weight": 0.15,
+      "definition": "The sources that matter to the question are used in proportion to their relevance; none is ignored without reason and none dominates by repetition."
+    },
+    {
+      "id": "clarity",
+      "weight": 0.15,
+      "definition": "The intended reader can find the answer, the evidence behind it and the remaining doubt after one read."
+    }
+  ],
+  "model_gates": [
+    {
+      "id": "no-claim-beyond-source",
+      "definition": "Makes no claim stronger than the cited source states it"
+    }
+  ],
+  "lenses": [
+    "fact-desk",
+    "research-methodologist",
+    "measurement-scientist",
+    "plain-language-editor"
+  ],
+  "evidence_required": [
+    "The source pack (tree hash), the requirements ledger and any known-conflicts list, hashed.",
+    "Each candidate's exact bytes, hashed. A re-edited candidate is a new candidate.",
+    "For every disqualification: the official, its version, and the citation, quotation or figure concerned, with the cited source and locator.",
+    "For every grounding lead: model name and pinned revision, the claim, the passage, the score and the threshold in force.",
+    "For the bracket: the controller's decision record with its contract hash, ballots and judge diagnostics."
+  ],
+  "hard_disqualifiers": [
+    "A citation does not resolve to a source and locator in the pack.",
+    "A quotation does not appear verbatim in the source it is cited to.",
+    "A figure attached to a citation does not appear in the cited source."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Judges compare only syntheses that passed the decisive officials. They rank weighting, conflict handling and calibration. Whether a cited passage supports its claim is checked by the fact desk and the grounding lead, not decided by judges.",
+    "calibration": "No judge route and no grounding threshold has been scored against human gold on this genre."
+  },
+  "format": {
+    "tournament": "gauntlet then finals",
+    "why": "Citation resolution, verbatim quotation and figure grounding are checkable on bytes, so they run first and can eliminate every candidate. Judged finals on the survivors compare weighting and calibration, which only readers can rank. Pairwise in both orders because the finals are small and position bias is worst on near-equal pairs.",
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": [
+        "requirements_ledger",
+        "known_conflicts"
+      ]
+    },
+    "panel": {
+      "reference_sources": [
+        "source_pack"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "no candidate passes every decisive official (NO_ELIGIBLE_CANDIDATE)",
+      "the leading eligible syntheses tie or beat each other in a cycle (TIED_SHORTLIST)",
+      "no challenger beats the baseline by the material-improvement threshold, when a baseline is named (NO_CHANGE)",
+      "a decisive official could not run for a candidate, for example an unparseable citation form (INCONCLUSIVE, never a loss)",
+      "a judge's two display orders disagree and quorum is lost (INCONCLUSIVE)"
+    ]
+  },
+  "human_decides_when": [
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Whether a cited passage supports the claim attached to it. The officials show that a citation resolves, a quotation is verbatim and a figure is present; none shows the passage says what the synthesis says it does. Grounding scores are leads until calibrated.",
+    "Whether the source pack is the right one: complete, current and well chosen. A synthesis can be faithful to a poor pack, and a pack the organizer assembled carries the organizer's choices.",
+    "Whether conflicts exist that the organizer did not list. The conflict check covers only the listed ones.",
+    "Whether a domain expert would accept the weighing of evidence. Model judges and a methodologist lens are a proxy; expert review is the measure."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal",
+      "restricted"
+    ],
+    "notes": "The officials are meant to run locally and send nothing anywhere, including the grounding models, so the event would accept any label. Reviewer and judge routes are cleared separately and fail closed."
+  },
+  "notes": "SPECIFIED, NOT RUNNABLE. To make it runnable build: (1) cite.resolves, a citation-grammar parser plus pack lookup; no upstream tool. (2) cite.quote_verbatim, wrapping rapidfuzz (MIT) for near-match reporting over exact normalised substring matching; the existing text.quotes official has the normalisation to reuse, but it checks against the whole reference rather than the cited source. (3) cite.number_grounded, same, scoped to the cited source (sibling of text.new_numbers). (4) cite.coverage and cite.conflict_acknowledged, custom, no upstream. (5) cite.grounding_score, wrapping MiniCheck (Apache-2.0 code; Flan-T5-Large weights MIT) and HHEM-2.1-Open (Apache-2.0 weights, needs trust_remote_code so pin the revision hash); never Bespoke-MiniCheck-7B (CC BY-NC 4.0). HHEM is weak on long premises (Vectara's own figures: balanced accuracy 71.57% under 4,608 characters, 62.58% above), so chunk the cited passage. Also needed: panel packets read single files only, so the source pack must be rendered to one reference file before the panel can use it."
+}

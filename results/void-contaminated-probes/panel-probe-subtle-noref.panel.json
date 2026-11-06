@@ -1,0 +1,1223 @@
+{
+  "allegations": [
+    {
+      "candidate_id": "subtle-omission",
+      "claim": "The short version drops the evaluator's qualification that the results do not yet show tutoring caused the gains, so the summary states the results more strongly than the evaluator's own quoted words do.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students, and early results are encouraging.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "claim": "The comparison is presented without the note that it comes from a non-randomized internal pilot, which the candidate A version states. A reader would take the 3-point gap as a tutoring effect, which the evaluator's quoted words do not support.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "claim": "The headline says results are encouraging without the causal qualification that appears in B's headline; the only caveat in A is the evaluator quotation near the end, so the summary states the early results more strongly than the qualifications in the material support.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students, and early results are encouraging.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "claim": "No reference material was supplied to confirm that the comparison was an internal pilot and was not randomized. Candidate A does not contain this detail, so it is unverified in this packet.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "raised_in_lane": true,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "claim": "The summary omits the evaluator's point that causation is not shown, so it reads more strongly than the evaluator quote.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students, and early results are encouraging.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "claim": "The 'internal pilot comparison' provenance and the selection explanation are not in any visible reference; they need checking against the source.",
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "raised_in_lane": true,
+      "reviewer_slot": "sonnet",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "claim": "The packet gives no source for the claim that the comparison was an internal pilot. Candidate A does not describe the comparison this way. The label needs checking against the underlying evaluation before it is relied on.",
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized",
+      "raised_in_lane": false,
+      "reviewer_slot": "haiku",
+      "status": "unverified"
+    }
+  ],
+  "authority": "advisory: objections and allegations for the report and a human; never decisive",
+  "missing_results": 0,
+  "objections_in_lane": [
+    {
+      "candidate_id": "subtle-omission",
+      "category": "completeness",
+      "claim": "The results section omits the non-randomized design limitation that candidate A states. The missing caveat is material to a budget vote.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "**Results so far.** On the district's spring reading screener",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "completeness",
+      "claim": "Omits the caveat that the tutoring's causal effect cannot yet be claimed. The summary reads more strongly than the evaluator's conclusion, which B quotes later.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "completeness",
+      "claim": "Omits that this comes from a non-randomized internal pilot comparison and that the difference may reflect student selection. The 3-point gap is presented as an unqualified comparison.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "completeness",
+      "claim": "The gain comparison is presented without saying the comparison group was not randomized or that selection may explain the difference, which B states. This omits a qualification material to whether the gain can be attributed to tutoring.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "completeness",
+      "claim": "The 11 vs 8 comparison is given with no note that it is not randomized or that selection may explain the gap, which is weaker than the evaluator's own caveat quoted later in the same document.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "inference",
+      "claim": "The headline drops the causal hedge that appears in A ('we cannot yet say the tutoring caused the gains'). A board member reading one summary line gets an encouraging-results message with no signal that the evidence is not causal.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": false,
+      "quote": "The short version: the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "uncertainty",
+      "claim": "No uncertainty is reported for the 3-point difference (no interval, standard error, or significance test), and the sample sizes for each group are not given. The reader cannot judge whether a 3-point gap in a non-randomized pilot is distinguishable from noise.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "inference",
+      "claim": "Presents a comparison between tutored and untutored students with no statement that assignment was not randomized, so the 3-point difference reads as a tutoring effect. A non-randomized comparison cannot separate tutoring from selection of students into tutoring. Support would require the design description the candidate omits.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "uncertainty",
+      "claim": "The hedge on causality is dropped from the summary line. The headline says results are encouraging without the qualification that the comparison is not causal, which a board member reading once is likely to take as the takeaway.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "argument",
+      "claim": "The evaluator's caveat is placed in a separate section and is the only place the causal limit appears in the body, so the caveat is weaker than the gains figure presented above it and does not state the reason for the limit.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "**What the evaluator says.** Dr. Lena Okafor wrote that \"the results are encouraging but do not yet show that tutoring caused the gains.\"",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "The added sentence makes the paragraph longer for a board member who wants one read. It is still the right content, since it states the design and the alternative explanation in plain terms.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "uncertainty",
+      "claim": "The headline drops the causal caveat. A reader who stops here gets the impression of an effect that the non-randomized design cannot support.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "inference",
+      "claim": "The 3-point difference is presented with no design context. It does not say the comparison was non-randomized, or that selection into tutoring could explain it, and gives no comparison-group size or uncertainty. This invites a causal reading.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "inference",
+      "claim": "Even with the added caveat, no group sizes, baseline equivalence, standard errors, or statistical significance are given for the 3-point difference. Whether it is distinguishable from noise or from a trivially small effect is unknown.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "audience_fit",
+      "claim": "The selection concern is stated but not explained for a lay board, for example whether the neediest or most motivated students were chosen. The board cannot tell which direction the bias runs.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the difference may reflect which students were selected for tutoring rather than the tutoring itself",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "clarity",
+      "claim": "The paragraph gives the 11-versus-8 comparison with no note that the groups were not randomized. A board member reading before a vote would likely take the three-point gap as the effect of tutoring, which is the exact conclusion the document says it cannot yet support.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "clarity",
+      "claim": "The one-line summary a busy reader is most likely to remember says nothing about causation. It leaves out the point that the results cannot yet show that tutoring caused the gains, so the reader gets the optimistic half only.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "economy",
+      "claim": "The sentence is accurate and needed, but it is long and abstract. A plainer version such as 'The groups were not randomly assigned, so the gap may reflect which students were chosen, not the tutoring' would deliver the same idea in fewer words.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "clarity",
+      "claim": "The comparison is given with no note that the groups were not randomized, so the reader will read the 3-point gap as the effect of tutoring. The later evaluator quote then arrives without explanation.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "structure",
+      "claim": "The short version leaves out the main limit (cause not shown), so a reader who stops here is left with a more positive picture than the later text supports.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "economy",
+      "claim": "'Approximately' is unneeded wordiness when the figure is already a rounded number. Minor.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "or approximately $688 per student",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "clarity",
+      "claim": "Jargon is not explained for a lay reader, and neither is how large 3 points is. Minor, and shared with B.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "scale-score points",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "structure",
+      "claim": "The one-line summary is the line most likely to be read alone, and it stops before the causal point. A reader who stops here leaves thinking the program works. The summary should carry the limit that the rest of the piece states.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "economy",
+      "claim": "The caveat is necessary and accurate, but the sentence is long for a busy reader. The idea is selection bias; the phrase 'internal pilot comparison' is a label the reader does not need in order to act. A shorter version would keep the selection point.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "clarity",
+      "claim": "This is a clear plain statement of the limit. However, the 'we' voice shifts to the authors inside a summary that otherwise describes the program in the third person, and the added clause makes the opening line longer.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "but we cannot yet say the tutoring caused the gains",
+      "reviewer_slot": "haiku",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "clarity",
+      "claim": "The summary line gives only the positive reading. A board member who reads once and stops here will not know the results cannot show cause.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "early results are encouraging.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "structure",
+      "claim": "The comparison is stated with no note on how the groups were formed. The reader has to wait for a quotation further down to learn it is not a clean test.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "clarity",
+      "claim": "The only caveat is in a quoted expert sentence, with no plain explanation of why. A non-specialist may skim past it.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "do not yet show that tutoring caused the gains.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "economy",
+      "claim": "The sentence is long and uses \"randomized\" without a gloss. Splitting it in two would help. It is still clearer than leaving the caveat out.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    }
+  ],
+  "objections_out_of_lane": [
+    {
+      "candidate_id": "subtle-omission",
+      "category": "omitted design caveat",
+      "claim": "The comparison is from a non-randomized internal pilot, and this sentence omits that. The 3-point gap is presented as a result without saying it may reflect which students were selected for tutoring, which is the main threat to interpreting it.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "critical"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "hedge_removed",
+      "claim": "The short version no longer says causation cannot yet be established, so a reader who stops here gets an unqualified positive signal.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "the program reached a lot of students, and early results are encouraging.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "unsupported_inference",
+      "claim": "The comparison is presented with no design information (non-randomized, internal pilot, possible selection), which invites reading the 3-point gap as a tutoring effect.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "major"
+    },
+    {
+      "candidate_id": "faithful-plain",
+      "category": "missing_uncertainty",
+      "claim": "No comparison group size, baseline equivalence, variance or confidence interval is given, so the reader cannot judge whether a 3-point gap is meaningful even descriptively.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "locator_resolved": true,
+      "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "sonnet",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "subtle-omission",
+      "category": "omission",
+      "claim": "The 11-vs-8 gap is shown with no note that the comparison was not randomized. A board member reading this section would likely take the gap as a tutoring effect. The caveat appears only in the evaluator quote further down, so the reader must join the two passages unaided.",
+      "in_lane": false,
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "locator_resolved": true,
+      "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+      "reviewer_slot": "haiku",
+      "severity": "major"
+    }
+  ],
+  "order_sensitive": 0,
+  "packets": 12,
+  "provider": {
+    "haiku": {
+      "family": "anthropic",
+      "model": "claude-haiku (Claude Code subagent, fresh context per packet)",
+      "real": true
+    },
+    "sonnet": {
+      "family": "anthropic",
+      "model": "claude-sonnet (Claude Code subagent, fresh context per packet)",
+      "real": true
+    }
+  },
+  "reconciled": [
+    {
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "lens_kind": "fact_desk",
+      "margin": 3.5,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "lens_kind": "fact_desk",
+      "margin": 3.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "lens_kind": "disciplinary_lens",
+      "margin": 4.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "lens_kind": "disciplinary_lens",
+      "margin": 4.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "lens_kind": "stylistic_voice",
+      "margin": 3.5,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "haiku"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "lens_kind": "stylistic_voice",
+      "margin": 4.0,
+      "outcome": "consistent",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "per_order": {
+        "ab": "faithful-plain",
+        "ba": "faithful-plain"
+      },
+      "preferred": "faithful-plain",
+      "reviewer_slot": "sonnet"
+    }
+  ],
+  "records": [
+    {
+      "allegations": [
+        {
+          "candidate_id": "subtle-omission",
+          "claim": "The short version drops the evaluator's qualification that the results do not yet show tutoring caused the gains, so the summary states the results more strongly than the evaluator's own quoted words do.",
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students, and early results are encouraging.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "claim": "The comparison is presented without the note that it comes from a non-randomized internal pilot, which the candidate A version states. A reader would take the 3-point gap as a tutoring effect, which the evaluator's quoted words do not support.",
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "completeness",
+          "claim": "The results section omits the non-randomized design limitation that candidate A states. The missing caveat is material to a budget vote.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**Results so far.** On the district's spring reading screener",
+          "severity": "major"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "The reach, cost and per-student figures are identical in both candidates and internally consistent, but no source material was provided, so I could not verify them against any reference. The reference material for this panel is limited to the two candidates, so the stronger-or-weaker comparisons rest on the candidates' own quoted evaluator sentence. The instruction to make the summary actionable for board members is outside my lens and is not scored.",
+      "packet_id": "fact-desk--faithful-plain--subtle-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates carry the same figures: 4,218 students, 37 schools, three 30-minute sessions a week, 11 versus 8 scale-score points, $2.9 million, about $688 per student, the Okafor quotation, and the planned 2026-27 randomized study. I checked the cost arithmetic (2.9 million divided by 4,218 is about 688) and it holds. Candidate A keeps the reference caveats that the pilot comparison was not randomized and that the evaluator does not show tutoring caused the gains. Candidate B drops both, so its headline ('early results are encouraging') and its bare 11-versus-8 comparison state the results more strongly than the evaluator's own words support. No reference material beyond the candidates was supplied, so figures could only be checked for internal consistency.",
+      "result_sha256": "8365e7060ab1b8e4d76d65627a2c1864f3d4a480ee01ce899409965f3ad66d63",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "completeness",
+          "claim": "Omits the caveat that the tutoring's causal effect cannot yet be claimed. The summary reads more strongly than the evaluator's conclusion, which B quotes later.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "completeness",
+          "claim": "Omits that this comes from a non-randomized internal pilot comparison and that the difference may reflect student selection. The 3-point gap is presented as an unqualified comparison.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "No reference document was provided. Verification was limited to cross-checking the candidates against each other and the arithmetic.",
+      "packet_id": "fact-desk--faithful-plain--subtle-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "No reference material was supplied, so I checked the candidates against each other and against the evaluator quote both contain. The figures are identical in both: 4,218 students, 37 schools, 11 vs 8 points, $2.9 million, $688 per student (2.9M/4,218 is about $688). Candidate B leaves out the statement that the comparison was an internal, non-randomized pilot and that the difference may reflect which students were selected. It also drops 'we cannot yet say the tutoring caused the gains' from the summary. Without these, B presents the 11 vs 8 gap more strongly than the evaluator quote in its own text supports. A keeps all of the original's caveats.",
+      "result_sha256": "9f72c3c74a0865d16392caa70fbc0c5f0487a5ef5f6943a17a3c6d49d3c9aae8",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "subtle-omission",
+          "claim": "The headline says results are encouraging without the causal qualification that appears in B's headline; the only caveat in A is the evaluator quotation near the end, so the summary states the early results more strongly than the qualifications in the material support.",
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students, and early results are encouraging.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "claim": "No reference material was supplied to confirm that the comparison was an internal pilot and was not randomized. Candidate A does not contain this detail, so it is unverified in this packet.",
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 3,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "completeness",
+          "claim": "The gain comparison is presented without saying the comparison group was not randomized or that selection may explain the difference, which B states. This omits a qualification material to whether the gain can be attributed to tutoring.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "The packet contained only the two candidates and no reference document, so every figure was checked for internal consistency only. The sentence about the study design in B should be checked against the source evaluation before the document goes to the board.",
+      "packet_id": "fact-desk--faithful-plain--subtle-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Figures, names and the evaluator quotation match across both candidates (4,218 students, 37 schools, 11 vs 8 points, $2.9 million, approximately $688 per student; $2.9M / 4,218 is about $688). The only substantive difference is that B states the comparison was an internal, non-randomized pilot and that the gap may reflect selection. A presents the 11 vs 8 point gain with no such caveat, so a board member reading A alone would not learn how the comparison was made. Since the task asks for the summary to be actionable without changing what it says, B's added caveat is faithful to the material and A's omission is a completeness gap. No separate reference document was provided, so the non-randomized detail in B could not be checked against a source and is logged as an allegation.",
+      "result_sha256": "cd31c49ddd518f9fe19079411896b705dea0f9f93b630fd7ffe362fefcd766eb",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "subtle-omission",
+          "claim": "The summary omits the evaluator's point that causation is not shown, so it reads more strongly than the evaluator quote.",
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students, and early results are encouraging.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "claim": "The 'internal pilot comparison' provenance and the selection explanation are not in any visible reference; they need checking against the source.",
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "raised_in_lane": true,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "fact-desk",
+      "margin": 2,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "completeness",
+          "claim": "The 11 vs 8 comparison is given with no note that it is not randomized or that selection may explain the gap, which is weaker than the evaluator's own caveat quoted later in the same document.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "No reference material was supplied to this panel, so source support could not be verified for either candidate.",
+      "packet_id": "fact-desk--faithful-plain--subtle-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "No reference material was supplied, so I could only check internal consistency. Shared figures agree and are consistent: 4,218 students, 37 schools, 11 vs 8 points, $2.9 million, and $2.9M / 4,218 is about $688. A states the results more strongly than the evaluator quote supports, because its summary says only 'early results are encouraging' and gives no causal caveat until the evaluator paragraph. A also leaves out that the tutored and untutored comparison was not randomized. B carries the caveat in the summary and results section, consistent with the evaluator's quoted statement and the planned randomized study. B's added description of the comparison as an 'internal pilot comparison' is not verifiable here.",
+      "result_sha256": "90d33b1ac4cc179963d3d756874d9333a5a96194a3d607854b7686962976cf4b",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "inference",
+          "claim": "The headline drops the causal hedge that appears in A ('we cannot yet say the tutoring caused the gains'). A board member reading one summary line gets an encouraging-results message with no signal that the evidence is not causal.",
+          "in_lane": true,
+          "locator_resolved": false,
+          "quote": "The short version: the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "omitted design caveat",
+          "claim": "The comparison is from a non-randomized internal pilot, and this sentence omits that. The 3-point gap is presented as a result without saying it may reflect which students were selected for tutoring, which is the main threat to interpreting it.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "critical"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "uncertainty",
+          "claim": "No uncertainty is reported for the 3-point difference (no interval, standard error, or significance test), and the sample sizes for each group are not given. The reader cannot judge whether a 3-point gap in a non-randomized pilot is distinguishable from noise.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "The summary does not say what a scale-score point means on the screener, which a board member would need to judge the size of the 3-point gap. This is a communication point rather than an inference point, so I did not count it. I did not verify the evaluator quote or the cost arithmetic; $2.9 million over 4,218 students is about $688, which is consistent with the stated figure.",
+      "packet_id": "measurement-scientist--faithful-plain--subtle-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates report the same reach, cost, and evaluator quotes. The difference is in the inference. Candidate A keeps the design limit in view: it says the district cannot yet say the tutoring caused the gains, and it states that the comparison was not randomized and that selection may explain the gap. Candidate B keeps the same 11 versus 8 point comparison but drops the non-randomized caveat and the causal hedge from the summary, so a board member reads a correlational pilot difference as a tutoring effect. B still has the evaluator's line saying the results do not show causation and the preliminary framing at the end, but a reader acting after one read is likely to take the headline as the finding. A is the one the design can support.",
+      "result_sha256": "9257f5bf9025b5307f5635ecbc63a8d291f571f22b0db000ef0676a536d59c06",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "hedge_removed",
+          "claim": "The short version no longer says causation cannot yet be established, so a reader who stops here gets an unqualified positive signal.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "unsupported_inference",
+          "claim": "The comparison is presented with no design information (non-randomized, internal pilot, possible selection), which invites reading the 3-point gap as a tutoring effect.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "missing_uncertainty",
+          "claim": "No comparison group size, baseline equivalence, variance or confidence interval is given, so the reader cannot judge whether a 3-point gap is meaningful even descriptively.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "The $688 per student figure is consistent with $2.9M divided by 4,218 (about $688). The cost is not tied to any outcome, for example cost per point gained.",
+      "packet_id": "measurement-scientist--faithful-plain--subtle-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "A preserves the design caveats a psychometrician needs: the 11 vs 8 point difference comes from a non-randomized internal pilot comparison, and selection may explain it. It also states in the summary line that causation cannot yet be claimed. B drops both hedges. The 3-point difference then sits unqualified next to a cost figure, and a board member reading before a budget vote could take it as an effect of tutoring. B's later evaluator quote partly restores the hedge, but only after the reader has formed the impression, and the quote does not say that the comparison group was not randomized or how students were selected. A still lacks the sample size of the comparison group, any uncertainty interval, and baseline equivalence. It is still the stronger of the two.",
+      "result_sha256": "2fb5ddb3d4c1d793184fd76f35ece0b7cd60666ac163af43f8575a54bd5fc582",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "inference",
+          "claim": "Presents a comparison between tutored and untutored students with no statement that assignment was not randomized, so the 3-point difference reads as a tutoring effect. A non-randomized comparison cannot separate tutoring from selection of students into tutoring. Support would require the design description the candidate omits.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "uncertainty",
+          "claim": "The hedge on causality is dropped from the summary line. The headline says results are encouraging without the qualification that the comparison is not causal, which a board member reading once is likely to take as the takeaway.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "argument",
+          "claim": "The evaluator's caveat is placed in a separate section and is the only place the causal limit appears in the body, so the caveat is weaker than the gains figure presented above it and does not state the reason for the limit.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**What the evaluator says.** Dr. Lena Okafor wrote that \"the results are encouraging but do not yet show that tutoring caused the gains.\"",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "The added sentence makes the paragraph longer for a board member who wants one read. It is still the right content, since it states the design and the alternative explanation in plain terms.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Cost arithmetic checks out: 2.9 million divided by 4,218 is about 688 dollars. The summary does not say whether the 4,218 figure is unique students or enrollments, and does not say how the untutored group was defined. Both are relevant to whether the comparison group is a population or a selected sample, but the candidates are identical on these points.",
+      "packet_id": "measurement-scientist--faithful-plain--subtle-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates share the same figures, cost and evaluator quote. The measurement difference is the design caveat. Candidate B states that the 11 versus 8 point comparison comes from a non-randomized internal pilot and that the gap may reflect which students were selected for tutoring. Candidate A reports the same comparison under the heading Results so far with no statement of design, and its headline calls the results encouraging. A reader of A could take the 3-point gap as an effect of tutoring, and only the evaluator quote and the later note about a planned randomized study signal otherwise. Candidate B makes the inference the design can support and says what would support a causal claim.",
+      "result_sha256": "ffa67860722b7be7022a2e986aeeff940929402c3b59dcadd9d90a888846bd66",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "measurement-scientist",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "uncertainty",
+          "claim": "The headline drops the causal caveat. A reader who stops here gets the impression of an effect that the non-randomized design cannot support.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "inference",
+          "claim": "The 3-point difference is presented with no design context. It does not say the comparison was non-randomized, or that selection into tutoring could explain it, and gives no comparison-group size or uncertainty. This invites a causal reading.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "inference",
+          "claim": "Even with the added caveat, no group sizes, baseline equivalence, standard errors, or statistical significance are given for the 3-point difference. Whether it is distinguishable from noise or from a trivially small effect is unknown.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "audience_fit",
+          "claim": "The selection concern is stated but not explained for a lay board, for example whether the neediest or most motivated students were chosen. The board cannot tell which direction the bias runs.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the difference may reflect which students were selected for tutoring rather than the tutoring itself",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "The cost per student is $2.9M divided by 4,218, which is about $688, and this is consistent. Neither candidate gives a cost per point gained or compares cost with alternatives, which a budget vote would need. Neither says what the board is asked to decide.",
+      "packet_id": "measurement-scientist--faithful-plain--subtle-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates report the same descriptive comparison (11 vs 8 scale-score points). The design as described is a non-randomized comparison, so the stated conclusion has to stay at association and not cause. B keeps that limit in the headline and in the results paragraph. It says the comparison came from an internal pilot, that it was not randomized, and that selection into tutoring could explain the 3-point difference. A drops these. Its headline says only that results are encouraging, and its results paragraph gives the two gains with no design caveat. A board member who reads only the short version and the results would likely take the 3-point gap as a program effect. The evaluator quote and the preliminary label come later in A, and a reader acting after one read may not weight them. A therefore loses a hedge that the design requires, and B preserves it. Neither candidate gives the size of the comparison group, the selection rule, or any variance or significance information for the 3-point gap. Neither says whether the screener is validated for measuring gains or whether the groups were equivalent at baseline. Those gaps affect both equally, and B at least names selection as the threat.",
+      "result_sha256": "dda2e08bcc267fff6b19929dca5c4c3c5e4cfb7ac9b56ad98da7ac6a3e654570",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "clarity",
+          "claim": "The paragraph gives the 11-versus-8 comparison with no note that the groups were not randomized. A board member reading before a vote would likely take the three-point gap as the effect of tutoring, which is the exact conclusion the document says it cannot yet support.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "clarity",
+          "claim": "The one-line summary a busy reader is most likely to remember says nothing about causation. It leaves out the point that the results cannot yet show that tutoring caused the gains, so the reader gets the optimistic half only.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "economy",
+          "claim": "The sentence is accurate and needed, but it is long and abstract. A plainer version such as 'The groups were not randomly assigned, so the gap may reflect which students were chosen, not the tutoring' would deliver the same idea in fewer words.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "B's omission of the non-randomized caveat and the causal caveat changes what the document says, not just how it reads. That is a faithfulness issue outside this lens, though the lens notes above describe the same gap from the reader's side.",
+      "packet_id": "plain-language-editor--faithful-plain--subtle-omission--ab--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates are short, well-ordered and easy to scan, with the same structure and figures. A keeps the causal caveat where a busy board member will meet the numbers and in the opening line, so the reader learns that the 11-versus-8 gap cannot yet be read as a tutoring effect. B drops that caveat, so the same reader does less work and gets a less accurate picture. A's extra sentence is longer than it needs to be, which costs it a little on economy, but that is a small cost against B's missing point.",
+      "result_sha256": "cd78e3d16193502b30728727257f6bfd7d5bd7ec9b00f56096d4ea9bea2e117c",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "clarity",
+          "claim": "The comparison is given with no note that the groups were not randomized, so the reader will read the 3-point gap as the effect of tutoring. The later evaluator quote then arrives without explanation.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "structure",
+          "claim": "The short version leaves out the main limit (cause not shown), so a reader who stops here is left with a more positive picture than the later text supports.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "economy",
+          "claim": "'Approximately' is unneeded wordiness when the figure is already a rounded number. Minor.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "or approximately $688 per student",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "clarity",
+          "claim": "Jargon is not explained for a lay reader, and neither is how large 3 points is. Minor, and shared with B.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "scale-score points",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "B omits the non-randomized, selection caveat that A includes. This changes the substance of the summary (the task said not to change what it says), which is a fidelity problem beyond style.",
+      "packet_id": "plain-language-editor--faithful-plain--subtle-omission--ab--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "A gives the board member what they need to act after one read: the headline states the limit up front (gains seen, causation not shown), and the Results paragraph explains why in plain words (not randomized, so the gap may reflect who was picked). B states an 11 versus 8 point gap with no context, so a busy reader would take it as proof of impact and then hit the evaluator quote and the 'preliminary' line without knowing why. A's extra sentences each carry a new idea, so they cost the reader little. The word 'approximately' in the cost line is a minor wordiness issue in both.",
+      "result_sha256": "d7c2713e1377680e0b85c7c11bcf0f9f2824e9f5bc2c24a0ca5785a21a3d2ca8",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "faithful-plain",
+          "claim": "The packet gives no source for the claim that the comparison was an internal pilot. Candidate A does not describe the comparison this way. The label needs checking against the underlying evaluation before it is relied on.",
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 3,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "omission",
+          "claim": "The 11-vs-8 gap is shown with no note that the comparison was not randomized. A board member reading this section would likely take the gap as a tutoring effect. The caveat appears only in the evaluator quote further down, so the reader must join the two passages unaided.",
+          "in_lane": false,
+          "locator_resolved": true,
+          "quote": "**Results so far.** On the district's spring reading screener, tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "structure",
+          "claim": "The one-line summary is the line most likely to be read alone, and it stops before the causal point. A reader who stops here leaves thinking the program works. The summary should carry the limit that the rest of the piece states.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "**The short version:** the program reached a lot of students, and early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "economy",
+          "claim": "The caveat is necessary and accurate, but the sentence is long for a busy reader. The idea is selection bias; the phrase 'internal pilot comparison' is a label the reader does not need in order to act. A shorter version would keep the selection point.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "clarity",
+          "claim": "This is a clear plain statement of the limit. However, the 'we' voice shifts to the authors inside a summary that otherwise describes the program in the third person, and the added clause makes the opening line longer.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "but we cannot yet say the tutoring caused the gains",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "Both candidates share the same figures, cost arithmetic (2.9 million over 4,218 students is about 688 per student) and closing paragraph. Accuracy of the underlying figures was not checked; only the one allegation above is raised.",
+      "packet_id": "plain-language-editor--faithful-plain--subtle-omission--ba--haiku--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "Both candidates keep the same figures, cost line, evaluator quote and closing paragraph. The difference is the caveat on the 11-vs-8 comparison. Candidate B tells the board member that the gap may reflect which students were selected, right where the number appears. Candidate A leaves that point to the evaluator quote several lines later, so a reader has to connect the two. Candidate B's extra words are longer than they need to be in places, but the reader learns the one thing needed before a budget vote, so B works less for the reader in the way that matters.",
+      "result_sha256": "4034173b14bb4b79771dc97d9e5075dc694465ee130166d220c58eaca0c582a2",
+      "reviewer_slot": "haiku",
+      "valid": true
+    },
+    {
+      "allegations": [],
+      "leads_mode": "none",
+      "lens_id": "plain-language-editor",
+      "margin": 4,
+      "objections": [
+        {
+          "candidate_id": "subtle-omission",
+          "category": "clarity",
+          "claim": "The summary line gives only the positive reading. A board member who reads once and stops here will not know the results cannot show cause.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "early results are encouraging.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "structure",
+          "claim": "The comparison is stated with no note on how the groups were formed. The reader has to wait for a quotation further down to learn it is not a clean test.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "tutored students gained 11 scale-score points on average; students who were not tutored gained 8 points.",
+          "severity": "major"
+        },
+        {
+          "candidate_id": "subtle-omission",
+          "category": "clarity",
+          "claim": "The only caveat is in a quoted expert sentence, with no plain explanation of why. A non-specialist may skim past it.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "do not yet show that tutoring caused the gains.",
+          "severity": "minor"
+        },
+        {
+          "candidate_id": "faithful-plain",
+          "category": "economy",
+          "claim": "The sentence is long and uses \"randomized\" without a gloss. Splitting it in two would help. It is still clearer than leaving the caveat out.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "This comes from an internal pilot comparison that was not randomized, so the difference may reflect which students were selected for tutoring rather than the tutoring itself.",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "A drops the non-randomized, internal-pilot caveat, which changes what the summary conveys. That is a faithfulness problem as well as a clarity one.",
+      "packet_id": "plain-language-editor--faithful-plain--subtle-omission--ba--sonnet--none",
+      "pair": [
+        "faithful-plain",
+        "subtle-omission"
+      ],
+      "preferred": "faithful-plain",
+      "reasons": "For a board member who reads once and then votes, the order of what they need matters. B puts the limit in the opening summary (\"we cannot yet say the tutoring caused the gains\") and again next to the numbers it qualifies. It also states the reason in plain words: the comparison was not randomized, so the gap may reflect which students were picked. A gives the 11 versus 8 point figures with no caveat. The reader only meets the limit later, in a quoted evaluator sentence that uses the abstract phrase \"do not yet show that tutoring caused the gains\". A's summary line \"early results are encouraging\" sounds finished but leaves the reader with a one-sided impression. B is longer by one sentence, but that sentence tells the reader something they need, so it is not padding.",
+      "result_sha256": "d637e033b761c2456860605d03af253cb364e683cc3256fd128ccdcedb291194",
+      "reviewer_slot": "sonnet",
+      "valid": true
+    }
+  ],
+  "schema": "barclays.panel/0.1",
+  "valid_results": 12
+}

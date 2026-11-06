@@ -1,0 +1,16 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "faithful-plain": "eligible",
+    "faithful-warm": "eligible"
+  },
+  "frozen_before_first_run": "2026-11-04",
+  "human_required": true,
+  "kind": "close call: two faithful revisions the judges cannot separate",
+  "recommended": [],
+  "shortlist_includes": [
+    "faithful-plain",
+    "faithful-warm"
+  ],
+  "status": "TIED_SHORTLIST"
+}

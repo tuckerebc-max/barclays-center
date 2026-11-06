@@ -1,0 +1,25 @@
+{
+  "applies_to": "all",
+  "authority": "advise",
+  "candidate_content_hash": "aeeb5c8311e2d665289d25eac23dcb26b0e5d863b5d80f394bd1dbfd1b6cd616",
+  "candidate_id": "polished-omission",
+  "duration_ms": 0,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "leads": 0
+  },
+  "official": "text.number_roles",
+  "official_id": "number-roles",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "0 lead(s) for reviewers; this official never fails a candidate"
+}

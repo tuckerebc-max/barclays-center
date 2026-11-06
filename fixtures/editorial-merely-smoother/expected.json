@@ -1,0 +1,21 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "smoother-only": "eligible"
+  },
+  "flags_exclude": [
+    "TARGET_UNMET",
+    "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE"
+  ],
+  "frozen_before_first_run": "2026-11-04",
+  "kind": "no candidate deserves promotion (faithful, but only smoother)",
+  "recommended": [],
+  "revision": "Run 1 expected NO_CHANGE and got INCONCLUSIVE: the simulated judges perceive this candidate as better by exactly the simulator's tie margin, so they split. Both outcomes refuse promotion, which is the property under test. The first failure is kept in results/calibration-run1-first-failure.",
+  "revisions": [
+    "2026-11-04, after the independent review (IR-05): the flag JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE is now SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE. Same condition; the name now says the judges were simulated. No expected outcome changed."
+  ],
+  "status_in": [
+    "NO_CHANGE",
+    "INCONCLUSIVE"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "labels": {
+    "A": "clean-fix",
+    "B": "polished-shallow"
+  },
+  "leads_mode": "tools",
+  "lens_id": "adversarial-tester",
+  "lens_sha256": "5830f30383a7a1f3dc8277662254578a40a48015fe5cbc4aa88e14875ceef845",
+  "order": "ab",
+  "packet_id": "p-25f25e560e97",
+  "packet_sha256": "80ad8255798bcd5fd9f61d8df451f076c96dc0e885660d6f579741a4d4756549",
+  "pair": [
+    "clean-fix",
+    "polished-shallow"
+  ],
+  "reference_shown": true,
+  "reviewer_slot": "r2"
+}

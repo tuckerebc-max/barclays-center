@@ -1,0 +1,22 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "clean-alt": "eligible",
+    "clean-fix": "eligible"
+  },
+  "frozen_before_first_run": "2026-11-04",
+  "human_required": true,
+  "kind": "close call: two correct changes the judges cannot separate",
+  "officials": {
+    "clean-alt": {
+      "fail-to-pass": "pass",
+      "pass-to-pass": "pass"
+    }
+  },
+  "recommended": [],
+  "shortlist_includes": [
+    "clean-fix",
+    "clean-alt"
+  ],
+  "status": "TIED_SHORTLIST"
+}

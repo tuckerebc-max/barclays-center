@@ -1,0 +1,1149 @@
+{
+  "allegations": [
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "Strict comparison fails to merge touching intervals, so [1,2] and [2,3] stay separate. This is an explicit requirement.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "The end is overwritten without max, so a nested interval truncates the earlier one: [1,10],[2,3] yields [1,3].",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "The docstring is self-praise that restates nothing useful and contradicts the code's actual behaviour.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "The comment restates the code, and it hides the missing touching case.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "# Overlap detected: extend the current interval.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The docstring promises full support, but the code mishandles nested and touching intervals.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "Unsorted input is fully supported.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness, not verifiable by reading",
+      "category_recognised": false,
+      "claim": "The strict less-than means touching intervals such as [1, 2] and [2, 3] are not merged, violating requirement 3. The docstring describes the rule as overlap-only, which hides this from a reader.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness, not verifiable by reading",
+      "category_recognised": false,
+      "claim": "Assigns end without taking the maximum, so a contained interval shrinks the current one: [[1, 10], [2, 3]] yields [[1, 3]]. The code gives no sign of this to a reader.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "clean-fix",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "No docstring states the closed-interval and touching-merge contract, so a future maintainer must infer it from the <= test.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "def merge_intervals(intervals):",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness: touching intervals",
+      "category_recognised": false,
+      "claim": "Strict inequality leaves touching intervals unmerged. For input [[1,2],[2,3]] the output is [[1,2],[2,3]] where the task requires [[1,3]].",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness: contained intervals",
+      "category_recognised": false,
+      "claim": "The end is overwritten without taking the max. For input [[1,10],[2,3]] the output is [[1,3]] where the correct result is [[1,10]]. Any contained interval shrinks the merged span.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation accuracy",
+      "category_recognised": false,
+      "claim": "The docstring promises a minimal covering, which the touching-interval failure above contradicts.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "A new list of merged ``[start, end]`` pairs in ascending order.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "Describes the code as robust and production-grade. The two critical defects above contradict this, and nothing in the candidate shows it was tested.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The sort step does handle unsorted input, but the overwrite and strict-overlap defects mean the merge output is wrong for many unsorted inputs.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "Unsorted input is fully supported.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness-requirement",
+      "category_recognised": false,
+      "claim": "The strict comparison does not merge touching intervals, so [[1, 2], [2, 3]] returns two intervals instead of [[1, 3]], violating requirement 3 of the task.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness-containment",
+      "category_recognised": false,
+      "claim": "The update overwrites the end without taking the maximum, so a contained interval shrinks the merged one: [[1, 10], [2, 3]] yields [[1, 3]] instead of [[1, 10]].",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation-restates-code",
+      "category_recognised": false,
+      "claim": "The comment describes the strict overlap test, which is the source of the touching-interval bug; it documents a wrong rule rather than the required one.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "Overlap detected: extend the current interval.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "clean-fix",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "A public function has no docstring or type hints, so a maintainer must read the body to learn the input and output contract.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "def merge_intervals(intervals):",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The claim of production-grade robustness is unsupported, and the implementation fails the touching-interval requirement and mishandles containment.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The docstring says the result is a minimal covering, but for touching input the function returns separate intervals that could be merged, so the output is not minimal under the task's definition.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "Merge overlapping intervals into a minimal, sorted covering.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "Strict less-than does not merge touching intervals such as [1,2] and [2,3], which the task requires.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "The end is overwritten instead of taking the max, so a contained interval shrinks the merged result, e.g. [[1,10],[2,3]] gives [[1,3]].",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "Self-praise that is false given the bugs and that adds nothing a maintainer can use.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "The comment restates the code, and it is also wrong about touching intervals.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "# Overlap detected: extend the current interval.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "clean-fix",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "No docstring or type hints, though the function is small enough to be understood without them.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "def merge_intervals(intervals):",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "Unsorted input is sorted, but the merge logic is wrong for contained and touching intervals, so the output is not correct for arbitrary input.",
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "Unsorted input is fully supported.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "Strict < does not merge touching intervals. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of [[1,3]], which breaks requirement 3 directly.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "The end is overwritten without taking the max. Input [[1,10],[2,3]] gives [[1,3]] instead of [[1,10]], and [[1,10],[2,3],[4,5]] gives [[1,3],[4,5]] instead of [[1,10]]. This silently loses coverage for any nested interval.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "documentation",
+      "category_recognised": false,
+      "claim": "The docstring claims robustness, but the code fails on touching and nested intervals, so the claim is misleading.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness: touching intervals not merged",
+      "category_recognised": false,
+      "claim": "The comparison is strict, so an interval starting exactly at the previous end is not merged. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of the required [[1,3]], violating requirement 3 of the task.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness: containment or shorter interval overwrites end",
+      "category_recognised": false,
+      "claim": "The end is replaced rather than maximised. Input [[1,10],[2,3]] sorts to [[1,10],[2,3]], then the sweep sets the end to 3 and returns [[1,3]] instead of [[1,10]]. Coverage is lost whenever a later interval is nested inside an earlier one.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r1",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "Strict < means touching intervals are not merged. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of [[1,3]], violating requirement 3, which is the main purpose of the change.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "if merged and start < merged[-1][1]:",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "correctness",
+      "category_recognised": true,
+      "claim": "The end is overwritten instead of taking the max. Input [[1,10],[2,3]] returns [[1,3]] instead of [[1,10]], which silently drops coverage. Input [[1,10],[2,3],[5,6]] is also wrong.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "merged[-1][1] = end",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The docstring claims correct merging, but the code does not merge touching intervals and does not take the max end, so the claim is misleading.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "Unsorted input is fully supported.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "allegation",
+      "category_recognised": true,
+      "claim": "The module docstring overstates quality given the two correctness bugs.",
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+      "raised_in_lane": false,
+      "reviewer_slot": "r2",
+      "status": "unverified"
+    }
+  ],
+  "authority": "advisory: objections and allegations for the report and a human; never decisive",
+  "missing_results": 0,
+  "objections_in_lane": [
+    {
+      "candidate_id": "polished-shallow",
+      "category": "economy",
+      "claim": "The extra copy is redundant, since merged entries are already created fresh. It adds work and one more thing to understand.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "sorted([list(pair) for pair in intervals])",
+      "reviewer_slot": "r2",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "economy",
+      "claim": "Module and function docstrings restate the code and add material to maintain without adding a rule a maintainer needs.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "This module provides a robust, production-grade implementation of interval",
+      "reviewer_slot": "r1",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "polished-shallow",
+      "category": "economy",
+      "claim": "Copying every pair into a new list before sorting adds an allocation and a special case that the sort does not need, since the sweep only unpacks values and never mutates the input pairs.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "locator_resolved": true,
+      "quote": "ordered: List[List[int]] = sorted([list(pair) for pair in intervals])",
+      "reviewer_slot": "r1",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "clean-fix",
+      "category": "robustness",
+      "claim": "Minor: there is no docstring or type hints. Empty input returns [] correctly, and duplicates and tuple inputs also work. I found no failing input.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "for start, end in sorted(intervals):",
+      "reviewer_slot": "r2",
+      "severity": "minor"
+    },
+    {
+      "candidate_id": "clean-fix",
+      "category": "robustness",
+      "claim": "Sorting the raw pairs and unpacking assumes every pair has exactly 2 elements. A malformed 3-element pair raises ValueError. This is outside the stated input contract and minor. Empty input returns [] correctly and single-element input is fine.",
+      "in_lane": true,
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "locator_resolved": true,
+      "quote": "for start, end in sorted(intervals):",
+      "reviewer_slot": "r2",
+      "severity": "minor"
+    }
+  ],
+  "objections_out_of_lane": [],
+  "order_sensitive": 0,
+  "packets": 8,
+  "provider": {
+    "r1": {
+      "family": "anthropic",
+      "model": "claude-haiku-4-5 (Claude Code subagent, fresh context per packet, packet staged in a folder holding only opaque packet files)",
+      "real": true
+    },
+    "r2": {
+      "family": "anthropic",
+      "model": "claude-sonnet-5-5 (Claude Code subagent, fresh context per packet, packet staged in a folder holding only opaque packet files)",
+      "real": true
+    }
+  },
+  "reconciled": [
+    {
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "lens_kind": "adversarial_role",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "per_order": {
+        "ab": "clean-fix",
+        "ba": "clean-fix"
+      },
+      "preferred": "clean-fix",
+      "reviewer_slot": "r1"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "lens_kind": "adversarial_role",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "per_order": {
+        "ab": "clean-fix",
+        "ba": "clean-fix"
+      },
+      "preferred": "clean-fix",
+      "reviewer_slot": "r2"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "lens_kind": "disciplinary_lens",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "per_order": {
+        "ab": "clean-fix",
+        "ba": "clean-fix"
+      },
+      "preferred": "clean-fix",
+      "reviewer_slot": "r1"
+    },
+    {
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "lens_kind": "disciplinary_lens",
+      "margin": 5.0,
+      "outcome": "consistent",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "per_order": {
+        "ab": "clean-fix",
+        "ba": "clean-fix"
+      },
+      "preferred": "clean-fix",
+      "reviewer_slot": "r2"
+    }
+  ],
+  "records": [
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "Strict comparison fails to merge touching intervals, so [1,2] and [2,3] stay separate. This is an explicit requirement.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "The end is overwritten without max, so a nested interval truncates the earlier one: [1,10],[2,3] yields [1,3].",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "The docstring is self-praise that restates nothing useful and contradicts the code's actual behaviour.",
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "The comment restates the code, and it hides the missing touching case.",
+          "locator_resolved": true,
+          "quote": "# Overlap detected: extend the current interval.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The docstring promises full support, but the code mishandles nested and touching intervals.",
+          "locator_resolved": true,
+          "quote": "Unsorted input is fully supported.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "economy",
+          "claim": "The extra copy is redundant, since merged entries are already created fresh. It adds work and one more thing to understand.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "sorted([list(pair) for pair in intervals])",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "A has no type hints or docstring, which is acceptable at this size. Neither candidate handles an empty input differently, and both return [] correctly.",
+      "packet_id": "p-1144edbcd7d1",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "A is short, and its correctness is visible from reading it: sort, then merge when start <= last end, extending with max. It covers the touching case, nested intervals and unsorted input, and it never mutates the input because it appends fresh lists. B uses a strict < comparison, so touching intervals like [1,2] and [2,3] are not merged, which breaks requirement 3. B also assigns the end directly instead of taking the max, so a nested interval such as [1,10],[2,3] shrinks to [1,3]. A maintainer would inherit two bugs in B, plus a module docstring and a function docstring that restate the code and claim robustness the code lacks.",
+      "result_sha256": "b7eb615beb6cd86e552b62bf4e44d561ee2a0dc44f75a63bb1b5b2e71fa5e44b",
+      "reviewer_slot": "r2",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness, not verifiable by reading",
+          "category_recognised": false,
+          "claim": "The strict less-than means touching intervals such as [1, 2] and [2, 3] are not merged, violating requirement 3. The docstring describes the rule as overlap-only, which hides this from a reader.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness, not verifiable by reading",
+          "category_recognised": false,
+          "claim": "Assigns end without taking the maximum, so a contained interval shrinks the current one: [[1, 10], [2, 3]] yields [[1, 3]]. The code gives no sign of this to a reader.",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "clean-fix",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "No docstring states the closed-interval and touching-merge contract, so a future maintainer must infer it from the <= test.",
+          "locator_resolved": true,
+          "quote": "def merge_intervals(intervals):",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "economy",
+          "claim": "Module and function docstrings restate the code and add material to maintain without adding a rule a maintainer needs.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "A's correctness defects fall partly outside the maintainability lens; they are counted here only where they bear on whether a reader can verify the code. The task file lists the requirements that both candidates were measured against.",
+      "packet_id": "p-1cde3e6f9f50",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "B can be verified by reading alone. Sorting gives the order, the test start <= previous end merges touching intervals, and max() stops a contained interval from shrinking. A uses a strict less-than test, so [1, 2] and [2, 3] stay separate, which violates requirement 3. A also assigns end with no max, so [1, 10] followed by [2, 3] collapses to [1, 3]. A's module and function docstrings and its type scaffolding restate the code, and the one substantive claim they make (that the rule is overlap-only and fully correct) does not hold. B's only maintainability cost is the missing docstring, which is small because the function is short.",
+      "result_sha256": "349fdf7db392eb0a3216e8b0607e93b118dc552ea7c65d9af8fe5425a2eb88aa",
+      "reviewer_slot": "r1",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness: touching intervals",
+          "category_recognised": false,
+          "claim": "Strict inequality leaves touching intervals unmerged. For input [[1,2],[2,3]] the output is [[1,2],[2,3]] where the task requires [[1,3]].",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness: contained intervals",
+          "category_recognised": false,
+          "claim": "The end is overwritten without taking the max. For input [[1,10],[2,3]] the output is [[1,3]] where the correct result is [[1,10]]. Any contained interval shrinks the merged span.",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation accuracy",
+          "category_recognised": false,
+          "claim": "The docstring promises a minimal covering, which the touching-interval failure above contradicts.",
+          "locator_resolved": true,
+          "quote": "A new list of merged ``[start, end]`` pairs in ascending order.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "Describes the code as robust and production-grade. The two critical defects above contradict this, and nothing in the candidate shows it was tested.",
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The sort step does handle unsorted input, but the overwrite and strict-overlap defects mean the merge output is wrong for many unsorted inputs.",
+          "locator_resolved": true,
+          "quote": "Unsorted input is fully supported.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "margin": 5,
+      "objections": [],
+      "order": "ba",
+      "out_of_lane_notes": "Candidate A adds type annotations and a docstring, which are fine. Candidate B has no docstring or annotations, which is a style gap only. Neither candidate is out of lane on the points that decide this preference.",
+      "packet_id": "p-266be606b2f3",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "Candidate B passes the adversarial inputs that matter for this task. Touching intervals merge because it uses start <= merged[-1][1]. Contained intervals merge correctly because it uses max(merged[-1][1], end). Input is not modified because it builds new lists with merged.append([start, end]). Empty and single-element inputs return [] and a single pair. Candidate A fails two required inputs. For [[1,2],[2,3]] its strict start < merged[-1][1] test returns [[1,2],[2,3]] instead of [[1,3]], violating requirement 3. For [[1,10],[2,3]] it sets merged[-1][1] = end without a max, so it returns [[1,3]] instead of [[1,10]], which loses coverage and is wrong on any input where a later interval is contained in an earlier one.",
+      "result_sha256": "4fd6df6441e486364a34ef59b96431ad88e79f32888b0165961d196a6f14513a",
+      "reviewer_slot": "r1",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness-requirement",
+          "category_recognised": false,
+          "claim": "The strict comparison does not merge touching intervals, so [[1, 2], [2, 3]] returns two intervals instead of [[1, 3]], violating requirement 3 of the task.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness-containment",
+          "category_recognised": false,
+          "claim": "The update overwrites the end without taking the maximum, so a contained interval shrinks the merged one: [[1, 10], [2, 3]] yields [[1, 3]] instead of [[1, 10]].",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation-restates-code",
+          "category_recognised": false,
+          "claim": "The comment describes the strict overlap test, which is the source of the touching-interval bug; it documents a wrong rule rather than the required one.",
+          "locator_resolved": true,
+          "quote": "Overlap detected: extend the current interval.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "clean-fix",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "A public function has no docstring or type hints, so a maintainer must read the body to learn the input and output contract.",
+          "locator_resolved": true,
+          "quote": "def merge_intervals(intervals):",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The claim of production-grade robustness is unsupported, and the implementation fails the touching-interval requirement and mishandles containment.",
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The docstring says the result is a minimal covering, but for touching input the function returns separate intervals that could be merged, so the output is not minimal under the task's definition.",
+          "locator_resolved": true,
+          "quote": "Merge overlapping intervals into a minimal, sorted covering.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "economy",
+          "claim": "Copying every pair into a new list before sorting adds an allocation and a special case that the sort does not need, since the sweep only unpacks values and never mutates the input pairs.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "ordered: List[List[int]] = sorted([list(pair) for pair in intervals])",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "Candidate B's docstring describes the algorithm in detail, which the maintainer lens treats as restating the code. Both candidates leave the input list unmodified, which the task requires.",
+      "packet_id": "p-442bfac10a91",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "Candidate A is short, has one comparison and one update rule, and its correctness can be seen by reading it: sorted() gives start order, start <= merged[-1][1] merges touching intervals as the task requires, and max() keeps containment correct. Candidate B's comparison is strict, so touching intervals such as [1, 2] and [2, 3] are not merged, which fails requirement 3. Its update assigns end without max, so a contained interval shortens the current one. Its docstring and type annotations add length and claims but no behaviour, and the claim of a 'minimal covering' is not true for B's output on touching input. A has no docstring, which is a small maintainability cost but does not change correctness.",
+      "result_sha256": "389a30205ced198d00506c53ff13d23be34aac30ee1e1bbf3a58807bc3916a49",
+      "reviewer_slot": "r1",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "Strict less-than does not merge touching intervals such as [1,2] and [2,3], which the task requires.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "The end is overwritten instead of taking the max, so a contained interval shrinks the merged result, e.g. [[1,10],[2,3]] gives [[1,3]].",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "Self-praise that is false given the bugs and that adds nothing a maintainer can use.",
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "The comment restates the code, and it is also wrong about touching intervals.",
+          "locator_resolved": true,
+          "quote": "# Overlap detected: extend the current interval.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "clean-fix",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "No docstring or type hints, though the function is small enough to be understood without them.",
+          "locator_resolved": true,
+          "quote": "def merge_intervals(intervals):",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "Unsorted input is sorted, but the merge logic is wrong for contained and touching intervals, so the output is not correct for arbitrary input.",
+          "locator_resolved": true,
+          "quote": "Unsorted input is fully supported.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "maintainer",
+      "margin": 5,
+      "objections": [],
+      "order": "ba",
+      "out_of_lane_notes": "B does not mutate the input, since sorted() makes a new list and each result pair is a fresh list. A's Sequence[Sequence[int]] annotation is reasonable, but the logic bugs make it moot.",
+      "packet_id": "p-7bea65f9f97e",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "B is a short loop whose correctness is evident: sort, merge when start <= previous end, and take the max of the ends. That meets the touching-interval requirement and handles containment. A uses a strict comparison, so touching intervals like [1,2] and [2,3] are not merged, which breaks requirement 3. A also overwrites the end instead of taking the max, so [1,10] followed by [2,3] shrinks to [1,3]. A's docstring and module header claim robustness the code does not have, and comments like 'Overlap detected' restate the code. A's copy step before sorting is the only extra thing it has over B, and it is needless, since sorted() already returns a new list and B copies each pair when it appends. B has no docstring, but at this size the code is the documentation.",
+      "result_sha256": "def0bdbc975f06f9f66463f0af19f8022d54f59fe1fa2d13384ba8a46761305c",
+      "reviewer_slot": "r2",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "Strict < does not merge touching intervals. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of [[1,3]], which breaks requirement 3 directly.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "The end is overwritten without taking the max. Input [[1,10],[2,3]] gives [[1,3]] instead of [[1,10]], and [[1,10],[2,3],[4,5]] gives [[1,3],[4,5]] instead of [[1,10]]. This silently loses coverage for any nested interval.",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "documentation",
+          "category_recognised": false,
+          "claim": "The docstring claims robustness, but the code fails on touching and nested intervals, so the claim is misleading.",
+          "locator_resolved": true,
+          "quote": "This module provides a robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "clean-fix",
+          "category": "robustness",
+          "claim": "Minor: there is no docstring or type hints. Empty input returns [] correctly, and duplicates and tuple inputs also work. I found no failing input.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "for start, end in sorted(intervals):",
+          "severity": "minor"
+        }
+      ],
+      "order": "ba",
+      "out_of_lane_notes": "B is minimal, with no docs or type hints. That is a style gap only. A's extra documentation does not make up for its wrong behaviour.",
+      "packet_id": "p-90e12e7b03b5",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "Candidate A fails requirement 3 (touching intervals) and also shrinks intervals when one is nested inside another. Candidate B uses <= and max(), so it handles both cases correctly. B builds fresh [start, end] lists, so the input is not mutated.",
+      "result_sha256": "5d20ecab57cc524bd4682bb6147c8d40a6053e154267f5f978a9b45026704d78",
+      "reviewer_slot": "r2",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness: touching intervals not merged",
+          "category_recognised": false,
+          "claim": "The comparison is strict, so an interval starting exactly at the previous end is not merged. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of the required [[1,3]], violating requirement 3 of the task.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness: containment or shorter interval overwrites end",
+          "category_recognised": false,
+          "claim": "The end is replaced rather than maximised. Input [[1,10],[2,3]] sorts to [[1,10],[2,3]], then the sweep sets the end to 3 and returns [[1,3]] instead of [[1,10]]. Coverage is lost whenever a later interval is nested inside an earlier one.",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "margin": 5,
+      "objections": [],
+      "order": "ab",
+      "out_of_lane_notes": "Candidate B has type hints and a docstring, but its docstring describes the output as a minimal covering, which the overwrite bug above contradicts. Candidate A has no docstring or type hints, which is cosmetic and does not affect correctness. Candidate B also copies each pair into a new list before sorting, which is harmless but adds allocation.",
+      "packet_id": "p-aee61811e35f",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "Candidate A sorts the input, merges when start <= the current end (so touching intervals merge), and extends the end with max(). It returns new lists and never mutates the input. Candidate B has two defects that break the task's stated requirements. Its overlap test is strict, so touching intervals are not merged, and its update overwrites the end instead of taking the max, so containment loses coverage. Both are concrete failing inputs: [[1,2],[2,3]] gives [[1,2],[2,3]] from B, and [[1,10],[2,3]] gives [[1,3]] from B where [[1,10]] is correct.",
+      "result_sha256": "7ae5310a4a3aac78d89b8149c957a8fb1e928188cd9470d5ef49e5ab26dd2146",
+      "reviewer_slot": "r1",
+      "valid": true
+    },
+    {
+      "allegations": [
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "Strict < means touching intervals are not merged. Input [[1,2],[2,3]] returns [[1,2],[2,3]] instead of [[1,3]], violating requirement 3, which is the main purpose of the change.",
+          "locator_resolved": true,
+          "quote": "if merged and start < merged[-1][1]:",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "correctness",
+          "category_recognised": true,
+          "claim": "The end is overwritten instead of taking the max. Input [[1,10],[2,3]] returns [[1,3]] instead of [[1,10]], which silently drops coverage. Input [[1,10],[2,3],[5,6]] is also wrong.",
+          "locator_resolved": true,
+          "quote": "merged[-1][1] = end",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The docstring claims correct merging, but the code does not merge touching intervals and does not take the max end, so the claim is misleading.",
+          "locator_resolved": true,
+          "quote": "Unsorted input is fully supported.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        },
+        {
+          "candidate_id": "polished-shallow",
+          "category": "allegation",
+          "category_recognised": true,
+          "claim": "The module docstring overstates quality given the two correctness bugs.",
+          "locator_resolved": true,
+          "quote": "robust, production-grade implementation of interval\nmerging with full type annotations and comprehensive documentation.",
+          "raised_in_lane": false,
+          "status": "unverified"
+        }
+      ],
+      "leads_mode": "none",
+      "lens_id": "adversarial-tester",
+      "margin": 5,
+      "objections": [
+        {
+          "candidate_id": "clean-fix",
+          "category": "robustness",
+          "claim": "Sorting the raw pairs and unpacking assumes every pair has exactly 2 elements. A malformed 3-element pair raises ValueError. This is outside the stated input contract and minor. Empty input returns [] correctly and single-element input is fine.",
+          "in_lane": true,
+          "locator_resolved": true,
+          "quote": "for start, end in sorted(intervals):",
+          "severity": "minor"
+        }
+      ],
+      "order": "ab",
+      "out_of_lane_notes": "B's copy of each pair via list(pair) is fine, but A also avoids mutating the input because it appends new [start, end] lists. B adds a module docstring and typing noise that the task did not ask for.",
+      "packet_id": "p-f8bf8ec2f912",
+      "pair": [
+        "clean-fix",
+        "polished-shallow"
+      ],
+      "preferred": "clean-fix",
+      "reasons": "A uses <= so touching intervals merge, uses max() so nested intervals are handled, and builds fresh lists so the input is not mutated. B fails two explicit requirements: touching intervals are not merged, and nested intervals shrink the result.",
+      "result_sha256": "c6a78bffe2a08895917b21ef8587e95361bec84273d33346be676526d55e904f",
+      "reviewer_slot": "r2",
+      "valid": true
+    }
+  ],
+  "schema": "barclays.panel/0.1",
+  "valid_results": 8
+}

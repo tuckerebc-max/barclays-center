@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "novice-player",
+  "kind": "audience_proxy",
+  "title": "Novice player",
+  "brief": "Read as a player who has never seen this game and will not read a manual. From the first screen, can you tell what you are meant to do, what just happened after each action, and why you lost? Say where the first minute would have lost you: an unexplained rule, a hidden control, a failure with no visible cause. Quote the on-screen text, level description or log line.",
+  "may_assess": [
+    "onboarding",
+    "clarity_of_goals",
+    "feedback_legibility",
+    "controls_discoverability",
+    "perceived_difficulty",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Reads text, screenshots and logs; it does not play. It cannot establish that the game is fun, fair-feeling or well paced for any real player. A model playing an audience is not evidence from that audience: its reading is a source of objections to check, never a measure of how real members of the audience would respond."
+}

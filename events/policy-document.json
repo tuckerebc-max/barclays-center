@@ -1,0 +1,234 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "policy-document",
+  "title": "Policy document: a revision against the adopted version",
+  "genre": "policy-document",
+  "status": "specified",
+  "objective": "Promote a revised policy, or a model-policy section, over the current adopted version only if it is internally consistent, carries every required provision, leaves frozen provisions untouched, and is clearly better for the people who must implement it. The adopted version is the champion; a challenger that does not clearly beat it changes nothing.",
+  "audience": "Set per bout. The bout names the staff or board who implement the policy and the people it governs.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one Markdown or plain-text file holding the full revised text of the policy or section",
+    "baseline": "the current adopted version, named as the bout baseline",
+    "required_sources": [
+      "adopted_version",
+      "requirements_ledger",
+      "frozen_provisions"
+    ],
+    "optional_sources": [
+      "defined_terms_glossary",
+      "change_rationale"
+    ],
+    "requirements_ledger": "Provisions required by statute, regulation or board direction, each with the surface forms that count as present and the authority the organizer cites for it. The ledger is the organizer's claim; counsel confirms it. A requirement left out of it is not protected.",
+    "frozen_provisions": "Identifiers of provisions whose text must match the adopted version after whitespace normalisation."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "bracket",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "xrefs",
+      "official": "policy.xref_resolves",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "why": "A reference to a section, appendix or defined term that does not exist is a defect on bytes."
+    },
+    {
+      "id": "numbering",
+      "official": "policy.numbering_consistent",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "why": "Sections numbered out of order, duplicated or skipped break every reference to them."
+    },
+    {
+      "id": "defined-terms",
+      "official": "policy.defined_terms",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "check": [
+          "used_as_defined",
+          "capitalised_term_undefined",
+          "defined_never_used"
+        ]
+      },
+      "why": "A term used in a sense other than its definition changes who is bound. Checked by form on bytes; whether a use fits the definition's meaning is for counsel."
+    },
+    {
+      "id": "required-provisions",
+      "official": "policy.required_provisions",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "ledger": "requirements_ledger"
+      },
+      "why": "A required provision that is absent is a defect no polish repairs. Applies to the baseline too: an adopted version that lacks a required provision is not a valid comparator."
+    },
+    {
+      "id": "frozen",
+      "official": "policy.frozen_unchanged",
+      "authority": "disqualify",
+      "applies_to": "challengers",
+      "params": {
+        "compare_to": "adopted_version",
+        "normalise": [
+          "whitespace"
+        ]
+      },
+      "why": "A provision marked frozen may not change in this revision, whatever its merit."
+    },
+    {
+      "id": "plain-language",
+      "official": "policy.plain_language",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Readability numbers, long sentences and non-inclusive wording as leads for the plain-language reviewer. Descriptive, never a failure."
+    },
+    {
+      "id": "obligation-delta",
+      "official": "policy.obligation_delta",
+      "authority": "advise",
+      "applies_to": "challengers",
+      "params": {
+        "modals": [
+          "shall",
+          "must",
+          "should",
+          "may",
+          "will"
+        ]
+      },
+      "why": "Obligations added, removed or shifted in strength (may to shall) relative to the adopted version, listed as leads for counsel. A lead is never a finding of legal effect."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "implementability",
+      "weight": 0.3,
+      "definition": "The person who must carry it out can tell who does what, by when, and what shows it was done."
+    },
+    {
+      "id": "clarity_for_readers",
+      "weight": 0.3,
+      "definition": "Governed readers understand their rights and duties after one read, without a specialist.",
+      "anchors": [
+        {
+          "level": 0,
+          "description": "unclear"
+        },
+        {
+          "level": 2,
+          "description": "clear with effort"
+        },
+        {
+          "level": 4,
+          "description": "immediately clear"
+        }
+      ]
+    },
+    {
+      "id": "proportionality",
+      "weight": 0.2,
+      "definition": "The burden each provision imposes is no greater than the purpose it serves."
+    },
+    {
+      "id": "fit_to_intent",
+      "weight": 0.2,
+      "definition": "The text does what the change rationale says it is meant to do, and nothing else."
+    }
+  ],
+  "model_gates": [
+    {
+      "id": "no-unflagged-obligation-change",
+      "definition": "Adds, removes or reverses no obligation that the change rationale does not mention"
+    }
+  ],
+  "lenses": [
+    "policy-counsel",
+    "district-administrator",
+    "plain-language-editor"
+  ],
+  "evidence_required": [
+    "The adopted version, requirements ledger, frozen-provision list and change rationale, hashed.",
+    "Each candidate's exact bytes, hashed. A re-edited candidate is a new candidate.",
+    "For every disqualification: the official, its version, and the provision, reference, term or ledger item concerned.",
+    "The obligation-delta listing, provision by provision, for counsel.",
+    "For the bracket: the controller's decision record with its contract hash, ballots and judge diagnostics."
+  ],
+  "hard_disqualifiers": [
+    "A cross-reference does not resolve.",
+    "Section numbering is inconsistent.",
+    "A defined term is used other than as defined, or a capitalised term is used undefined.",
+    "A required provision from the requirements ledger is absent.",
+    "A provision marked frozen differs from the adopted version."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Judges compare only revisions that passed the decisive officials. They rank implementability, clarity and proportionality. They do not rule on legal effect or compliance.",
+    "calibration": "No judge route has been scored against policy-owner or counsel decisions for this genre."
+  },
+  "format": {
+    "tournament": "champion-challenger",
+    "why": "The question in production is whether the revision is better than what is adopted today, so each challenger meets the incumbent in both display orders. Candidate-versus-candidate order is secondary. The result depends on the incumbent, which is named in the bout, and winning says nothing about how two challengers compare.",
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": [
+        "adopted_version",
+        "requirements_ledger"
+      ]
+    },
+    "panel": {
+      "reference_sources": [
+        "adopted_version"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "no challenger beats the adopted version by the material-improvement threshold on the weighted composite (NO_CHANGE)",
+      "the leading eligible challengers tie or beat each other in a cycle (TIED_SHORTLIST)",
+      "the adopted version itself fails a decisive official, so it is not a valid comparator (INCONCLUSIVE)",
+      "a deciding comparison lacks coverage, or a judge's two display orders disagree and quorum is lost (INCONCLUSIVE)",
+      "a challenger could not be verified by a decisive official (INCONCLUSIVE, never a loss)"
+    ]
+  },
+  "human_decides_when": [
+    "on_status:RECOMMEND",
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "on_status:NO_ELIGIBLE_CANDIDATE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Legal effect. Whether a provision is lawful, enforceable, consistent with a statute or regulation, or changes anyone's legal duties is for counsel. A tournament cannot establish it, and obligation-delta output is a list of leads for counsel, not advice.",
+    "Stakeholder acceptance. Whether the board, staff, unions, families or other governed parties will accept or comply with the text is for the policy owner and those parties. A model standing in for an administrator is a source of objections, not their consent.",
+    "Whether the requirements ledger is complete. It is the organizer's claim about what the policy must contain.",
+    "Whether a plain-language rewrite kept the meaning. Readability scores and model readers cannot say; counsel and the policy owner can.",
+    "Whether it can be implemented in a given district with its staff, budget and contracts."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal",
+      "restricted"
+    ],
+    "notes": "The officials are meant to run locally and send nothing anywhere, so the event would accept any label. Reviewer and judge routes are cleared separately and fail closed. A pending draft is usually internal."
+  },
+  "notes": "SPECIFIED, NOT RUNNABLE. To make it runnable build: policy.xref_resolves and policy.numbering_consistent, a policy-structure parser (sections, subsections, appendices, defined terms) with markdownlint (MIT) for heading structure and custom resolvers, no other upstream; policy.defined_terms, custom or Vale (MIT, offline) existence and consistency rules generated from the glossary; policy.required_provisions and policy.frozen_unchanged, ledger matching modelled on text.fact_ledger, with no upstream; policy.plain_language, wrapping textstat (MIT; readability as a descriptive statistic only), Vale and alex (MIT; inclusive-language lint); policy.obligation_delta, custom modal-verb diff over provisions using the standard library, with no upstream. Needs a convention for provision identifiers across the adopted and revised versions. The bout must name the adopted version as baseline."
+}

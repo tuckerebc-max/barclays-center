@@ -1,0 +1,53 @@
+{
+  "audience": "School-board members reading before a budget vote",
+  "baseline": "baseline",
+  "bout_id": "real-bracket-01",
+  "candidates": [
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/baseline.md"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/faithful-plain.md"
+        }
+      ],
+      "id": "faithful-plain"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/faithful-warm.md"
+        }
+      ],
+      "id": "faithful-warm"
+    }
+  ],
+  "event": "editorial-revision",
+  "notes": "Synthetic material judged by REAL model judges (Claude Haiku and Claude Sonnet, one family) through the controller's native-host path. Same candidates as the editorial-close-call fixture.",
+  "params": {
+    "bracket": {
+      "allow_single_family": true,
+      "finalists": 3,
+      "grade_judges": 2,
+      "judges_per_match": 2,
+      "max_model_calls": 120
+    }
+  },
+  "purpose": "Revise the first-year summary so a school-board member can act on it after one read, without changing what it says",
+  "schema": "barclays.bout/0.1",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fact_ledger": "sources/ledger.json",
+    "judge_registry": "sources/registry.json",
+    "source_draft": "sources/source.md"
+  }
+}

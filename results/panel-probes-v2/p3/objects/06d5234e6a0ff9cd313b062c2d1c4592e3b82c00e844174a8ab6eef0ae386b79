@@ -1,0 +1,58 @@
+{
+  "barclays_version": "0.2.0",
+  "bout_id": "software-clear-win",
+  "bout_sha256": "00ca5b4364a14338e0d81e8ec42ab80b1b86f7bfdb324bace778490b1571e98e",
+  "candidates": [
+    {
+      "content_hash": "8c1fae75a680fe69b54e16e48f196394cde45e999e61173d12ca7574d582e6db",
+      "files": [
+        {
+          "path": "solution.py",
+          "sha256": "5cb9df2bc299495088ee0ac1f099ba76527d5532e2a497f3681745336dde3fc9"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "content_hash": "858115f0d94b014153ea1ba5cafefb2433deafea8a6a63690d97c81c3c0e9c53",
+      "files": [
+        {
+          "path": "solution.py",
+          "sha256": "6e685d6d49848a776bcd71a63558d43b30ea4b41a2087c9cfc3727f16e056b3d"
+        }
+      ],
+      "id": "clean-fix"
+    },
+    {
+      "content_hash": "a36855504bb640af1337e7f92a53dffb1ff3d3c5d58f5dfa0571ca35a2814de3",
+      "files": [
+        {
+          "path": "solution.py",
+          "sha256": "b53db8d87a4c05f27cb111b907e4c8aec4072bc52f4932a2cd4f5d768fa2a13f"
+        }
+      ],
+      "id": "polished-shallow"
+    }
+  ],
+  "event_id": "software-change",
+  "event_sha256": "8f4c76e4de398ae53f44fb3a80c5fc0b9aa58aba4eb8aed6eb79815f3e0ec84b",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fail_to_pass": {
+      "path": "sources/fail_to_pass",
+      "sha256": "7b1d8ac5acb18374d622f8556a216741d5f9cb119f38ee416eed67a8a0aada44"
+    },
+    "pass_to_pass": {
+      "path": "sources/pass_to_pass",
+      "sha256": "ea21d529f4417318bc572ccbff09e4f18974f1686289d62e1e9ba01fc73922c6"
+    },
+    "task": {
+      "path": "sources/task.md",
+      "sha256": "3813148e4d1508123b1ea39ec22d764b7dea947f04981c30ed35ef8c578766b7"
+    },
+    "visible_tests": {
+      "path": "sources/visible_tests",
+      "sha256": "a891e0db59d4653eaf9782f5c29512ae446e3e018dd7ae69af400ff48f2b7b4d"
+    }
+  }
+}

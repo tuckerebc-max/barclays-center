@@ -1,0 +1,54 @@
+{
+  "barclays_version": "0.1.0",
+  "bout_id": "real-bracket-01",
+  "bout_sha256": "5ea75404a24d3ef32f35ecb5a01032b1140ff0c90f2e6b4f7e2cef51a468550d",
+  "candidates": [
+    {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "1e51878e54db91fe8ee9b82b32f093d4bb123c0eaec3f9fb07fdf7f4fa5a3991"
+        }
+      ],
+      "id": "faithful-plain"
+    },
+    {
+      "content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+      "files": [
+        {
+          "path": "draft.md",
+          "sha256": "80691980f1ccd413e0d611190659eea149ff8b28058d98a561202424323c47af"
+        }
+      ],
+      "id": "faithful-warm"
+    }
+  ],
+  "event_id": "editorial-revision",
+  "event_sha256": "10fbaf194f3e4bd7f629c8023335ff1a9d321a8bbcafb717f33856cabe61f6ac",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fact_ledger": {
+      "path": "sources/ledger.json",
+      "sha256": "3681d857f86fdf05427320f5931cc328f4ac4e2c8f652113ad850b4bf4f40f1e"
+    },
+    "judge_registry": {
+      "path": "sources/registry.json",
+      "sha256": "e50cb18bcb481bd59cbdd62cf4082129a5cc0f335a1a214a2753d5c56ecac622"
+    },
+    "source_draft": {
+      "path": "sources/source.md",
+      "sha256": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+    }
+  }
+}

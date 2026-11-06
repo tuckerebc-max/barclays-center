@@ -1,0 +1,23 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "maintainer",
+  "kind": "disciplinary_lens",
+  "title": "Maintainer",
+  "brief": "Read as the engineer who will own this code in a year. Can you tell why it is correct without running it? Would a small change in the requirement be a small change in the code? Prefer the version with fewer special cases and fewer things to remember. Documentation that restates the code earns nothing.",
+  "may_assess": [
+    "maintainability",
+    "economy",
+    "generality",
+    "structure"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "A maintainer lens ranks code that already passed execution. It does not rule on correctness; that is the execution official's job."
+}

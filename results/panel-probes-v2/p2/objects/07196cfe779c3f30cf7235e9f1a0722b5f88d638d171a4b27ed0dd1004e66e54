@@ -1,0 +1,26 @@
+{
+  "applies_to": "challengers",
+  "authority": "disqualify",
+  "candidate_content_hash": "4d3f7b31fa8030f921488c804d5ea923aeb1071eb95ddbd07f839d78a778af36",
+  "candidate_id": "subtle-omission",
+  "duration_ms": 0,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "dropped_source_numbers": 0,
+    "new_numbers": 0
+  },
+  "official": "text.new_numbers",
+  "official_id": "new-numbers",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "no unsupported numbers"
+}

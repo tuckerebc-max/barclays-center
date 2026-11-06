@@ -1,0 +1,253 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "ui-website",
+  "title": "Website: loads clean, passes the checks, and works for its visitor",
+  "genre": "ui-website",
+  "status": "officials_runnable",
+  "objective": "Promote a version of a site only if it loads without errors, passes the agreed machine-checkable integrity and accessibility checks, and is the better site for the stated visitor and task. Passing every automated check never shows that the site works for people.",
+  "audience": "Set per bout. The bout names the visitor, their goal and the two to five tasks the site must support.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "a static site build: one HTML file, or a flat set of files. A site with sub-directories is packaged as one archive that the official unpacks and hashes as one file.",
+    "required_sources": [
+      "brief",
+      "task_script",
+      "viewports"
+    ],
+    "optional_sources": [
+      "axe_config",
+      "baseline_screenshots"
+    ],
+    "brief": "Audience, goal, required content and the severity threshold the organizer has agreed for accessibility violations.",
+    "task_script": "Scripted paths for the named tasks, run by the browser driver. They show that a path works; they do not show that a person finds it.",
+    "viewports": "The widths and heights to render, including 320 CSS pixels wide."
+  },
+  "stages": [
+    "weigh_in",
+    "panel",
+    "bracket",
+    "human_review"
+  ],
+  "officials": [
+    {
+      "id": "loads-clean",
+      "official": "web.load_console",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "max_console_errors": 0,
+        "max_failed_requests": 0,
+        "max_uncaught_exceptions": 0
+      },
+      "why": "A page that throws, logs errors or requests missing files is broken before anyone judges its design."
+    },
+    {
+      "id": "html-valid",
+      "official": "web.html_valid",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "fail_on": "error"
+      },
+      "why": "Invalid markup is where assistive technology and browsers diverge. Errors fail; warnings do not."
+    },
+    {
+      "id": "links",
+      "official": "web.links",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "scope": "local",
+        "external": "unverified_not_fail"
+      },
+      "why": "A broken internal link or anchor is a defect on bytes. An unreachable external site is reported unverified, never a failure of the candidate."
+    },
+    {
+      "id": "axe",
+      "official": "web.axe",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "axe_version": "pinned per bout",
+        "fail_on_impact": [
+          "critical",
+          "serious"
+        ],
+        "states": "every page state the task script reaches",
+        "incomplete": "reported, never counted as a pass"
+      },
+      "why": "Violations of rules the engine can test, at the severity the organizer agreed. A pass means none of those rules failed in the states driven; it does not mean the page is accessible."
+    },
+    {
+      "id": "no-hscroll-320",
+      "official": "web.no_hscroll",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {
+        "viewport_width": 320,
+        "tolerance_px": 0
+      },
+      "why": "Horizontal scrolling at 320 CSS pixels fails reflow for people who magnify, and it is measured directly."
+    },
+    {
+      "id": "equal-access",
+      "official": "web.equal_access",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "A second, independent rule engine. What one engine misses another sometimes finds; its findings are leads."
+    },
+    {
+      "id": "task-success",
+      "official": "web.task_success",
+      "authority": "advise",
+      "applies_to": "all",
+      "why": "Whether the scripted path completes. It shows the path works, not that a visitor can find it."
+    },
+    {
+      "id": "lighthouse",
+      "official": "web.lighthouse",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "categories": [
+          "performance",
+          "accessibility",
+          "seo",
+          "best-practices"
+        ],
+        "runs": 5,
+        "aggregate": "median"
+      },
+      "why": "Lighthouse-style lab metrics. Performance varies with machine load, so it is a median of repeated runs and never decisive."
+    },
+    {
+      "id": "screenshot-checklist",
+      "official": "web.screenshot_checklist",
+      "authority": "advise",
+      "applies_to": "all",
+      "params": {
+        "checklist_dimensions": 10,
+        "screenshots_per_candidate": 3
+      },
+      "why": "A multimodal model scores a fixed checklist against staged screenshots. A lead for reviewers; unvalidated against real visitors."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "navigation_clarity",
+      "weight": 0.3,
+      "definition": "The visitor can tell where they are, where each control leads and how to reach the next step of the task.",
+      "anchors": [
+        {
+          "level": 0,
+          "description": "visitor would be lost"
+        },
+        {
+          "level": 2,
+          "description": "gets there with effort"
+        },
+        {
+          "level": 4,
+          "description": "path is obvious"
+        }
+      ]
+    },
+    {
+      "id": "visual_hierarchy",
+      "weight": 0.25,
+      "definition": "What matters most is seen first; grouping, spacing and emphasis tell the visitor what goes with what."
+    },
+    {
+      "id": "content_clarity",
+      "weight": 0.25,
+      "definition": "Headings, labels and copy say what they mean to this visitor in the fewest words."
+    },
+    {
+      "id": "consistency",
+      "weight": 0.2,
+      "definition": "The same thing looks and behaves the same way everywhere on the site."
+    }
+  ],
+  "model_gates": [],
+  "lenses": [
+    "accessibility-auditor",
+    "first-time-visitor",
+    "plain-language-editor"
+  ],
+  "evidence_required": [
+    "The brief, task script and viewport list, hashed, and the agreed severity threshold.",
+    "Each candidate's exact bytes, hashed.",
+    "For every official run: tool name and pinned version, browser name and version, viewport, page state, and the raw report (axe results including 'incomplete').",
+    "For every disqualification: the official, the rule or URL, and the element or message concerned.",
+    "For the bracket: the screenshots shown, their capture settings (viewport, fonts, animations off), and the controller's decision record."
+  ],
+  "hard_disqualifiers": [
+    "The page throws, logs a console error or requests a file that is missing.",
+    "The HTML has a validation error.",
+    "An internal link or anchor is broken.",
+    "Any axe-core violation at or above the agreed severity in a state the task script reaches.",
+    "The page scrolls horizontally at 320 CSS pixels wide."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "scope": "Judges compare only sites that passed the gauntlet, from screenshots and extracted text normalised to the same capture settings. They rank design quality for the stated visitor. They do not rule on accessibility or on whether the site works.",
+    "calibration": "No judge route has been scored against visitor preferences or task outcomes for this genre."
+  },
+  "format": {
+    "tournament": "gauntlet then finals",
+    "why": "Load, validity, links, axe violations and reflow are checkable on the build, so they run first and can eliminate every candidate. Judged finals on survivors compare design quality, which needs readers. Pairwise in both orders with a lens panel as advisory objections.",
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": [
+        "brief"
+      ]
+    },
+    "panel": {
+      "reference_sources": [
+        "brief"
+      ],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "no candidate passes the gauntlet (NO_ELIGIBLE_CANDIDATE)",
+      "the leading eligible sites tie or beat each other in a cycle (TIED_SHORTLIST)",
+      "no challenger beats the baseline by the material-improvement threshold, when a baseline is named (NO_CHANGE)",
+      "a deciding comparison lacks coverage, or a judge's two display orders disagree and quorum is lost (INCONCLUSIVE)",
+      "an official could not run, for example the browser failed to start (INCONCLUSIVE; a harness failure is not a candidate failure)"
+    ]
+  },
+  "human_decides_when": [
+    "always",
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Automated accessibility checks find only a fraction of WCAG problems, and the published figures differ because they measure different things. Deque reports 57.38% of issue instances found by axe-core (169,242 of 294,958; vendor data; first-time audits, WCAG 2.0 and 2.1 A and AA). The same report puts the share of success criteria that automation can test at all at about 20 to 30%. The UK Government Digital Service tested ten free tools against a deliberately broken page with 143 failures: 17% to 41% per tool, 71% combined, 29% (42 of 143) missed by every tool. None of these is the share of real-user barriers found. Zero axe violations means none of the rules axe tested failed in the states driven; 'incomplete' items still need a person.",
+    "No automated check and no simulated user shows that a site works for people. Whether visitors can find and finish the tasks, understand the content, trust it, and operate it with a screen reader, switch or voice control needs real-user task evidence: task success and time on task, and a questionnaire such as SUS (the validity of SUS and UMUX-Lite was not verified in the research notes). Five users find many problems in formative testing; they do not support a statistical comparison between two sites.",
+    "Whether the site looks better to its real audience. Model checklist scores agree with human rankings of generated web pages in published work, which is not evidence about end users.",
+    "The severity threshold and the task script are the organizer's definition of acceptable. Anything they do not drive is untested."
+  ],
+  "privacy": {
+    "allowed_sensitivity": [
+      "synthetic",
+      "public",
+      "internal"
+    ],
+    "notes": "Candidate pages run JavaScript in a browser on this machine. Restricted material is refused until the browser runs in a real sandbox with default-deny network. Screenshots sent to a multimodal reviewer leave the machine, so that route is cleared separately and fails closed."
+  },
+  "notes": "OFFICIALS RUNNABLE, NO BRACKET. The decisive checks run through the plug-in barclays-officials-web when the venue has it installed (docs/PLUGINS.md): web.load_console, web.links, web.no_hscroll, web.html_valid (a built-in structural check, not the Nu Html Checker) and web.axe (unverified unless axe-core is installed). They look at each page as loaded, after a small interaction probe, and in the states the task script reaches. A page that breaks only under some other interaction, or after a long delay, is not seen. web.equal_access, web.lighthouse and web.screenshot_checklist are named here and not implemented: they report unverified and are advisory. There is no model bracket: the controller has no adapter for rendered pages, so survivors go to the panel and to people. Passing every check never shows that the site works for a person; that needs task completion by real users."
+}

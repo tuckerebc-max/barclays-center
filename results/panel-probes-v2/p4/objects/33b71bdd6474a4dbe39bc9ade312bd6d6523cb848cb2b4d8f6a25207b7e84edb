@@ -1,0 +1,40 @@
+{
+  "baseline_fails_target": true,
+  "eligibility": {
+    "baseline": {
+      "content_hash": "8c1fae75a680fe69b54e16e48f196394cde45e999e61173d12ca7574d582e6db",
+      "is_baseline": true,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "clean-fix": {
+      "content_hash": "858115f0d94b014153ea1ba5cafefb2433deafea8a6a63690d97c81c3c0e9c53",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "polished-shallow": {
+      "content_hash": "a36855504bb640af1337e7f92a53dffb1ff3d3c5d58f5dfa0571ca35a2814de3",
+      "is_baseline": false,
+      "reasons": [
+        "pass-to-pass: 1 of 7 test(s) in 'pass_to_pass' did not pass",
+        "fail-to-pass: 3 of 5 test(s) in 'fail_to_pass' did not pass"
+      ],
+      "status": "disqualified"
+    }
+  },
+  "result_objects": [
+    "0378d7063f3f36cbe956e3675b983a32320875cfedd7833c4bd56e69d0f4193c",
+    "dc0e0c9741974b1e43d4284fe752040d16916fbe17de0928a3ac8ef47716e8ab",
+    "92e0e5e890a5904d62b33b2b132027fffb6c9bbc31865b65f05dad8519799a34",
+    "0f36e6a2c8d2bb19030f1c14596cc4e1e91574fe8e53aacadfd5dfd22393ad0e",
+    "576c27d70d7362c04acdf8eff9198cf229799cf38d708201161405b553e1f732",
+    "6ea14d30f7f4732f27f50fab82eeec1d0c46741d674586cce19e15e6ad0235bd",
+    "0ea1c284808c8322318fab56dfdde8dcf752ac4f6b2fcb3e8d86dfdd69a9932a",
+    "3f71172b3e45530f1886aeb26bbd57717e53a4c1eb4f80bfcf11218ec2a5a562",
+    "7835a932523f0b633c2b1d0da50a73325736ee766718223f37a6fbb078732727",
+    "7b0f6157f3874dc9b582a31ebf817f0429fd5bf4bc196353914e9f66cd3dc5cb",
+    "c9c6ef748e9e500f944b96ce766a029cb807815c92e371ac6401c16840f2b935",
+    "e4f18cd855e70cb25cc2841ef881831c3e2df0dddb67762a9fc90d1e8a0abcb0"
+  ]
+}

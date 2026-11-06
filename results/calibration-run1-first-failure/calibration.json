@@ -1,0 +1,866 @@
+{
+  "fixtures": 9,
+  "judging": "simulated (controller's sim provider); weigh-in results are real executions on synthetic files",
+  "met": 6,
+  "position_biases": [
+    0.0,
+    0.25
+  ],
+  "rows": [
+    {
+      "bracket_calls": 14,
+      "bracket_tokens": 20830,
+      "event": "editorial-revision",
+      "expected_sha256": "5184eefe63779ac36d5e6cb20ba6294534db83d3592afb9f861eca7edcad5a2f",
+      "expected_status": "RECOMMEND",
+      "fixture": "editorial-clear-win",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "known-good beats a polished known-bad",
+      "ledger_head": "09041b2ca21be864a417ba8e4bf7d45b8fca557da4b57c82614625bf808ea19b",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 5,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "faithful-plain"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-omission",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-omission"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-omission"
+        ]
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 29,
+      "bracket_tokens": 44927,
+      "event": "editorial-revision",
+      "expected_sha256": "fbcf8235312c6f3f4dbd8083ef313ac496ffec859bb58f0f5d7a46caf76535d5",
+      "expected_status": "TIED_SHORTLIST",
+      "fixture": "editorial-close-call",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "close call: two faithful revisions the judges cannot separate",
+      "ledger_head": "6b8ae7a902dbfba31b70271e1a3a10492ae77288679192ea8a13602e102893da",
+      "met": false,
+      "mismatches": [
+        "status: expected TIED_SHORTLIST, got RECOMMEND",
+        "recommended: expected [], got ['faithful-plain']",
+        "shortlist lacks ['faithful-plain', 'faithful-warm'] (got [])"
+      ],
+      "official_ms": 3,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.6666666666666666,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "faithful-plain"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "faithful-plain",
+          "baseline"
+        ],
+        "recommended": [
+          "faithful-plain"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 14,
+      "bracket_tokens": 20624,
+      "event": "editorial-revision",
+      "expected_sha256": "76938cd1f632c857d2fcd8d8eef57167b866a3952112de92f3d9e8d8353f1012",
+      "expected_status": "NO_CHANGE",
+      "fixture": "editorial-merely-smoother",
+      "flags": [
+        "ATR:COVERAGE_INCOMPLETE",
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "no candidate deserves promotion (faithful, but only smoother)",
+      "ledger_head": "94437f72f903e56d4f1c4322229c310d63331f03c5f633b9a1ca0b531f08e6e2",
+      "met": false,
+      "mismatches": [
+        "status: expected NO_CHANGE, got INCONCLUSIVE"
+      ],
+      "official_ms": 2,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 11,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 13,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "NO_CHANGE"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 11,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 13,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "NO_CHANGE"
+          ]
+        }
+      ],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "baseline",
+          "smoother-only"
+        ],
+        "recommended": [],
+        "status": "INCONCLUSIVE",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [
+        "baseline",
+        "smoother-only"
+      ],
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "editorial-revision",
+      "expected_sha256": "b8cb9ed4a99b7e08efb6723f4600e04d7815399aa14dff5a1169d3f97c9b172b",
+      "expected_status": "NO_CHANGE",
+      "fixture": "editorial-polish-only",
+      "flags": [
+        "JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE"
+      ],
+      "kind": "no candidate deserves promotion (the only challenger drops facts)",
+      "ledger_head": "bf1a75158361bd736deaef17a28bd1fa620312bf3bec25307438a990574e5a0e",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 1,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-omission",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-omission"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-omission"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": 12,
+      "bracket_tokens": 14524,
+      "event": "software-change",
+      "expected_sha256": "b8259911e725e18ac1ba6215115b4f564919e50feda3182be9c600a46f743637",
+      "expected_status": "RECOMMEND",
+      "fixture": "software-clear-win",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "BASELINE_FAILS_TARGET",
+        "JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "known-good beats a polished candidate that fails hidden tests",
+      "ledger_head": "383841e7bd75db4ae4b00a3ac90b3e37b8b12cf1cb6b0634345f040294c9af7e",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 338,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "clean-fix"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 26,
+      "bracket_tokens": 32229,
+      "event": "software-change",
+      "expected_sha256": "547092c4c02466cd7b830a2502b3bcbdf6d8681517a3c6eaaa29d43627e8fb51",
+      "expected_status": "TIED_SHORTLIST",
+      "fixture": "software-close-call",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "BASELINE_FAILS_TARGET",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "close call: two correct changes the judges cannot separate",
+      "ledger_head": "b2b496da626168bee8b2642f8c9d83fb79ee896c5fc908553f327cc0d8fb77a4",
+      "met": false,
+      "mismatches": [
+        "status: expected TIED_SHORTLIST, got RECOMMEND",
+        "recommended: expected [], got ['clean-alt']",
+        "shortlist lacks ['clean-fix', 'clean-alt'] (got [])"
+      ],
+      "official_ms": 331,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.5,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-alt"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 4,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "clean-alt"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "clean-alt",
+          "baseline"
+        ],
+        "recommended": [
+          "clean-alt"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "7a209be037bf4048056cba781f9ae3f0b5efd3035bcef5549a7c8e4adb7fbf6f",
+      "expected_status": "NO_CHANGE",
+      "fixture": "software-looks-good-only",
+      "flags": [
+        "BASELINE_FAILS_TARGET",
+        "JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "TARGET_UNMET"
+      ],
+      "kind": "no candidate deserves promotion (looks good, fails in use)",
+      "ledger_head": "7029336587182b54e29c4449400b698c6aceddbe3f6a038447771c3b9c0a8564",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 251,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "a47a8fd56d85229294321e27cad84d73eccdaa16e855b9d1b7a40610d3c44a37",
+      "expected_status": "NO_CHANGE",
+      "fixture": "software-no-winner",
+      "flags": [
+        "BASELINE_FAILS_TARGET",
+        "JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "TARGET_UNMET"
+      ],
+      "kind": "no candidate deserves promotion (every challenger fails hidden tests)",
+      "ledger_head": "4d86d17b241028245ce1b137fc73df11416ee8bf87cde3fb064c2139d8abf7a5",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 323,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "bbe7e510cc95f45a347e3dbcd1ad8c4fbb1cb26443dd411e4cd8d27ce09b8d8b",
+      "expected_status": "INCONCLUSIVE",
+      "fixture": "software-unverified-target",
+      "flags": [
+        "COVERAGE_INCOMPLETE",
+        "UNVERIFIED:clean-fix"
+      ],
+      "kind": "missing evidence: the target suite has no tests, so a correct change cannot be verified",
+      "ledger_head": "003ffec0a1904f058061db191a3e4ed720f174963964924bfad9102c45b60c52",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 213,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "clean-fix",
+          "baseline"
+        ],
+        "recommended": [
+          "clean-fix"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [],
+      "status": "INCONCLUSIVE"
+    }
+  ],
+  "seeds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ]
+}

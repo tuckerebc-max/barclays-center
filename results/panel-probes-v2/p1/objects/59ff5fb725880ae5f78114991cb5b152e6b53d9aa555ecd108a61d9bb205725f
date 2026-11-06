@@ -1,0 +1,28 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+  "candidate_id": "faithful-plain",
+  "duration_ms": 0,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "facts_total": 8,
+    "kept": 8,
+    "missing": 0,
+    "must_keep": 7
+  },
+  "official": "text.fact_ledger",
+  "official_id": "fact-ledger",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "all 7 must-keep facts present"
+}

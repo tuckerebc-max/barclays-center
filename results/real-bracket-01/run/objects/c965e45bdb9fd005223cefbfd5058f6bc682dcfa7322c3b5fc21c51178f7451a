@@ -1,0 +1,92 @@
+{
+  "acceptance_state": "pending_owner",
+  "barclays_version": "0.1.0",
+  "bout_id": "real-bracket-01",
+  "bracket": null,
+  "eligibility": {
+    "baseline": {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "is_baseline": true,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-plain": {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-warm": {
+      "content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    }
+  },
+  "event_id": "editorial-revision",
+  "evidence_grade": {
+    "bracket": "not_run",
+    "panel": "not_run",
+    "weigh_in": "executed on these exact bytes"
+  },
+  "flags": [
+    "WAITING_ON_JUDGES"
+  ],
+  "human_decision": {
+    "because": [
+      "status is INCONCLUSIVE"
+    ],
+    "boundary": [
+      "Whether the revision still sounds like its author. Only the author can say; a voice lens can describe a register, not grant it.",
+      "Whether a fact that is not in the ledger was lost or bent. The ledger is the organizer's claim about what matters.",
+      "Whether the piece persuades its real readers. Model judges and panels are a proxy; reader evidence is the measure."
+    ],
+    "required": true
+  },
+  "provenance": {
+    "bout_sha256": "5ea75404a24d3ef32f35ecb5a01032b1140ff0c90f2e6b4f7e2cef51a468550d",
+    "candidates": {
+      "baseline": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "faithful-plain": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "faithful-warm": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba"
+    },
+    "event_sha256": "10fbaf194f3e4bd7f629c8023335ff1a9d321a8bbcafb717f33856cabe61f6ac",
+    "officials": [
+      [
+        "fact-ledger",
+        "text.fact_ledger",
+        "0.1.0"
+      ],
+      [
+        "hedge-shift",
+        "text.hedge_shift",
+        "0.1.0"
+      ],
+      [
+        "new-numbers",
+        "text.new_numbers",
+        "0.1.0"
+      ],
+      [
+        "quotes",
+        "text.quotes",
+        "0.1.0"
+      ]
+    ],
+    "sensitivity": "synthetic",
+    "sources": {
+      "fact_ledger": "3681d857f86fdf05427320f5931cc328f4ac4e2c8f652113ad850b4bf4f40f1e",
+      "judge_registry": "e50cb18bcb481bd59cbdd62cf4082129a5cc0f335a1a214a2753d5c56ecac622",
+      "source_draft": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+    }
+  },
+  "reasons": [
+    "the controller exported judge work and is waiting for results"
+  ],
+  "recommended": [],
+  "schema": "barclays.verdict/0.1",
+  "seed": 0,
+  "shadow_bracket": null,
+  "shortlist": [],
+  "status": "INCONCLUSIVE"
+}

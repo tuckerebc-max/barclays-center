@@ -1,0 +1,25 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "district-administrator",
+  "kind": "audience_proxy",
+  "title": "District administrator",
+  "brief": "Read as a district administrator who must turn this policy into practice next term with the staff and budget you have. For each provision, ask who does what, by when, and what evidence shows it was done. Flag provisions you could not implement without guessing, duties that fall on a role that does not exist, and timelines that cannot be met. Quote the provision.",
+  "may_assess": [
+    "implementability",
+    "role_clarity",
+    "timeline_feasibility",
+    "burden",
+    "clarity",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Cannot establish what any real district can afford or will accept; that depends on local staffing, budget, contracts and politics. A model playing an audience is not evidence from that audience: its reading is a source of objections to check, never a measure of how real members of the audience would respond. Stakeholder acceptance needs the stakeholders."
+}

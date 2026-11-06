@@ -1,0 +1,43 @@
+{
+  "audience": "School-board members reading before a budget vote",
+  "baseline": "baseline",
+  "bout_id": "editorial-clear-win",
+  "candidates": [
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/baseline.md"
+        }
+      ],
+      "id": "baseline"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/faithful-plain.md"
+        }
+      ],
+      "id": "faithful-plain"
+    },
+    {
+      "files": [
+        {
+          "path": "draft.md",
+          "source": "candidates/polished-omission.md"
+        }
+      ],
+      "id": "polished-omission"
+    }
+  ],
+  "event": "editorial-revision",
+  "notes": "Synthetic calibration fixture. The organisation, people and figures do not exist.",
+  "purpose": "Revise the first-year summary so a school-board member can act on it after one read, without changing what it says",
+  "schema": "barclays.bout/0.1",
+  "sensitivity": "synthetic",
+  "sources": {
+    "fact_ledger": "sources/ledger.json",
+    "source_draft": "sources/source.md"
+  }
+}

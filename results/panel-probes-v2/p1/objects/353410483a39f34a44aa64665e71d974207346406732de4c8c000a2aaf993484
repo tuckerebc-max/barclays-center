@@ -1,0 +1,40 @@
+{
+  "applies_to": "all",
+  "authority": "advise",
+  "candidate_content_hash": "aeeb5c8311e2d665289d25eac23dcb26b0e5d863b5d80f394bd1dbfd1b6cd616",
+  "candidate_id": "polished-omission",
+  "duration_ms": 1,
+  "findings": [],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [
+    {
+      "basis": "heuristic",
+      "id": "B-F4",
+      "locator": "fact:F4",
+      "note": "Near fact F4 the candidate adds ['proves']. Check whether the source supports that strength. Candidate: \"on the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points, a 38 percent advantage that proves the model works.\"",
+      "severity": "major"
+    },
+    {
+      "basis": "heuristic",
+      "id": "P-F4",
+      "locator": "fact:F4",
+      "note": "Near fact F4 the polarity may have changed: the candidate's sentence has no negation, the source's sentence for this fact has a negation. Candidate: \"on the district's spring reading screener, tutored students gained 11 scale-score points while their peers gained 8 points, a 38 percent advantage that proves the model works.\"",
+      "severity": "major"
+    }
+  ],
+  "metrics": {
+    "leads": 2
+  },
+  "official": "text.hedge_shift",
+  "official_id": "hedge-shift",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "2 lead(s) for reviewers; this official never fails a candidate"
+}

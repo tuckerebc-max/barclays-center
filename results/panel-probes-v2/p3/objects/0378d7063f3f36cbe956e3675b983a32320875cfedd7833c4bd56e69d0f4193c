@@ -1,0 +1,31 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "8c1fae75a680fe69b54e16e48f196394cde45e999e61173d12ca7574d582e6db",
+  "candidate_id": "baseline",
+  "duration_ms": 2,
+  "findings": [],
+  "is_baseline": true,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "annotation_coverage": 0.0,
+    "complexity": 4,
+    "docstring_coverage": 0.0,
+    "functions": 1,
+    "loc": 8,
+    "longest_function": 8,
+    "special_case_comparisons": 0
+  },
+  "official": "py.static",
+  "official_id": "static",
+  "official_version": "0.1.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "pass",
+  "summary": "parses; 1 function(s), complexity 4"
+}

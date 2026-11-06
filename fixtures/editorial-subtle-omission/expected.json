@@ -1,0 +1,31 @@
+{
+  "eligibility": {
+    "baseline": "eligible",
+    "faithful-plain": "eligible",
+    "subtle-omission": "disqualified"
+  },
+  "flags_include": [
+    "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE"
+  ],
+  "frozen_before_first_run": "2026-11-04",
+  "human_required": true,
+  "kind": "known-good beats a tighter revision that silently drops one caveat",
+  "officials": {
+    "subtle-omission": {
+      "fact-ledger": "fail",
+      "new-numbers": "pass",
+      "quotes": "pass"
+    }
+  },
+  "recommended": [
+    "faithful-plain"
+  ],
+  "revisions": [
+    "2026-11-04, after the independent review (IR-05): the flag JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE is now SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE. Same condition; the name now says the judges were simulated. No expected outcome changed."
+  ],
+  "shadow": {
+    "top_ranked": "subtle-omission",
+    "top_ranked_was_disqualified": true
+  },
+  "status": "RECOMMEND"
+}

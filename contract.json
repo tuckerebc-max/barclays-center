@@ -1,0 +1,157 @@
+{
+  "name": "barclays-center",
+  "version": "0.3.0",
+  "kind": "navy-yard venue",
+  "summary": "Purpose-specific tournaments: officials before judges (a separate jailed process for executed code; plug-in officials in sibling repositories behind a file contract), advisory lens panels from a closed list of lanes, the existing controller for the bracket, one hash-chained and sealed verdict record.",
+  "runtime": {
+    "python": ">=3.11",
+    "dependencies": [],
+    "controller": {
+      "name": "adversarial-tournament-review",
+      "schema": "atr/1",
+      "locate": [
+        "--atr",
+        "BARCLAYS_ATR",
+        "sibling checkout"
+      ],
+      "python": "3.11 or 3.12 (not 3.13)"
+    }
+  },
+  "schemas": {
+    "event": "barclays.event/0.1",
+    "bout": "barclays.bout/0.1",
+    "lens": "barclays.lens/0.1",
+    "official_result": "barclays.official-result/0.1",
+    "panel": "barclays.panel/0.1",
+    "verdict": "barclays.verdict/0.1",
+    "ledger": "barclays.ledger/0.1",
+    "frozen": "barclays.frozen/0.1",
+    "official_request": "barclays.official-request/0.1",
+    "official_response": "barclays.official-response/0.1",
+    "plugins": "barclays.plugins/0.1"
+  },
+  "cli": {
+    "entry": "python bc.py",
+    "stdout": "one JSON object per command",
+    "exit_codes": {
+      "0": "done, whatever the verdict",
+      "1": "invalid input, I/O or internal error",
+      "2": "deliberate refusal",
+      "3": "calibration ran; an expectation was not met"
+    },
+    "commands": {
+      "events": "list event cards",
+      "lenses": "list lens cards",
+      "contract": "print this file",
+      "validate <bout>": "check a bout against its event card; runs nothing",
+      "weigh-in <bout> --out <run>": "run officials only",
+      "run <bout> --out <run> [--judges sim|real|none] [--shadow] [--seed N] [--panel-from <run>]": "weigh-in, bracket, verdict, report, seal; --panel-from carries an imported panel for the same bytes into the verdict (advisory)",
+      "resume <bout> --run <run>": "after real judges answered the controller's packets: import, step, verdict",
+      "panel-export <bout> --out <run> --pairs a:b --reviewers r1,r2 --leads none|tools --clearance labels [--panel-lenses a,b,c]": "weigh-in, then blind lens packets; --panel-lenses seats the organiser's choice of lenses for this bout (recorded in panel/roster.json and the verdict)",
+      "panel-import <bout> --run <run> [--provider file]": "validate reviewer results, enforce lens authority, reconcile orders",
+      "verify <run> [--expect-head <hash>]": "reports 'consistent' (chain, objects, sealed tree, re-derived eligibility) and 'authenticated' (the head equals the one given with --expect-head; null when none is given). Exit 2 if not consistent or if the head does not match",
+      "calibrate <fixtures> --out <dir>": "refuses unfrozen inputs; fixtures against frozen expectations, reseeding and position-bias probes, attack tables"
+    },
+    "global_options": {
+      "--events <dir>": "event card directory",
+      "--lenses <dir> (repeatable)": "lens card directories; a lens id defined twice is an error",
+      "--plugins <file>": "plug-in table (schema barclays.plugins/0.1); also read from BARCLAYS_PLUGINS"
+    }
+  },
+  "statuses": [
+    "RECOMMEND",
+    "NO_CHANGE",
+    "TIED_SHORTLIST",
+    "INCONCLUSIVE",
+    "NO_ELIGIBLE_CANDIDATE"
+  ],
+  "eligibility": [
+    "eligible",
+    "disqualified",
+    "incomplete"
+  ],
+  "official_status": [
+    "pass",
+    "fail",
+    "unverified",
+    "not_applicable"
+  ],
+  "authority": {
+    "disqualify": "a failure makes the candidate ineligible; unverified makes it incomplete",
+    "advise": "findings and leads only; never changes eligibility"
+  },
+  "sensitivity_labels": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "acceptance": "always pending_owner; Barclays recommends and never accepts, releases or publishes",
+  "invariants": [
+    "A candidate that fails a decisive official is never recommended or shortlisted.",
+    "Unverified is neither a pass nor a failure. A harness failure is unverified; a candidate that exits or twice fails to answer in time has failed.",
+    "Leads and lens objections never change eligibility. A panel never changes a verdict's status or recommendation.",
+    "A factual objection from any reviewer is an allegation until verified. So is an objection filed under a word the venue does not know, one whose own words read as a claim about facts or the source, and an entry that names no candidate. Nothing a reviewer raised is dropped.",
+    "One reviewer's two display orders reconcile to one preference; a disagreement abstains.",
+    "A component not cleared for a bout's sensitivity label is refused before anything is written.",
+    "Bout inputs resolve inside the bout directory, and symbolic links are refused.",
+    "A bout may change only the parameters its event card lists under bout_may_set, and a number only where the card gives its own value; every such change is flagged, and a change to a decisive check requires a person.",
+    "Executed candidate code never shares a process with the tests that judge it.",
+    "A held-back suite reveals counts, never test names, inputs or expected values.",
+    "Run directories are written once; every object is content-addressed and chained; a finished run ends with a seal over every file, directory and link in it (a database by its schema and rows; permissions and timestamps are not sealed).",
+    "verify never reports a run as genuine without a head recorded outside the run: consistency and authentication are separate results.",
+    "An answer over the size limit, or a timeout while the candidate was not being waited on, is a failure only when another candidate's result shows the limit was reachable; otherwise it is unverified.",
+    "Lens lanes are a closed vocabulary matched exactly as written; only a fact desk holds a factual lane, and it holds nothing else.",
+    "A plug-in official's response is validated; anything missing, malformed, oversized or out of vocabulary is unverified, never pass. A pass carries no findings. A missing plug-in is flagged PLUGIN_MISSING.",
+    "A plug-in never receives an environment variable whose name contains KEY, TOKEN, SECRET, PASSWORD or CREDENTIAL, nor the venue's own BARCLAYS_* settings, nor a scratch folder inside the run directory.",
+    "An officials_runnable event never names a recommended candidate.",
+    "A figure that is not in the source and is marked approximate is a major lead, not an accepted rounding; a finalist with a major lead requires a person.",
+    "The plug-in table is read once per run and that copy serves the whole run."
+  ],
+  "not_provided": [
+    "a tournament controller",
+    "routing or dispatch",
+    "an evidence store for the fleet",
+    "authentication of who wrote a run (record the ledger head outside the run and check it with verify --expect-head)",
+    "a hardened sandbox for hostile code (the jail is a namespace and a chroot on the host kernel; no process-count limit)",
+    "a decisive check for meaning changes that keep every surface form (those are leads and judges' work)",
+    "agreement of any judge route with human gold",
+    "evidence that a game is fun, a site is usable or a voice is the author's (human evidence only)",
+    "an operating-system sandbox around plug-ins or around the browser they drive",
+    "a signature on the plug-in table (it is recorded by hash)",
+    "detection of a panel reviewer who stays silent about a factual problem or words it as taste"
+  ],
+  "tools": {
+    "python tools/freeze.py [--check]": "freeze every fixture directory and event card (fixtures/FROZEN.json); freeze, commit, then calibrate",
+    "python tools/build_fixtures.py": "rebuild fixtures and the software attack bout from fixtures/_pool",
+    "python tools/native_envelope.py <packet.prompt.json> <answer> --model <id>": "wrap one model answer in the controller's native result envelope; the model writes only its answer",
+    "python tools/plugins_table.py [--family-dir DIR] [--out plugins.json]": "write the plug-in table from the sibling repositories found beside the venue (runs each sibling's `official.py list`)"
+  },
+  "flags": {
+    "ATR:*": "the controller's own flags, passed through",
+    "BOUT_OVERRIDE:<target>.<param>": "the bout changed a parameter its event card allows a bout to change",
+    "EXEC_NOT_ISOLATED": "candidate code ran without the jail on this host",
+    "MODEL_GATE_EXCLUDED:<candidate>": "a model gate inside the bracket excluded a candidate the weigh-in passed",
+    "PANEL_PREFERRED_A_DISQUALIFIED_CANDIDATE": "an attached panel preferred a candidate the weigh-in disqualified; it changed nothing",
+    "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE": "simulated judges with no weigh-in ranked a disqualified candidate first; says nothing about real models",
+    "SIMULATED_JUDGES / WAITING_ON_JUDGES / NO_BRACKET / COVERAGE_INCOMPLETE": "how far judging got",
+    "BASELINE_FAILS_TARGET / TARGET_UNMET / BASELINE_INELIGIBLE / UNVERIFIED:<candidate>": "what the weigh-in found",
+    "PLUGIN_MISSING:<official>": "the event card names an official this venue has no plug-in for; it reported unverified",
+    "PANEL_LENSES_CHOSEN_BY_ORGANISER": "the attached panel's lenses were chosen for this bout, not taken from the event card",
+    "PANEL_NO_FACT_DESK": "no lens on the attached panel was briefed to check facts",
+    "PLUGIN_TABLE_CHANGED_DURING_RUN": "the plug-in table file changed while the officials ran; the run used the copy pinned at its start"
+  },
+  "event_status": {
+    "runnable": "weigh-in, panel and bracket",
+    "officials_runnable": "weigh-in and panel; no model bracket; the verdict names no winner and a human decides",
+    "specified": "a design; refuses to run"
+  },
+  "family": {
+    "barclays-lenses": "lens cards bound to voice and review skills; cards load with --lenses",
+    "barclays-officials-web": "web.* officials for ui-website",
+    "barclays-officials-game": "game.* officials for game-build",
+    "barclays-officials-code": "code.* officials for software-change (advisory)",
+    "barclays-gold": "blind human ballots; scores a judge route against human decisions from manifest.json and panel/panel.json",
+    "see": "docs/FAMILY.md"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "acceptance_state": "pending_owner",
+  "barclays_version": "0.1.0",
+  "bout_id": "real-bracket-01",
+  "bracket": {
+    "campaign_id": "real-bracket-01",
+    "composites": {
+      "baseline": 80.0,
+      "faithful-plain": 95.0,
+      "faithful-warm": 82.5
+    },
+    "contract_hash": "54dc0e71619e21d1cef1ecfa23a4e57e6d95df5c00bb8eac2b244937a0cafde4",
+    "controller": {
+      "commit": "101539890d543b85392ed6ac8315beb5fe26c90e",
+      "files": {
+        "aggregate.py": "a8399ae8e855229f7027928d946c4f0c30274dba48e927224f226ac11a0eeacf",
+        "canon.py": "b5bbbf9e91239f38c48dbd9a4cdda5980520c58cd7db6122955a5b33f120fb4c",
+        "decide.py": "f1bfc87a1e0a5985e3d70acc4ac0ff34b301fd7817a096539ebb016901addc3c",
+        "engine.py": "1083eb76c8768320e1893cabd90003550eaf04fc8f19d68342c6cb1c265d1d75",
+        "records.py": "4179d1d4156e37c4c40c892f63f51d7eda7915de90fc9e288b3276ec60366a06"
+      },
+      "name": "adversarial-tournament-review",
+      "schema": "atr/1"
+    },
+    "judge_diagnostics": {
+      "claude-haiku": {
+        "abstain_rate": 0.0,
+        "ballots": 6,
+        "both_order_matches": 3,
+        "display_a_rate": 0.5,
+        "flip_rate": 0.0,
+        "matches": 3,
+        "valid": 6
+      },
+      "claude-sonnet": {
+        "abstain_rate": 0.6666666666666666,
+        "ballots": 6,
+        "both_order_matches": 3,
+        "display_a_rate": 0.5,
+        "flip_rate": 0.6666666666666666,
+        "matches": 3,
+        "valid": 6
+      }
+    },
+    "operational_status": "COMPLETE",
+    "planned_calls_upper": 48,
+    "selected_hashes": {
+      "baseline": "f8e0cb28a22e98434287c46cd67308b8e4ba03ed089b084fafb9259f3b6eb986",
+      "faithful-warm": "eb7860e452bef08778bdd7edde004c7060104511986af4634342f98163955364"
+    },
+    "usage": {
+      "by_role": {
+        "challenger": {
+          "calls": 2,
+          "tokens": 0
+        },
+        "gate_check": {
+          "calls": 5,
+          "tokens": 0
+        },
+        "judge_grade": {
+          "calls": 8,
+          "tokens": 0
+        },
+        "judge_pair": {
+          "calls": 15,
+          "tokens": 0
+        },
+        "verifier": {
+          "calls": 6,
+          "tokens": 0
+        }
+      },
+      "calls_used": 36,
+      "tokens_used": 0
+    },
+    "win_matrix": {
+      "baseline": {
+        "faithful-plain": "inconclusive",
+        "faithful-warm": "inconclusive"
+      },
+      "faithful-plain": {
+        "baseline": "inconclusive",
+        "faithful-warm": "win"
+      },
+      "faithful-warm": {
+        "baseline": "inconclusive",
+        "faithful-plain": "loss"
+      }
+    }
+  },
+  "eligibility": {
+    "baseline": {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "is_baseline": true,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-plain": {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-warm": {
+      "content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    }
+  },
+  "event_id": "editorial-revision",
+  "evidence_grade": {
+    "bracket": "real model judges",
+    "panel": "not_run",
+    "weigh_in": "executed on these exact bytes"
+  },
+  "flags": [
+    "ATR:COVERAGE_INCOMPLETE",
+    "ATR:MODEL_DIVERSITY_LIMITED",
+    "ATR:PRICE_UNKNOWN",
+    "ATR:ROLE_OVERLAP",
+    "ATR:SINGLE_TOURNAMENT",
+    "ATR:UNCALIBRATED_PANEL"
+  ],
+  "human_decision": {
+    "because": [
+      "status is INCONCLUSIVE",
+      "unreviewed leads on 'faithful-warm': H-F7"
+    ],
+    "boundary": [
+      "Whether the revision still sounds like its author. Only the author can say; a voice lens can describe a register, not grant it.",
+      "Whether a fact that is not in the ledger was lost or bent. The ledger is the organizer's claim about what matters.",
+      "Whether the piece persuades its real readers. Model judges and panels are a proxy; reader evidence is the measure."
+    ],
+    "required": true
+  },
+  "provenance": {
+    "bout_sha256": "5ea75404a24d3ef32f35ecb5a01032b1140ff0c90f2e6b4f7e2cef51a468550d",
+    "candidates": {
+      "baseline": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "faithful-plain": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "faithful-warm": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba"
+    },
+    "event_sha256": "10fbaf194f3e4bd7f629c8023335ff1a9d321a8bbcafb717f33856cabe61f6ac",
+    "officials": [
+      [
+        "fact-ledger",
+        "text.fact_ledger",
+        "0.1.0"
+      ],
+      [
+        "hedge-shift",
+        "text.hedge_shift",
+        "0.1.0"
+      ],
+      [
+        "new-numbers",
+        "text.new_numbers",
+        "0.1.0"
+      ],
+      [
+        "quotes",
+        "text.quotes",
+        "0.1.0"
+      ]
+    ],
+    "sensitivity": "synthetic",
+    "sources": {
+      "fact_ledger": "3681d857f86fdf05427320f5931cc328f4ac4e2c8f652113ad850b4bf4f40f1e",
+      "judge_registry": "e50cb18bcb481bd59cbdd62cf4082129a5cc0f335a1a214a2753d5c56ecac622",
+      "source_draft": "1353f1ffa6049969b3d0b030506f4ef3e97bfbf72c98e1a595a61833b01efdbf"
+    }
+  },
+  "reasons": [
+    "faithful-warm vs baseline: pair result inconclusive; composite delta +2.50 against a threshold of 5.00; not promotable",
+    "the comparisons needed for a decision are incomplete or open; the strongest observed eligible candidates are listed without a recommendation",
+    "2 finalist pair(s) lack a conclusive result"
+  ],
+  "recommended": [],
+  "schema": "barclays.verdict/0.1",
+  "shadow_bracket": null,
+  "shortlist": [
+    "baseline",
+    "faithful-warm"
+  ],
+  "status": "INCONCLUSIVE"
+}

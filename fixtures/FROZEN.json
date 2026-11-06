@@ -1,0 +1,76 @@
+{
+  "attacks": {
+    "editorial": {
+      "tree": "c40f68d7206ed2183e88eb1004b39fd36e9474cbdf46e7fe839080827ecf6ef3"
+    },
+    "software": {
+      "tree": "cf2d1963f7436c7ee96221ea7ce74e91b1a0d232626884c7b82735fb38ed04e7"
+    }
+  },
+  "barclays_version": "0.3.0",
+  "events": {
+    "editorial-revision.json": "5b882f996b56c9361b829dc26162f0fa4d959f89ef01725a8290f7afec0c8537",
+    "factual-extraction.json": "db8ef7b0a587ff775387a1f29a70b74cac63c3f649dc46bb21f660c2e342fb50",
+    "game-build.json": "f96629e422de1067c40787e2596251361eae65bc17c42c8a09a9a0395536d080",
+    "instructional-material.json": "f9329cd7f17316623ce744b7f2febfa0e6b27d5a776518039301244763f72423",
+    "manuscript-production.json": "98f7fc8ce80bdd9b1ff24431b889c534fe887ce08c7e589bfcb618964bcff011",
+    "policy-document.json": "0344be5390a40d15558107892fdbae0aa9a06e66cf184d0671606487365ae1bd",
+    "research-synthesis.json": "1b072b05a395a9c346f929e803b6ec8e3c64df16c32d3fed63969a13080378fe",
+    "software-change.json": "ab4c9b45da8403ede1eb31c449d4989d54ab74064a2922bd919d20160804f8a8",
+    "ui-website.json": "5f1411706c9622ac13e3df51e14acf9facee1905da4b3179b0589371188d50f9"
+  },
+  "fixtures": {
+    "editorial-clear-win": {
+      "bout": "7496990ec9e3d1d3186e14507900058e8da310bf1c80f9a56198b937e3df54c6",
+      "expected": "ca8755eaf1e622aada6f196ae89cc719901beb4951b2952f22ca5e4b2c031e89",
+      "tree": "8d23ac7ea2db3219cb5e886fc730da0ca16edab4c8df251c8596bace31cb6a3d"
+    },
+    "editorial-close-call": {
+      "bout": "bb207d3073fb054f7bbd1d3c39a11561a0d1b71ee98f665cd68f04c0b65248f0",
+      "expected": "fbcf8235312c6f3f4dbd8083ef313ac496ffec859bb58f0f5d7a46caf76535d5",
+      "tree": "32781f6137ed5714ad81eac0fed6ed25a62c5009546f46d5fa86a85a46af623b"
+    },
+    "editorial-merely-smoother": {
+      "bout": "87fe42da048ae3c224b4adf051c470dbcb0b1b9c63e78b736195569d4e68484e",
+      "expected": "4cc810420e8bc77ec6805b65fd43a73240b02fd1a2e872624ce9be86df35bc41",
+      "tree": "b0e63ce234061849032ea41e268c588ac03c0dcbd5cc893f682d3919e9a54d33"
+    },
+    "editorial-polish-only": {
+      "bout": "964670f9911bf505f1edafcee4daee45d0df9f145bb98a5bba13c6bea26ae127",
+      "expected": "91c34a161cac5427da96bd1fe6d85169402d97bb0ba4378e20ca33fd13956e57",
+      "tree": "bd24011712a8b0c3c3a672b0aa0df98586b003570f0040684851cb33cf5be764"
+    },
+    "editorial-subtle-omission": {
+      "bout": "db0eb15c2c44291b84c0d59324b25ead67a392083f3adad423154f308d38b1c4",
+      "expected": "1386bd1df43fe86a2f87edd6980d438bd9a6c829541581d53226c1d22b7bfe8d",
+      "tree": "89cd005c50864aeaa90587d811ac8cc4ca79bd175fa4c9242d11785964e4bc38"
+    },
+    "software-clear-win": {
+      "bout": "00ca5b4364a14338e0d81e8ec42ab80b1b86f7bfdb324bace778490b1571e98e",
+      "expected": "ea6f182dcda363b11fe67c11daa0bbda11d02aa8d3778be7db92faecfc5ea2fc",
+      "tree": "027f187339a06101164a120a13808f6314991c3403c83b4272625dbc49611287"
+    },
+    "software-close-call": {
+      "bout": "e7cbf46d52e84ed5d897bf04cfab311994e30aed094f7bb4f1ff25eac4925d91",
+      "expected": "547092c4c02466cd7b830a2502b3bcbdf6d8681517a3c6eaaa29d43627e8fb51",
+      "tree": "fbde99ba9ef438f37d597b6877364215d2c4b349655a0b5bff1f1c6058e1e01e"
+    },
+    "software-looks-good-only": {
+      "bout": "614e538582b26e73fb6c08738b7eb4b7287767355b07faf332d664ac0c926bf9",
+      "expected": "9fcd037a4c845c5ac68041b6285a7fc395f8f57a81efbbfae8599145c3443220",
+      "tree": "405d128b114777d8799cf90d253cc00b6c32eba4635490ec805fe356a521afdd"
+    },
+    "software-no-winner": {
+      "bout": "eee4671b80633d0776f403fd6e17f9346129fab87cbfff6586fa2e25e6da1f1b",
+      "expected": "a47a8fd56d85229294321e27cad84d73eccdaa16e855b9d1b7a40610d3c44a37",
+      "tree": "ec7724f6b721cd5857b30b5359a1c83038364927d072bec73675757e387d2c62"
+    },
+    "software-unverified-target": {
+      "bout": "ea68670518ad5af9519ff79e15eb78b8c8d4b7d582b9e38d8ee2d8d4f4f77871",
+      "expected": "bbe7e510cc95f45a347e3dbcd1ad8c4fbb1cb26443dd411e4cd8d27ce09b8d8b",
+      "tree": "1d0360d8ef5a61beed6a47d9aafad103f5bb71b0511ccdca2b0f57aeb87708f0"
+    }
+  },
+  "pool_tree": "31b859961795d2ea672a403e5100d73c9bec453c977d09b1622756627b4444cf",
+  "schema": "barclays.frozen/0.1"
+}

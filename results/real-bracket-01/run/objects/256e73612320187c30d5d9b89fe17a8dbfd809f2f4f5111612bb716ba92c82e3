@@ -1,0 +1,37 @@
+{
+  "baseline_fails_target": false,
+  "eligibility": {
+    "baseline": {
+      "content_hash": "9e274c8a274020f39de21b088d1de1b18cdf76afe35c1d1baf7e138a8bd98f3b",
+      "is_baseline": true,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-plain": {
+      "content_hash": "f274d89cbfa134f4764412ddc75bb47d2004a56b91e00b7ccd52136d507f9f95",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    },
+    "faithful-warm": {
+      "content_hash": "54aa1b70138047bf54b8b13bac4391272e9fe859f247f289892521241e8910ba",
+      "is_baseline": false,
+      "reasons": [],
+      "status": "eligible"
+    }
+  },
+  "result_objects": [
+    "df8de5257df3ecb1c5b03ee6ca99187e10914161d4b326de6ae53b19859596d7",
+    "83fea23fa05b72db669e8c58e157f2b561d930d68dcdf52dddcb9781d54a5384",
+    "2fd2be4763ab2321f6787e61bdb0a795053a7572e822c0920bef18dccb000774",
+    "157a8995eebc3eff0f3e917d2d010f31cce25ad012e6f08836f2432d62c96e6a",
+    "753ad993d82be418c434aae360fea9fde3fa0fd75a0e23fd6181c040504585bd",
+    "1490a761ed7371a21108212251e2b0c9360ba38064faf1439238f29c7e8bd753",
+    "00bd4df79c8d946a5f33355ec7c7f6f73e28af9063e2884b59a54ffb542830fd",
+    "2a4d3af3715eeec3a07306eb5f16e679d9f7e5de247e2a9af7a90df2fa446070",
+    "f15938fa73667273b25c117b9ee696fb9f97f662af201cc56e55ef25d62797a8",
+    "7429c20369549dd4e8ec2da2e128e32803f1909cbe2004f3875db39f6173fe1b",
+    "5864141527d33e44bdaf94849f54e07242a8e2ee881390102b49dfc1631aa083",
+    "d049da775eaa5c8514eb34d4192f19de2f530f241e2f6db65eef9e3f524c8dc5"
+  ]
+}

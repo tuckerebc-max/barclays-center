@@ -1,0 +1,39 @@
+{
+  "applies_to": "all",
+  "authority": "disqualify",
+  "candidate_content_hash": "4d3f7b31fa8030f921488c804d5ea923aeb1071eb95ddbd07f839d78a778af36",
+  "candidate_id": "subtle-omission",
+  "duration_ms": 0,
+  "findings": [
+    {
+      "claim": "Fact F3 is not present: The comparison was not randomized.",
+      "evidence": {
+        "reason": "no occurrence of: not randomized | non-randomized | nonrandomized | without random assignment | no random assignment | not a randomized",
+        "source_sentence": "an internal pilot comparison suggests that tutored students may have gained more than untutored students on the district's spring reading screener, but the comparison was not randomized and the difference could reflect which students were selected for tutoring."
+      },
+      "id": "F3",
+      "locator": "(absent from the candidate)",
+      "severity": "critical"
+    }
+  ],
+  "is_baseline": false,
+  "kind": "deterministic",
+  "leads": [],
+  "metrics": {
+    "facts_total": 8,
+    "kept": 7,
+    "missing": 1,
+    "must_keep": 7
+  },
+  "official": "text.fact_ledger",
+  "official_id": "fact-ledger",
+  "official_version": "0.2.0",
+  "receipt": {},
+  "runtime": {
+    "platform": "Linux",
+    "python": "3.13.18"
+  },
+  "schema": "barclays.official-result/0.1",
+  "status": "fail",
+  "summary": "1 of 7 must-keep facts missing"
+}

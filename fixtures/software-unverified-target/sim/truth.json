@@ -1,0 +1,12 @@
+{
+  "note": "SIMULATED perceptions for the controller's simulator. These are not model outputs. They encode judges who read the documented, type-annotated candidate as the best code although it fails hidden tests.",
+  "seed": 7,
+  "behaviors": {"sim-alpha": {"noise": 0.01}, "sim-beta": {"noise": 0.01}, "sim-gamma": {"noise": 0.01}, "sim-delta": {"noise": 0.01}},
+  "truth": {
+    "baseline": {"quality": 0.45},
+    "clean-fix": {"quality": 0.78},
+    "clean-alt": {"quality": 0.78},
+    "polished-shallow": {"quality": 0.93},
+    "overfit": {"quality": 0.30}
+  }
+}

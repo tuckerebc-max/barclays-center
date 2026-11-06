@@ -1,0 +1,119 @@
+{
+  "schema": "barclays.event/0.1",
+  "event_id": "editorial-revision",
+  "title": "Editorial revision: clearly better, or merely smoother?",
+  "genre": "editorial-revision",
+  "status": "runnable",
+  "objective": "Promote a revision of an existing draft only if it keeps every fact the source carries, adds nothing the source cannot support, and is materially better for the stated audience. A revision that only reads more smoothly does not win.",
+  "audience": "Set per bout. The bout names the reader the revision is for.",
+  "artifact_type": "text",
+  "candidate_inputs": {
+    "candidate": "one Markdown or plain-text file",
+    "required_sources": ["source_draft", "fact_ledger"],
+    "optional_sources": ["evidence"],
+    "fact_ledger": "The organizer's list of facts the revision must keep, each with the surface forms that count as keeping it. The ledger is evidence: it is hashed with the bout, and a fact left out of it is not protected."
+  },
+  "stages": ["weigh_in", "panel", "bracket", "human_review"],
+  "officials": [
+    {
+      "id": "fact-ledger",
+      "official": "text.fact_ledger",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "why": "A dropped or altered fact is a defect no amount of polish repairs. Checked on bytes, before any judge reads the prose."
+    },
+    {
+      "id": "new-numbers",
+      "official": "text.new_numbers",
+      "authority": "disqualify",
+      "applies_to": "challengers",
+      "params": {"policy": "fail", "ignore_integers_upto": 10},
+      "why": "A revision may not introduce a figure that is absent from the source and the evidence."
+    },
+    {
+      "id": "quotes",
+      "official": "text.quotes",
+      "authority": "disqualify",
+      "applies_to": "all",
+      "params": {"min_words": 4},
+      "why": "Every quotation must appear verbatim in the source or the evidence."
+    },
+    {
+      "id": "hedge-shift",
+      "official": "text.hedge_shift",
+      "authority": "advise",
+      "why": "Dropped hedges and added boosters next to a fact are where meaning shifts without any fact disappearing. Leads for reviewers; never a failure."
+    }
+  ],
+  "criteria": [
+    {"id": "clarity", "weight": 0.35, "definition": "The intended reader understands the point and what follows from it after one read.",
+     "anchors": [{"level": 0, "description": "unclear"}, {"level": 2, "description": "clear with effort"}, {"level": 4, "description": "immediately clear"}]},
+    {"id": "argument", "weight": 0.25, "definition": "The piece makes a claim, supports it in order, and the reader can tell what is evidence and what is interpretation."},
+    {"id": "voice", "weight": 0.2, "definition": "The register suits the stated audience and stays consistent; nothing reads as filler or as written to impress."},
+    {"id": "economy", "weight": 0.2, "definition": "No sentence could be cut without losing something the reader needs."}
+  ],
+  "model_gates": [
+    {"id": "no-new-claims", "definition": "Makes no claim that the reference material does not support"}
+  ],
+  "lenses": ["plain-language-editor", "measurement-scientist", "fact-desk"],
+  "evidence_required": [
+    "The source draft and the fact ledger, hashed.",
+    "Each candidate's exact bytes, hashed. A re-edited candidate is a new candidate.",
+    "For every disqualification: the official, its version, and the fact, number or quotation concerned.",
+    "For the bracket: the controller's decision record with its contract hash, ballots and judge diagnostics."
+  ],
+  "hard_disqualifiers": [
+    "A must-keep ledger fact is absent.",
+    "A number appears that is in neither the source nor the evidence.",
+    "A quotation does not appear verbatim in the source or the evidence."
+  ],
+  "judge_qualifications": {
+    "minimum_model_families": 2,
+    "exclude_author_family": true,
+    "blind": "Judges see A and B, never ids, authors, model names or scores.",
+    "calibration": "A judge route is provisional until it has been scored against human gold on this genre with a chance-corrected agreement statistic. No route has been so far."
+  },
+  "format": {
+    "bracket": {
+      "controller": "atr/1",
+      "profile": "light",
+      "judges_per_match": 3,
+      "finalists": 3,
+      "grade_judges": 2,
+      "max_model_calls": 400,
+      "evidence_sources": ["source_draft", "evidence"]
+    },
+    "panel": {
+      "reference_sources": ["source_draft"],
+      "orders": "both",
+      "authority": "advisory"
+    }
+  },
+  "abstention": {
+    "material_improvement": 5.0,
+    "no_clear_winner_when": [
+      "the leading eligible candidates tie or beat each other in a cycle (TIED_SHORTLIST)",
+      "no challenger beats the baseline by the material-improvement threshold on the weighted composite (NO_CHANGE)",
+      "a deciding comparison lacks coverage, or a judge's two display orders disagree and quorum is lost (INCONCLUSIVE)",
+      "a challenger could not be verified by a decisive official (INCONCLUSIVE, never a loss)"
+    ]
+  },
+  "human_decides_when": [
+    "on_status:TIED_SHORTLIST",
+    "on_status:INCONCLUSIVE",
+    "open_critical_leads",
+    "unverified_allegations",
+    "simulated_judges",
+    "sensitivity_not_in:synthetic,public"
+  ],
+  "human_evidence_boundary": [
+    "Whether the revision still sounds like its author. Only the author can say; a voice lens can describe a register, not grant it.",
+    "Whether a fact that is not in the ledger was lost or bent. The ledger is the organizer's claim about what matters.",
+    "Whether the piece persuades its real readers. Model judges and panels are a proxy; reader evidence is the measure."
+  ],
+  "privacy": {
+    "allowed_sensitivity": ["synthetic", "public", "internal", "restricted"],
+    "notes": "The officials run locally and send nothing anywhere, so the event accepts any label. Reviewer and judge routes are cleared separately and fail closed."
+  },
+  "notes": "Runnable in v0.1 with the four text officials and the controller's simulator or a supplied model registry."
+}

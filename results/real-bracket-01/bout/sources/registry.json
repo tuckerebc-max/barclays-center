@@ -1,0 +1,36 @@
+{
+  "models": [
+    {
+      "alias": "claude-haiku",
+      "model_id": "claude-haiku-4-5",
+      "provider": "native",
+      "host": "claude-code",
+      "family": "anthropic",
+      "lane_class": "native",
+      "modalities": [
+        "text"
+      ],
+      "calibration": {
+        "status": "uncalibrated",
+        "date": "2026-11-04",
+        "notes": "no calibration against human gold for this genre"
+      }
+    },
+    {
+      "alias": "claude-sonnet",
+      "model_id": "claude-sonnet-5-5",
+      "provider": "native",
+      "host": "claude-code",
+      "family": "anthropic",
+      "lane_class": "native",
+      "modalities": [
+        "text"
+      ],
+      "calibration": {
+        "status": "uncalibrated",
+        "date": "2026-11-04",
+        "notes": "no calibration against human gold for this genre"
+      }
+    }
+  ]
+}

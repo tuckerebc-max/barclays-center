@@ -1,0 +1,26 @@
+{
+  "schema": "barclays.lens/0.1",
+  "lens_id": "classroom-teacher",
+  "kind": "audience_proxy",
+  "title": "Classroom teacher",
+  "brief": "Read as a teacher who will use this material tomorrow with a real class. Could you teach from it without rewriting? Check the directions a student would follow alone, the time each task needs, the order from explanation to practice, and whether each task matches a stated objective. Say what you would change before handing it out and which students would be lost. Quote the passage.",
+  "may_assess": [
+    "usability_in_class",
+    "task_directions",
+    "sequencing",
+    "time_fit",
+    "objective_alignment",
+    "differentiation",
+    "audience_fit"
+  ],
+  "source": {
+    "type": "inline"
+  },
+  "allowed_sensitivity": [
+    "synthetic",
+    "public",
+    "internal",
+    "restricted"
+  ],
+  "notes": "Cannot establish that the material works in a classroom or that students learn from it. A model playing an audience is not evidence from that audience: its reading is a source of objections to check, never a measure of how real members of the audience would respond. Learning effect needs evidence from learners and use by real teachers."
+}
