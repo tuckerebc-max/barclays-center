@@ -60,8 +60,8 @@ by tests the author wrote and have not themselves been independently reviewed.**
 | Unit and regression tests, venue | 103 (6 of them need the siblings and skip without them) | real execution | `tests/` |
 | Unit tests, the five siblings | 43, 61, 40, 44 and 58 (lenses, web, game, code, gold) | real execution, including Chromium, ruff and bandit | each sibling's `tests/` |
 | Plug-in officials through the venue | 3 bouts (website, game, software) | real execution | `tests/test_family.py` |
-| Calibration fixtures (known-good, known-bad, close call, no winner, missing evidence) | 10 bouts | weigh-in real; judges simulated | `fixtures/`, `results/calibration-run4/` |
-| Reseeding and position-bias probes | 120 brackets | simulated judges | `results/calibration-run4/calibration.json` |
+| Calibration fixtures (known-good, known-bad, close call, no winner, missing evidence) | 10 bouts | weigh-in real; judges simulated | `fixtures/`, `results/calibration-run5/` |
+| Reseeding and position-bias probes | 120 brackets | simulated judges | `results/calibration-run5/calibration.json` |
 | Attack tables | 42 candidates | real execution | `fixtures/_attacks/` |
 | Bracket with real model judges | 1 bout, 36 judge calls | real (Claude Haiku and Sonnet tiers) | `results/real-bracket-01/` |
 | Panel probes with real reviewers, blind packets | 4 probes, 40 calls | real (same two models) | `results/panel-probes-v2/` |
@@ -167,8 +167,25 @@ What changed between the two runs of run 4, in full:
 - No fixture, no attack row and no `expected.json` changed.
 
 The summary of this run is what is kept in `results/calibration-run4/`; it states its own commit and freeze hash.
-Version 0.3.0 adds only documents and that summary on top of commit `9c89aa4`; no code, fixture, event card, lens
-or test differs. The stability table in section 5 is unchanged from run 3: the same seeds give the same counts.
+The private version 0.3.0 adds only documents and that summary on top of commit `9c89aa4`; no code, fixture,
+event card, lens or test differs. The stability table in section 5 is unchanged from run 3: the same seeds give
+the same counts.
+
+**Run 5, the public edition (commit `cc2e84b`, clean): 10 of 10 fixtures, 42 of 42 attack rows.** This
+repository's history starts at that commit. The commits named for runs 1 to 4 are in the private development
+history and cannot be checked out from here. What changed since the last run, in full:
+
+- Documents were cut for publication. Three were left out, and the rest lost their references to private
+  repositories.
+- The controller's working files for the saved real-model bracket were left out
+  (`results/real-bracket-01/PUBLIC-NOTE.md`).
+- `tests/test_family.py` seats three different lens cards on one panel.
+- One refusal message in `barclays/bracket.py` is shorter.
+- No event card, fixture, lens card, official or `expected.json` changed, and the freeze hash is the same
+  (`fabd9828...`).
+
+The summary is in `results/calibration-run5/`. It states its own commit and freeze hash. The commit after
+`cc2e84b` adds only that summary and this paragraph. The stability table in section 5 is unchanged again.
 
 ## 4. What the officials catch
 

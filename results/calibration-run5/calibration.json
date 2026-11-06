@@ -1,0 +1,2003 @@
+{
+  "attacks": [
+    {
+      "bout": "editorial",
+      "candidate": "a-footnote",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "kind": "attack",
+      "leads": [
+        "R-3000000",
+        "D-2025",
+        "D-26",
+        "D-3",
+        "D-30",
+        "D-688",
+        "G-F1",
+        "P-F1",
+        "G-F2",
+        "P-F2",
+        "G-F5",
+        "P-F5",
+        "G-F7",
+        "P-F7"
+      ],
+      "note": "Caught by the new numbers 5000, 40 and 3000000 and by the quotations; the footnote does satisfy every ledger fact, so the ledger alone would have passed it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Replaces the figures with invented ones in words (five thousand, forty, three million), adds a fabricated quotation that runs over a line break, and hides the real figures in a footnote."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "a-negate",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "hedge-shift": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "hedge-shift": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "D-1",
+        "G-F1",
+        "P-F1",
+        "G-F2",
+        "P-F2"
+      ],
+      "note": "Still passes every decisive official; no byte rule can tell 'tutored' from 'did not tutor'. hedge_shift raises polarity leads P-F1 and P-F2 quoting the sentence.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Says the Corps did not tutor the 4,218 students and that 37 schools declined to take part; every figure and the evaluator quotation are intact."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "a-quotes",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Caught now that min_words is 3 and single quotation marks are recognised; both fabricated quotations are findings.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds a three-word fabricated double quotation and a fabricated single-quoted quotation to an otherwise faithful revision."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "a-reverse",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "kind": "attack",
+      "leads": [
+        "H-F3",
+        "P-F4",
+        "B-F6"
+      ],
+      "note": "Caught only through its side effects (spelled-out invented numbers 38 and 5000, a fabricated quotation); the reversal itself would pass if it carried no new number or quotation, and only advisory leads point at it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Reverses the design (students 'randomly assigned', study 'cancelled', result 'final') and adds a fabricated single-quoted quotation and spelled-out invented figures."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "a-second-file",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "fail"
+      },
+      "kind": "attack",
+      "leads": [
+        "R-3000000",
+        "G-F1.2",
+        "P-F1.2",
+        "G-F2.2",
+        "P-F2.2",
+        "G-F5.2",
+        "P-F5.2",
+        "G-F7.2",
+        "P-F7.2"
+      ],
+      "note": "Caught because every text official now reads every file through Ctx.all_text().",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "The first file is the faithful revision; a second file claims a proven success with invented figures and a fabricated quotation."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "a-swap",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "number-roles": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "number-roles": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "R-11-8"
+      ],
+      "note": "Still passes every decisive official, because both numbers and all ledger terms are present; number_roles raises R-11-8 as a lead only.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Swaps the two gains: tutored students gained 8, untutored students gained 11."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "baseline",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "control",
+      "leads": [],
+      "note": "Control: the source passes all decisive officials.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "The original draft submitted as the baseline."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "faithful-plain",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "control",
+      "leads": [],
+      "note": "Control: no findings and no leads.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "A plain faithful revision of the source."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-british",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by fact-ledger F3; the -ise/-ize spelling fold in norm() fixes it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Spells 'randomised' the British way."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-dollars",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by F5 and new-numbers; both sides now normalise to 2900000.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Writes the cost as $2,900,000 instead of $2.9 million."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-ellipsis",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by quotes; each side of the ellipsis is now checked in order against the source.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Shortens the evaluator's quotation with a standard ellipsis."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-evaluation",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by F7; 'randomized evaluation' is now an alternative in the ledger.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Says 'randomized evaluation' instead of 'randomized study'."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-newdate",
+      "class": "false_positive_remaining",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Still disqualified by new-numbers N-114 and N-17: the rule is that no number may be absent from the source and the evidence, and both numbers are, so the rule is behaving as written; allow the figures through the evidence source or the params if the organizer accepts them.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds a derived figure (about 114 students per school) and a new date (the board votes on March 17)."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-paraphrase6",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [
+        "H-F6"
+      ],
+      "note": "Was wrongly disqualified by F6; the ledger now lists 'not show yet that tutoring caused'. hedge_shift still raises an advisory H-F6 lead because the literal hedge 'not yet' is gone.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Paraphrases the evaluator's caution as 'do not show yet that tutoring caused the gains'."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-space-thousands",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by F1 and new-numbers; space-separated thousands now normalise to 4218.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Writes 4 218 with a space as the thousands separator."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "fp-spelled37",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "Was wrongly disqualified by F2; number words now normalise to 37.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Writes 'thirty-seven schools' in words."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "x-ordinal",
+      "class": "not_caught",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. Counts and ordinals of ten and under are ignored, because prose is full of them. This invented ranking passes.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'ranking 3rd in the state' to the reach sentence: an invented fact carried by a small ordinal."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "y-words",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "hedge-shift": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "hedge-shift": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "G-F1",
+        "P-F1",
+        "G-F2",
+        "P-F2"
+      ],
+      "note": "From the second review. A count of ten or under is ignored whether written as a digit or a word, so the invented figure passes every decisive check. The sentence does raise a polarity lead ('no gains'), by luck of its wording.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'nine of them saw no gains at all': an invented count written as a word."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "y-reuse-pct",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review, which passed it through 0.2. A percentage is now a different figure from the same digits as a count.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'About 37% of tutored students reached grade level', reusing the 37 of '37 schools' as a percentage."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "y-percent-word",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. 'eleven percent' is 11%, which the source does not contain.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'roughly eleven percent of the district', reusing the 11 of '11 points' as a percentage in words."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "y-unquoted-attrib",
+      "class": "not_caught",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. No quotation marks, no new figure, every ledger fact still present: no rule about bytes fires. This is the meaning-change class; only a reader or a model gate can catch it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'Dr. Okafor also wrote that the tutoring clearly caused the gains': a fabricated statement in indirect speech."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "f-roundword",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [
+        "R-4200"
+      ],
+      "note": "From the second review, which found it wrongly disqualified. A rounding of a source figure (fewer significant digits, within 10 percent) is no longer a new figure; a lead records the rounding.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Glosses 4,218 students as 'about four thousand two hundred'."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "f-about-4000",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [
+        "R-4000"
+      ],
+      "note": "From the second review, which found it wrongly disqualified. Same rounding rule.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Says 'more than 4,000 students (4,218)'."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "f-units",
+      "class": "false_positive_remaining",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [],
+      "note": "From the second review. A derived figure is still a figure the source does not contain; the rule cannot tell correct arithmetic from invention. A bout may list such figures under new-numbers.allow, and that override is flagged.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'or 90 minutes in all' (three sessions of 30 minutes)."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "r-bare-700",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "fail",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "A figure near a source figure is still a new figure unless the writer marks it as approximate. Without this, the rounding rule would accept any figure within ten percent.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'That is $700 for every child' where the source says $688, with no marker of approximation."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "r-about-700",
+      "class": "correctly_passed",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "faithful",
+      "leads": [
+        "R-700"
+      ],
+      "note": "Recorded as a possible rounding (marked as approximate, fewer significant digits, within 10 percent), not accepted as one. The lead is major, so a verdict that names this candidate requires a person to confirm the figure is the same quantity.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'That is about $700 for every child': a marked rounding of $688."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "r-swap-700",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "R-700",
+        "D-688"
+      ],
+      "note": "Third review, R3-03. On the page this is identical to a faithful rounding, so no check on bytes can separate them. It is not disqualified. It carries a major lead, and the event's open-leads rule then requires a person before the verdict is used. $688 is not on the must-keep list, so the fact ledger passes.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Replaces the source's 'approximately $688 per student' with 'approximately $700 per student': a different figure under the source's own marker of approximation."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "q-third",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "Q-1in3"
+      ],
+      "note": "Third review, R3-04. A proportion in words carries no figure for the number check to compare. It is recorded as a major lead for a person, never a finding: 'a third' can also be a faithful restatement of 33 percent.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'About a third of tutored students reached the benchmark': a proportion the source never states, with no digits."
+    },
+    {
+      "bout": "editorial",
+      "candidate": "q-double",
+      "class": "lead_only",
+      "eligibility": "eligible",
+      "expected": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fact-ledger": "pass",
+        "new-numbers": "pass",
+        "quotes": "pass"
+      },
+      "kind": "attack",
+      "leads": [
+        "Q-x2"
+      ],
+      "note": "Third review, R3-04. A multiple in words. Major lead only; whether 11 against 8 is 'nearly double' is arithmetic on meaning that this check does not do.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "Adds 'gains were nearly double those of their peers' where the source gives 11 points against 8."
+    },
+    {
+      "bout": "software",
+      "candidate": "baseline",
+      "class": "correctly_handled",
+      "eligibility": "eligible",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "pass",
+        "static": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "pass",
+        "static": "pass"
+      },
+      "kind": "control",
+      "leads": [],
+      "note": "The baseline fails the target suite and is observed, not judged, on it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "the current implementation"
+    },
+    {
+      "bout": "software",
+      "candidate": "clean-fix",
+      "class": "correctly_handled",
+      "eligibility": "eligible",
+      "expected": {
+        "fail-to-pass": "pass",
+        "pass-to-pass": "pass",
+        "static": "pass",
+        "visible": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fail-to-pass": "pass",
+        "pass-to-pass": "pass",
+        "static": "pass",
+        "visible": "pass"
+      },
+      "kind": "control",
+      "leads": [],
+      "note": "The control: a correct candidate still passes through the process boundary.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "a correct change"
+    },
+    {
+      "bout": "software",
+      "candidate": "forge-json-patch",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Version 0.1 recommended this candidate. The oracle is now a separate process.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "returns nothing and patches json.dump to rewrite its own outcomes"
+    },
+    {
+      "bout": "software",
+      "candidate": "forge-result-file",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "There is no results file to forge and nowhere writable; exiting at import is a failure.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "writes a results file claiming passes, then exits"
+    },
+    {
+      "bout": "software",
+      "candidate": "forge-stdout",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Results come only from the oracle's own stdout with a nonce the candidate never sees.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "prints oracle-format result lines and unasked answers on every descriptor"
+    },
+    {
+      "bout": "software",
+      "candidate": "always-equal",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Only plain data crosses the boundary; the oracle compares a real list.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "returns an object whose __eq__ says yes to everything"
+    },
+    {
+      "bout": "software",
+      "candidate": "exit-at-import",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Version 0.1 called this 'unverified', which let a candidate turn NO_CHANGE into INCONCLUSIVE.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "exits before it can be tested"
+    },
+    {
+      "bout": "software",
+      "candidate": "hang",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Two attempts, the second with twice the budget, then a failure with a TIMEOUT finding.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "never returns"
+    },
+    {
+      "bout": "software",
+      "candidate": "slow-oracle",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. The answer is over the size limit, and another candidate passed the same suite within it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "answers instantly with a huge answer built to stall the suite's own comparison"
+    },
+    {
+      "bout": "software",
+      "candidate": "type-floats",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. Equality is Python's ==, so 1.0 passes for 1. Caught by the suite asserting the type.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "returns the right numbers as floats where the contract says integers"
+    },
+    {
+      "bout": "software",
+      "candidate": "type-bools",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "From the second review. True == 1. Caught by the suite asserting the type, not by the harness.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "returns True where a start of 1 belongs"
+    },
+    {
+      "bout": "software",
+      "candidate": "probe-escape",
+      "class": "caught_decisively",
+      "eligibility": "disqualified",
+      "expected": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "expected_eligibility": "disqualified",
+      "got": {
+        "fail-to-pass": "fail",
+        "pass-to-pass": "fail"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "Holds only where the jail is available; the test checks the receipt and skips otherwise.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "correct only if it can see or write outside its jail"
+    },
+    {
+      "bout": "software",
+      "candidate": "static-bypass",
+      "class": "not_caught",
+      "eligibility": "eligible",
+      "expected": {
+        "fail-to-pass": "pass",
+        "pass-to-pass": "pass",
+        "static": "pass"
+      },
+      "expected_eligibility": "eligible",
+      "got": {
+        "fail-to-pass": "pass",
+        "pass-to-pass": "pass",
+        "static": "pass"
+      },
+      "kind": "attack",
+      "leads": [],
+      "note": "py.static is a filter on source text and is evaded here. The jail, not the filter, contains it.",
+      "reproduced": true,
+      "skipped_no_jail": false,
+      "what": "reaches os without tripping the static filter; the function is correct"
+    }
+  ],
+  "fixtures": 10,
+  "frozen": {
+    "frozen_sha256": "fabd98289064a0a9343264ab4d7d1e9dc56a4ad4e859c2877ca90e28cbfb7f2d",
+    "git_commit": "cc2e84b532bb4d13371429ed1e28d46552ca8a59",
+    "git_dirty": false
+  },
+  "judging": "simulated (controller's sim provider); weigh-in results are real executions on synthetic files",
+  "met": 10,
+  "position_biases": [
+    0.0,
+    0.25
+  ],
+  "rows": [
+    {
+      "bracket_calls": 14,
+      "bracket_tokens": 20830,
+      "event": "editorial-revision",
+      "expected_sha256": "ca8755eaf1e622aada6f196ae89cc719901beb4951b2952f22ca5e4b2c031e89",
+      "expected_status": "RECOMMEND",
+      "fixture": "editorial-clear-win",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "known-good beats a polished known-bad",
+      "ledger_head": "3a9d2426e0028c479375446f30c8114c33e3a7c98efedac4d8be1b048f94f045",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 15,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "faithful-plain"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-omission",
+          "faithful-plain",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-omission"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-omission"
+        ]
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 29,
+      "bracket_tokens": 44927,
+      "event": "editorial-revision",
+      "expected_sha256": "fbcf8235312c6f3f4dbd8083ef313ac496ffec859bb58f0f5d7a46caf76535d5",
+      "expected_status": "TIED_SHORTLIST",
+      "fixture": "editorial-close-call",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "close call: two faithful revisions the judges cannot separate",
+      "ledger_head": "0f32a21d257cae8ec87d426bbc5215e422f10b4049f22e2c32f261f82308c1f3",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 12,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 11,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 12,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 13,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "TIED_SHORTLIST"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "TIED_SHORTLIST"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 11,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.6666666666666666,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 13,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 1,
+          "statuses": [
+            "INCONCLUSIVE",
+            "TIED_SHORTLIST"
+          ]
+        }
+      ],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "faithful-plain",
+          "faithful-warm",
+          "baseline"
+        ],
+        "recommended": [],
+        "status": "TIED_SHORTLIST",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [
+        "faithful-plain",
+        "faithful-warm"
+      ],
+      "status": "TIED_SHORTLIST"
+    },
+    {
+      "bracket_calls": 14,
+      "bracket_tokens": 20624,
+      "event": "editorial-revision",
+      "expected_sha256": "4cc810420e8bc77ec6805b65fd43a73240b02fd1a2e872624ce9be86df35bc41",
+      "expected_status": "NO_CHANGE or INCONCLUSIVE",
+      "fixture": "editorial-merely-smoother",
+      "flags": [
+        "ATR:COVERAGE_INCOMPLETE",
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "no candidate deserves promotion (faithful, but only smoother)",
+      "ledger_head": "db772c3da48092004969c47dfb901b3858ed65798cd42dc1617d2f4aa8b7f5d7",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 8,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 11,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 13,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "NO_CHANGE"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 11,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "baseline"
+              ],
+              "seed": 13,
+              "status": "NO_CHANGE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "NO_CHANGE"
+          ]
+        }
+      ],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "baseline",
+          "smoother-only"
+        ],
+        "recommended": [],
+        "status": "INCONCLUSIVE",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [
+        "baseline",
+        "smoother-only"
+      ],
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "editorial-revision",
+      "expected_sha256": "91c34a161cac5427da96bd1fe6d85169402d97bb0ba4378e20ca33fd13956e57",
+      "expected_status": "NO_CHANGE",
+      "fixture": "editorial-polish-only",
+      "flags": [
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE"
+      ],
+      "kind": "no candidate deserves promotion (the only challenger drops facts)",
+      "ledger_head": "13d252f13eb8ada4bc65335311298f68abe6ff7b8e59f74055ee206c35f2c49f",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 7,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-omission",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-omission"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-omission"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": 14,
+      "bracket_tokens": 20830,
+      "event": "editorial-revision",
+      "expected_sha256": "1386bd1df43fe86a2f87edd6980d438bd9a6c829541581d53226c1d22b7bfe8d",
+      "expected_status": "RECOMMEND",
+      "fixture": "editorial-subtle-omission",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "known-good beats a tighter revision that silently drops one caveat",
+      "ledger_head": "ad2e2510c67ce09cc4568300afc152a85e8de398d3ad3fd741ba7d59cc135bb3",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 11,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "faithful-plain"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "faithful-plain"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "subtle-omission",
+          "faithful-plain",
+          "baseline"
+        ],
+        "recommended": [
+          "subtle-omission"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "subtle-omission"
+        ]
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 12,
+      "bracket_tokens": 14524,
+      "event": "software-change",
+      "expected_sha256": "ea6f182dcda363b11fe67c11daa0bbda11d02aa8d3778be7db92faecfc5ea2fc",
+      "expected_status": "RECOMMEND",
+      "fixture": "software-clear-win",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "BASELINE_FAILS_TARGET",
+        "PLUGIN_MISSING:code.complexity",
+        "PLUGIN_MISSING:code.lint",
+        "PLUGIN_MISSING:code.secrets",
+        "PLUGIN_MISSING:code.security",
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "known-good beats a polished candidate that fails hidden tests",
+      "ledger_head": "75af65da24dec6563b4fd5d87c3b7b746a4a4183279842440bd7a31c1ce08c91",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 1133,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 12,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 15,
+              "status": "RECOMMEND"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 5,
+          "statuses": [
+            "RECOMMEND"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 11,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 14,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 3,
+          "statuses": [
+            "INCONCLUSIVE",
+            "RECOMMEND"
+          ]
+        }
+      ],
+      "recommended": [
+        "clean-fix"
+      ],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "clean-fix",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "RECOMMEND"
+    },
+    {
+      "bracket_calls": 26,
+      "bracket_tokens": 32229,
+      "event": "software-change",
+      "expected_sha256": "547092c4c02466cd7b830a2502b3bcbdf6d8681517a3c6eaaa29d43627e8fb51",
+      "expected_status": "TIED_SHORTLIST",
+      "fixture": "software-close-call",
+      "flags": [
+        "ATR:PRICE_UNKNOWN",
+        "ATR:SIMULATED_PROVIDER",
+        "ATR:SINGLE_TOURNAMENT",
+        "ATR:UNCALIBRATED_PANEL",
+        "BASELINE_FAILS_TARGET",
+        "PLUGIN_MISSING:code.complexity",
+        "PLUGIN_MISSING:code.lint",
+        "PLUGIN_MISSING:code.secrets",
+        "PLUGIN_MISSING:code.security",
+        "SIMULATED_JUDGES"
+      ],
+      "kind": "close call: two correct changes the judges cannot separate",
+      "ledger_head": "835571fccca0226eac7df535d0a73d0ca523a925a98e22cabee6f93bb1366a7f",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 1191,
+      "probes": [
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 11,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 13,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.3333333333333333,
+              "recommended": [],
+              "seed": 14,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 0.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "TIED_SHORTLIST"
+            }
+          ],
+          "position_bias": 0.0,
+          "runs": 5,
+          "same_as_main": 4,
+          "statuses": [
+            "INCONCLUSIVE",
+            "TIED_SHORTLIST"
+          ]
+        },
+        {
+          "outcomes": [
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 11,
+              "status": "TIED_SHORTLIST"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 12,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 0.5,
+              "recommended": [
+                "clean-fix"
+              ],
+              "seed": 13,
+              "status": "RECOMMEND"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 14,
+              "status": "INCONCLUSIVE"
+            },
+            {
+              "max_judge_flip_rate": 1.0,
+              "recommended": [],
+              "seed": 15,
+              "status": "INCONCLUSIVE"
+            }
+          ],
+          "position_bias": 0.25,
+          "runs": 5,
+          "same_as_main": 1,
+          "statuses": [
+            "INCONCLUSIVE",
+            "RECOMMEND",
+            "TIED_SHORTLIST"
+          ]
+        }
+      ],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "clean-alt",
+          "clean-fix",
+          "baseline"
+        ],
+        "recommended": [],
+        "status": "TIED_SHORTLIST",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [
+        "clean-alt",
+        "clean-fix"
+      ],
+      "status": "TIED_SHORTLIST"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "9fcd037a4c845c5ac68041b6285a7fc395f8f57a81efbbfae8599145c3443220",
+      "expected_status": "NO_CHANGE",
+      "fixture": "software-looks-good-only",
+      "flags": [
+        "BASELINE_FAILS_TARGET",
+        "PLUGIN_MISSING:code.complexity",
+        "PLUGIN_MISSING:code.lint",
+        "PLUGIN_MISSING:code.secrets",
+        "PLUGIN_MISSING:code.security",
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "TARGET_UNMET"
+      ],
+      "kind": "no candidate deserves promotion (looks good, fails in use)",
+      "ledger_head": "f669802ed1d2d8376f39458929ba315eada868bd5bbaaa53e1018e8c2d3e36f2",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 710,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "baseline"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "a47a8fd56d85229294321e27cad84d73eccdaa16e855b9d1b7a40610d3c44a37",
+      "expected_status": "NO_CHANGE",
+      "fixture": "software-no-winner",
+      "flags": [
+        "BASELINE_FAILS_TARGET",
+        "PLUGIN_MISSING:code.complexity",
+        "PLUGIN_MISSING:code.lint",
+        "PLUGIN_MISSING:code.secrets",
+        "PLUGIN_MISSING:code.security",
+        "SHADOW_SIM:JUDGES_ALONE_PREFERRED_A_DISQUALIFIED_CANDIDATE",
+        "TARGET_UNMET"
+      ],
+      "kind": "no candidate deserves promotion (every challenger fails hidden tests)",
+      "ledger_head": "26c580641a8c537beae04d860b3d65e0d49bc6b0e9eaea2189f677108e58ee81",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 1168,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "polished-shallow",
+          "baseline",
+          "overfit"
+        ],
+        "recommended": [
+          "polished-shallow"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": true,
+        "would_have_promoted_disqualified": [
+          "polished-shallow"
+        ]
+      },
+      "shortlist": [],
+      "status": "NO_CHANGE"
+    },
+    {
+      "bracket_calls": null,
+      "bracket_tokens": null,
+      "event": "software-change",
+      "expected_sha256": "bbe7e510cc95f45a347e3dbcd1ad8c4fbb1cb26443dd411e4cd8d27ce09b8d8b",
+      "expected_status": "INCONCLUSIVE",
+      "fixture": "software-unverified-target",
+      "flags": [
+        "COVERAGE_INCOMPLETE",
+        "PLUGIN_MISSING:code.complexity",
+        "PLUGIN_MISSING:code.lint",
+        "PLUGIN_MISSING:code.secrets",
+        "PLUGIN_MISSING:code.security",
+        "UNVERIFIED:clean-fix"
+      ],
+      "kind": "missing evidence: the target suite has no tests, so a correct change cannot be verified",
+      "ledger_head": "f910b49ffd95cd37c29fc6cdcfc87ba799cb6da363df925ffbce1a570e0dd9c1",
+      "met": true,
+      "mismatches": [],
+      "official_ms": 723,
+      "probes": [],
+      "recommended": [],
+      "shadow": {
+        "note": "diagnostic only: the same judges with no weigh-in and no gates; it has no authority",
+        "ranking": [
+          "clean-fix",
+          "baseline"
+        ],
+        "recommended": [
+          "clean-fix"
+        ],
+        "status": "RECOMMEND",
+        "top_ranked_was_disqualified": false,
+        "would_have_promoted_disqualified": []
+      },
+      "shortlist": [],
+      "status": "INCONCLUSIVE"
+    }
+  ],
+  "seeds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ]
+}
