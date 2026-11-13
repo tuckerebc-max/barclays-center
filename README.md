@@ -23,8 +23,8 @@ and games, static checks for code, and human gold. See `docs/FAMILY.md`.
 
 **This repository is public. The controller and the other five repositories are private.** What that leaves you
 able to run is under "What runs without the private repositories" below. The project's research comparison, the
-map of the owner's existing tools and the handoff describe private repositories and are not here. No licence has
-been chosen yet, so all rights are reserved until the owner adds one.
+map of the owner's existing tools and the handoff describe private repositories and are not here. The licence
+is Apache 2.0 (`LICENSE`).
 
 Four independent reviewers have attacked the venue and its plug-ins, and a fifth attacked the first two siblings.
 Each broke something. What was fixed, what was cut back to a smaller claim and what is still open are in

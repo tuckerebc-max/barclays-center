@@ -135,4 +135,4 @@ evaluator that competes with the one the owner already has.
 4. Whether to send the proposed changes to the controller's owner now.
 5. Whether the software event may run on a Windows host without WSL2 at all. The recommendation is no.
 6. Which model route judges should use, given what the subagent route costs (`CALIBRATION.md` section 9).
-7. Which licence this repository carries. None has been chosen.
+7. Done on 11 November: this repository carries the Apache 2.0 licence.
